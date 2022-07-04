@@ -1,0 +1,54 @@
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.categories__btn {
+    background: hsl(207, 100%, 50%);
+    color: #fff;
+    aspect-ratio: 2/1;
+    height: 3rem;
+    width: 20vw;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    transition: .15s;
+}
+.categories__btn:hover {
+    background: hsl(207, 100%, 60%);
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+    outline-style: dashed;
+    animation: btn 1s;
+}
+@keyframes btn {
+    from {
+        transform: perspective(250px) rotateY(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@media (min-width: 960px){
+    .categories__btn {
+        max-width: 12.5rem;
+    }
+}
+.buy-btn {
+    background: var(--buy-btn);
+    color: white;
+    font-weight: 500;
+    padding: .5rem 1.6rem;
+    border-radius: 3px;
+    transition: .14s;
+}
+.buy-btn:hover {
+    background: hsl(105, 46%, 55%);
+}
+.buy-btn:hover .fa-cart-shopping{
+    transition: 1s;
+    transform: 
+    perspective(500px)
+    rotateY(360deg);   
+}
+

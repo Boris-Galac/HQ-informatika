@@ -1,0 +1,20 @@
+@import 'abstracts/variables.css';
+
+@import 'base/colors.css';
+@import 'base/defaults.css';
+@import 'base/typography.css';
+@import 'utilities/utilities.css';
+
+@import 'components/buttons.css';
+@import 'components/product.css';
+
+@import 'layout/header.css';
+@import 'layout/navbar.css';
+@import 'layout/hero.css';
+@import 'layout/action.css';
+@import 'layout/best-offer.css';
+@import 'layout/advertisement.css';
+@import 'layout/accordion.css';
+@import 'layout/footer.css';
+
+

@@ -1,0 +1,72 @@
+.header {
+    color: var(--white);
+    padding-block: .3rem;
+}
+.header .container {
+    position: relative;
+    display: var(--d-flex);
+    justify-content: space-between;
+    align-items: var(--center);
+    height: auto;
+}
+.header__logo {
+    font-size: 1.1rem;
+    display: var(--d-flex);
+    gap: 3px;
+    align-items: var(--center);
+    margin-right: 2rem;
+}
+.header__btns {
+    display: var(--d-flex);
+    align-items: var(--center);
+    gap: .3rem;
+}
+.header__sign-up,
+.header__registration {
+    color: var(--white);
+    font-weight: 500;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: .5rem 1.7rem;
+    transition: var(--time-transition);
+    display: none;
+}
+.header__sign-up:hover {
+        background: hsla(0, 0%, 100%, 0.150);
+    }
+
+.header__registration {
+    margin-left: .6rem;
+    background-color: var(--buy-btn);
+}
+.header__registration :hover {
+    background-color: hsl(105, 46%, 53%);
+}
+.header__cart-btn {
+    margin-inline: 1rem;
+}
+.header__ham-btn {
+    aspect-ratio: 1;
+    padding: 2px;
+    position: relative;
+    width: 2.5rem;
+    display: var(--d-flex);
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+}
+.ham-line {
+    border-radius: 100vmax;
+    width: 100%;
+    height: 4px;
+    background-color:var(--white);
+}
+@media (max-width:960px){
+    .header__btns button:nth-of-type(-n + 3){
+        display: none;
+    }
+    .header__sign-up,
+    .header__registration {
+        display: block
+    }
+}

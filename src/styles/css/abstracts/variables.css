@@ -1,0 +1,8 @@
+:root {
+    --d-flex: flex;
+    --d-grid: grid;
+    --center: center;
+    --gap-1: 1rem;
+    --measure-1: 1rem;
+    --time-transition:.3s;
+}

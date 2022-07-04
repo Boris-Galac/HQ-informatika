@@ -1,0 +1,54 @@
+.accordion {
+            position: relative;
+            background-color: hsl(116, 32%, 57%);
+            color: white;
+            display: grid;
+            place-items: enter;
+            padding: 2rem;
+            isolation: isolate;
+        }
+    .accordion:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('/src/styles/img/geometry.png') no-repeat center center/cover;
+        mix-blend-mode: plus-lighter;
+        z-index: -2;
+    }
+    .accordion__wrapper {
+        display: grid;
+        gap: 1rem;
+    }
+    .accordion__heading {
+        margin-bottom: 1.5rem;
+    }
+    .accordion__tab {
+        cursor: pointer;
+        width: 40vw;
+        min-width: 18rem;
+        background-color: var(--accordion);
+        padding: .9rem;
+        border-radius: 4px;
+        transition: .2s;
+    }
+    .accordion:hover {
+        box-shadow: 0 2px 2px hsl(120, 23%, 46%);
+        background-color: hsl(115, 49%, 86%);
+    }
+        .accordion__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion__tab-heading {
+            color: var(--neutral-900);
+        }
+        .arrow {
+            font-size: 1.1rem;
+        }
+        .accordion__body {
+            display: none;
+            margin-top: 1rem;
+            color: var(--gray-900);
+            line-height: 1.6;
+        }

@@ -1,0 +1,49 @@
+.best-offer {
+    background-color: var(--white);
+}
+.best-offer__header {
+    background-color: var(--neutral-200);
+    padding: 2rem;
+    text-align: center;
+}
+.best-offer__heading {
+    position: relative;
+    color: var(--white);
+    text-align: center;
+    isolation: isolate;
+}
+.best-offer__heading::after {
+    content: '';
+    max-width: 65vw;
+    margin-inline: auto;
+    position: absolute;
+    background-color: var(--red-600);
+    clip-path: polygon(100% 0, 100% 60%, 50% 94%, 0 60%, 0 0);
+    padding: 1.5rem;
+    border-radius: 100vmax;
+    inset: 0;
+    z-index: -1; 
+    animation: best-offer 1s alternate infinite ease-in-out;
+}
+@keyframes best-offer {
+    to {
+        transform: translateY(-4px);
+    }
+}
+.best-offer__footer {
+    background-color: var(--neutral-200);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.best-offer__load-more {
+    background-color: var(--neutral-400);
+    padding: .4rem 6rem;
+    border-radius: 3px;
+    font-weight: 500;
+    color: var(--neutral-700);
+}
+.best-offer__load-more:hover {
+    opacity: .8;
+}

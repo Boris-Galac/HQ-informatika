@@ -1,0 +1,31 @@
+.hero {
+    position: relative;
+}
+img {
+    image-rendering: optimizeSpeed;
+    width: 100%;   
+}
+.hero__arrows {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    display: var(--d-flex);
+    justify-content: space-between;
+    width: 100%;
+}
+.left,
+.right {
+    color: var(--white);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    transition: var(--time-transition);
+}
+.left:hover,
+.right:hover{
+    transform: scale(1.25);
+}
+.left {
+    margin-left: 1rem;
+}
+.right {
+    margin-right: 1rem;
+} 
