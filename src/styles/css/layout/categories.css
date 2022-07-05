@@ -1,6 +1,6 @@
 .categories {
     position: relative;
-    background: #103753;
+    background-color: #103753;
     padding: 1rem;
     display: grid;
     place-items: center;
@@ -23,18 +23,18 @@
     gap: var(--gap-1);
 }
 .categories__name-category {
-    color: #fff;
+    color: var(--white);
     font-weight: 400;
     font-size: 1rem;
     display: none;
 }
-@media (max-width: 640px){
+@media (min-width: 40rem){
     .categories__name-category {
         display: var(--d-flex);
         justify-content: var(--center);
     }
 }
-@media (max-width:960px){
+@media (min-width: 60rem){
     .categories__wrapper {
         display: var(--d-flex);
     }

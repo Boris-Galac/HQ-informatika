@@ -263,7 +263,7 @@ button {
 
 .buy-btn {
     background: var(--buy-btn);
-    color: white;
+    color: var(--white);
     font-weight: 500;
     padding: .5rem 1.6rem;
     border-radius: 3px;
@@ -285,39 +285,39 @@ button {
     padding: 1rem;
     max-width: 650px;
     margin: auto;
-    display: grid;
+    display: var(--d-grid);
     grid-template-columns: 7% 1fr 1fr;
     height: 250px;
 }
 
 .product__stars {
-    display: grid;
+    display: var(--d-grid);
     grid-template-rows: auto;
-    place-items: center;
+    place-items: var(--center);
     height: 70%;
     margin-block: auto;
 }
 
 .product__left {
-    display: grid;
+    display: var(--d-grid);
     grid-template-rows: 3fr 1fr;
 }
 
 .product__right {
     position: relative;
-    display: grid;
+    display: var(--d-grid);
     grid-template-rows: 4fr 1fr;
 }
 
 .product__header {
     position: relative;
-    display: flex;
+    display: var(--d-grid);
     justify-content: space-evenly;
 }
 
 .product__info {
-    display: grid;
-    place-items: center;
+    display: var(--d-grid);
+    place-items: var(--center);
 }
 
 .product__img {
@@ -334,16 +334,16 @@ button {
 }
 
 .product__footer {
-    display: grid;
+    display: var(--d-grid);
     grid-template-columns: 1fr 1fr;
-    place-items: center;
+    place-items: var(--center);
 }
 
 .product__price {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
+    align-items: var(--center);
+    justify-content: var(--center);
+    justify-self: var(--center);
     padding: .5rem;
     border-radius: 50px;
     border: 4px solid rgb(235, 240, 242);
@@ -360,7 +360,7 @@ button {
 
 .product:not(:last-child){
     border-bottom: 1px solid hsl(206, 24%, 80%);
-    text-align: center;
+    text-align: var(--center);
 }
 
 .header {
@@ -410,7 +410,7 @@ button {
     background-color: var(--buy-btn);
 }
 
-.header__registration :hover {
+.header__registration:hover {
     background-color: hsl(105, 46%, 53%);
 }
 
@@ -436,7 +436,7 @@ button {
     background-color:var(--white);
 }
 
-@media (max-width:960px){
+@media (min-width:960px){
     .header__btns button:nth-of-type(-n + 3){
         display: none;
     }
@@ -485,8 +485,8 @@ button {
     transform: scale(1);
 }
 
-@media (max-width: 960px) {
-    .av {
+@media (min-width: 960px) {
+    .nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -507,7 +507,7 @@ button {
     position: relative;
 }
 
-img {
+.hero img {
     image-rendering: optimizeSpeed;
     width: 100%;   
 }
@@ -541,13 +541,67 @@ img {
     margin-right: 1rem;
 }
 
-.action__ad-nintendo {
+.categories {
+    position: relative;
+    background-color: #103753;
+    padding: 1rem;
     display: grid;
+    place-items: center;
+    isolation: isolate;
+}
+
+.categories__wrapper {
+    display: var(--d-grid);
+    gap: var(--gap-1);
+}
+
+.categories__wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url('.././img/categories-bg.png');
+    opacity: .2;
+}
+
+.categories__row {
+    display: var(--d-flex);
+    gap: var(--gap-1);
+}
+
+.categories__name-category {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1rem;
+    display: none;
+}
+
+@media (min-width: 40rem){
+    .categories__name-category {
+        display: var(--d-flex);
+        justify-content: var(--center);
+    }
+}
+
+@media (min-width: 60rem){
+    .categories__wrapper {
+        display: var(--d-flex);
+    }
+    .categories__row {
+        display: contents;
+    }
+    .categories__btn {
+        max-width: 8.5rem;
+    }
+}
+
+.action__ad-nintendo {
+    display: var(--d-grid);
 }
 
 .action__info-nintendo {
-    background: var(--neutral-600);
-    display: grid;
+    background-color: var(--neutral-600);
+    display: var(--d-grid);
     grid-template-rows: auto 50%;
 }
 
@@ -574,29 +628,34 @@ img {
     align-items: baseline;
     padding: .4rem .6rem;
     border-radius: 100vmax;
-    background: hsl(24, 59%, 46%);
+    background-color: hsl(24, 59%, 46%);
     color: var(--white);
-    background: var(--white);
+    background-color: var(--white);
     color: var(--neutral-700);
     outline: 3px solid var(--neutral-400);
 }
 
-span {
+.action__countdown span {
     color: var(--neutral-600);
 }
 
 .action__footer {
-    display: grid;
+    position: relative;
+    display: var(--d-grid);
     padding: var(--measure-1);
     grid-template-columns: 1fr 1fr;
-    place-items: center;
-    background: var(--gray-900);
+    place-items: var(--center);
+    background-color: var(--gray-900);
+}
+
+.action__footer .buy-btn{
+    position: static;
 }
 
 @media (min-width: 33.125rem) {
     .action__header {
-        display: grid;
-        place-items: center;
+        display: var(--d-grid);
+        place-items: var(--center);
     }
     .action__ad-nintendo {
         display: grid;
@@ -649,6 +708,14 @@ span {
     justify-content: center;
 }
 
+.best-offer__footer .buy-btn {
+    background-color: var(--neutral-200);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .best-offer__load-more {
     background-color: var(--neutral-400);
     padding: .4rem 6rem;
@@ -666,14 +733,14 @@ span {
 }
 
 .accordion {
-            position: relative;
-            background-color: hsl(116, 32%, 57%);
-            color: white;
-            display: grid;
-            place-items: enter;
-            padding: 2rem;
-            isolation: isolate;
-        }
+        position: relative;
+        background-color: hsl(116, 32%, 57%);
+        color: var(--white);
+        display: var(--d-grid);
+        place-items: center;
+        padding: 2rem;
+        isolation: isolate;
+    }
 
 .accordion:after {
         content: '';
@@ -685,7 +752,7 @@ span {
     }
 
 .accordion__wrapper {
-        display: grid;
+        display: var(--d-grid);
         gap: 1rem;
     }
 
@@ -703,31 +770,31 @@ span {
         transition: .2s;
     }
 
-.accordion:hover {
+.accordion__tab:hover {
         box-shadow: 0 2px 2px hsl(120, 23%, 46%);
         background-color: hsl(115, 49%, 86%);
     }
 
 .accordion__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 .accordion__tab-heading {
-            color: var(--neutral-900);
-        }
+        color: var(--neutral-900);
+    }
 
 .arrow {
-            font-size: 1.1rem;
-        }
+        font-size: 1.1rem;
+    }
 
 .accordion__body {
-            display: none;
-            margin-top: 1rem;
-            color: var(--gray-900);
-            line-height: 1.6;
-        }
+        display: none;
+        margin-top: 1rem;
+        color: var(--gray-900);
+        line-height: 1.6;
+    }
 
 .footer {
     background-color: var(--neutral-700);

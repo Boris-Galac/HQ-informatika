@@ -1,10 +1,10 @@
 
 .action__ad-nintendo {
-    display: grid;
+    display: var(--d-grid);
 }
 .action__info-nintendo {
-    background: var(--neutral-600);
-    display: grid;
+    background-color: var(--neutral-600);
+    display: var(--d-grid);
     grid-template-rows: auto 50%;
 }
 .action__header {
@@ -27,26 +27,30 @@
     align-items: baseline;
     padding: .4rem .6rem;
     border-radius: 100vmax;
-    background: hsl(24, 59%, 46%);
+    background-color: hsl(24, 59%, 46%);
     color: var(--white);
-    background: var(--white);
+    background-color: var(--white);
     color: var(--neutral-700);
     outline: 3px solid var(--neutral-400);
 }
-span {
+.action__countdown span {
     color: var(--neutral-600);
 }
 .action__footer {
-    display: grid;
+    position: relative;
+    display: var(--d-grid);
     padding: var(--measure-1);
     grid-template-columns: 1fr 1fr;
-    place-items: center;
-    background: var(--gray-900);
+    place-items: var(--center);
+    background-color: var(--gray-900);
+}
+.action__footer .buy-btn{
+    position: static;
 }
 @media (min-width: 33.125rem) {
     .action__header {
-        display: grid;
-        place-items: center;
+        display: var(--d-grid);
+        place-items: var(--center);
     }
     .action__ad-nintendo {
         display: grid;

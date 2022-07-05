@@ -39,7 +39,7 @@
     margin-left: .6rem;
     background-color: var(--buy-btn);
 }
-.header__registration :hover {
+.header__registration:hover {
     background-color: hsl(105, 46%, 53%);
 }
 .header__cart-btn {
