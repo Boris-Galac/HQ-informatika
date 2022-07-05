@@ -61,7 +61,7 @@
     height: 4px;
     background-color:var(--white);
 }
-@media (max-width:960px){
+@media (min-width:960px){
     .header__btns button:nth-of-type(-n + 3){
         display: none;
     }
