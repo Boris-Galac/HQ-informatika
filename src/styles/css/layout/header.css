@@ -9,6 +9,9 @@
     align-items: var(--center);
     height: auto;
 }
+.header .container a{
+    color: var(--white);
+}
 .header__logo {
     font-size: 1.1rem;
     display: var(--d-flex);

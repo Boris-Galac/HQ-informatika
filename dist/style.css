@@ -164,8 +164,10 @@ body {
 img {
     max-width: 100%;
     display: block;
-    object-fit: contain;
-    object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
 }
 
 span {
@@ -243,7 +245,17 @@ button {
     outline: 1px solid #fff;
     outline-offset: -4px;
     outline-style: dashed;
-    animation: btn 1s;
+    -webkit-animation: btn 1s;
+            animation: btn 1s;
+}
+
+@-webkit-keyframes btn {
+    from {
+        transform: perspective(250px) rotateY(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }
 
 @keyframes btn {
@@ -350,7 +362,11 @@ button {
 }
 
 .buy-btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     position: absolute;
     transform: translate(-50%);
@@ -560,7 +576,7 @@ button {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: url('.././img/categories-bg.png');
+    background: url('../../img/categories-bg.png');
     opacity: .2;
 }
 
@@ -624,6 +640,8 @@ button {
     margin-inline: auto;
     gap: 5px;
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     align-items: baseline;
     padding: .4rem .6rem;
@@ -686,12 +704,20 @@ button {
     margin-inline: auto;
     position: absolute;
     background-color: var(--red-600);
-    clip-path: polygon(100% 0, 100% 60%, 50% 94%, 0 60%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 60%, 50% 94%, 0 60%, 0 0);
+            clip-path: polygon(100% 0, 100% 60%, 50% 94%, 0 60%, 0 0);
     padding: 1.5rem;
     border-radius: 100vmax;
     inset: 0;
     z-index: -1; 
-    animation: best-offer 1s alternate infinite ease-in-out;
+    -webkit-animation: best-offer 1s alternate infinite ease-in-out; 
+            animation: best-offer 1s alternate infinite ease-in-out;
+}
+
+@-webkit-keyframes best-offer {
+    to {
+        transform: translateY(-4px);
+    }
 }
 
 @keyframes best-offer {
@@ -826,6 +852,10 @@ button {
     transition: .2s;
 }
 
+.footer__text::-moz-placeholder {
+    color: var(--white);
+}
+
 .footer__text::placeholder {
     color: var(--white);
 }
@@ -896,7 +926,14 @@ button {
 }
 
 .author {
-    animation: author 3s infinite linear;
+    -webkit-animation: author 3s infinite linear;
+            animation: author 3s infinite linear;
+}
+
+@-webkit-keyframes author {
+    to {
+        transform: perspective(200px) rotateY(360deg);
+    }
 }
 
 @keyframes author {

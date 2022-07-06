@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/styles/icons/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/css/style.css">
+    <title>HQ Informatika</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html">
+                <h1 class="header__logo">
+                    <img src="/src/styles/img/logo.png" alt="hq-informatika-logo">
+                    HQ Informatika
+                </h1>
+            </a>
+            <div class="header__btns">
+                    <button class="header__search-btn">
+                        <img src="/src/styles/icons/search.svg" alt="search">
+                    </button>
+                    <button class="header__cart-btn">
+                        <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
+                        <span id="header__amount-items"></span>
+                    </button>
+                    <button class="header__ham-btn">
+                        <div class="ham-line"></div>
+                        <div class="ham-line"></div>
+                        <div class="ham-line"></div>
+                    </button>
+                    <button class="header__sign-up">
+                        Prijavi se
+                    </button>
+                    <button class="header__registration">
+                        Registracija
+                    </button>
+            </div>
+        </div>
+        <nav class="nav">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#">It oprema</a></li>
+                    <li><a class="nav__link" href="#">Multimedija</a></li>
+                    <li><a class="nav__link" href="#">Mobile</a></li>
+                    <li><a class="nav__link" href="#">Kontakt</a></li>
+                </ul>
+                <div class="nav__search_cart-wrapper">
+                    <button class="search-btn">
+                        <img src="/src/styles/icons/search.svg" alt="search">
+                    </button>
+                    <button class="cart-btn">
+                        <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
+                        <span id="header__amount-items"></span>
+                    </button>
+                </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="categories">
+            <div class="categories__wrapper">
+                <div class="categories__row">
+                    <a href="#">
+                        <button class="categories__btn">
+                            <img src="/src/styles/icons/desktop.svg" alt="desktop">
+                        </button>
+                        <h3 class="categories__name-category">
+                            Desktop
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <button class="categories__btn">
+                            <img src="/src/styles/icons/keyboard.svg" alt="keyboard">
+                        </button>
+                        <h3 class="categories__name-category">
+                            Accessories
+                        </h3>                      
+                    </a>
+                    <a href="#">
+                        <button class="categories__btn">
+                            <img src="/src/styles/icons/network.svg" alt="network">
+                        </button>
+                        <h3 class="categories__name-category">
+                            Mreže
+                        </h3>                      
+                    </a>
+                </div>
+                <div class="categories__row">
+                    <a href="#">
+                        <button class="categories__btn">
+                            <img src="/src/styles/icons/laptop.svg" alt="laptop">
+                        </button>
+                        <h3 class="categories__name-category">
+                            Laptopi
+                        </h3>                      
+                    </a>
+                    <a href="#">
+                        <button class="categories__btn">
+                            <img src="/src/styles/icons/monitor.svg" alt="monitor">
+                        </button>
+                        <h3 class="categories__name-category">
+                            Monitori
+                        </h3>                      
+                    </a>
+                    <a href="#">
+                        <button class="categories__btn">
+                            <img src="/src/styles/icons/software.svg" alt="software">
+                        </button>
+                        <h3 class="categories__name-category">
+                            Software
+                        </h3>                      
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <form class="footer__form">
+                <fieldset class="footer__fieldset">
+                    <legend class="footer__legend">Pretplati se na naš newsletter</legend>
+                    <input type="text" name="text" id="footer-text" class="footer__text" placeholder="Upišite svoj mail">
+                    <input type="submit" name="submit" id="footer-submit" class="footer__submit">
+                </fieldset>
+            </form>
+            <div class="footer__wrapper">
+                <nav class="footer__row">
+                    <h2 class="footer__heading">Služba za korisnike</h2>
+                    <a class="footer__link" href="#">Izjava o privatnosti</a>
+                    <a class="footer__link" href="#">Uvjeti korištenja</a>
+                    <a class="footer__link" href="#">Servis</a>
+                    <a class="footer__link" href="#">Kontaktirajte nas</a>
+                    <a class="footer__link" href="#">Rješavanje sporova</a>
+                </nav>
+                <nav class="footer__row">
+                    <h2 class="footer__heading">Moj račun</h2>
+                    <a class="footer__link" href="#">Adrese</a>
+                    <a class="footer__link" href="#">Nalozi</a>
+                    <a class="footer__link" href="#">Lista želja</a>
+                    <a class="footer__link" href="#">Košarica</a>
+                </nav>
+                <nav class="footer__row">
+                    <h2 class="footer__heading">Naš web</h2>
+                    <a class="footer__link" href="#">Novo</a>
+                    <a class="footer__link" href="#">Nedavno pogledani proizvodi</a>
+                    <a class="footer__link" href="#">Usporedite proizvode</a>
+                    <a class="footer__link" href="#">Pretraživanje</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="footer__copyright-wrapper">
+                <span>Web shop kreirao:</span><h3 class="author">Boris Galac</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="module" src="js/main.js"></script>
+</html>

@@ -15,7 +15,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: url('.././img/categories-bg.png');
+    background: url('../../img/categories-bg.png');
     opacity: .2;
 }
 .categories__row {
