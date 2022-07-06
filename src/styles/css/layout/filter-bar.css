@@ -1,0 +1,84 @@
+.filter-bar {
+    background-color: var(--neutral-800);
+    padding: .5rem;
+}
+.filter__wrapper {
+    display: var(--d-grid);
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+}
+.filter-layout__btns {
+    display: var(--d-grid);
+    place-items: center;
+    width: fit-content;
+    gap: .5rem;
+    background-color: var(--black);
+    padding: 8px;
+    border-radius: 3px; 
+}
+.filter__price_brand {
+    background-color: var(--black);
+    width: fit-content;
+    padding: .4rem;
+    border-radius: 3px;
+}
+.filter__price_brand form {
+   display: var(--d-flex);
+   justify-content: space-between;
+   padding: .3rem;
+   gap: .5rem;
+}
+.filter__price_brand input[type="number"] {
+   padding: .4rem;
+   background-color: transparent;
+   border: 2px solid #fff;
+   border-radius: 3px;
+   width: 30vw;
+   max-width: 9rem;
+   color: var(--white);
+   transition: .15s;
+}
+.filter__price_brand input[type="number"]:focus {
+   background-color: var(--neutral-800);
+   box-shadow: 0 0 10px #fff;
+}
+.filter__price_brand label {
+    display: block;
+    color: var(--white);
+    text-align: var(--center);
+}
+.filter__brand {
+    display: var(--d-flex);
+    flex-direction: column;
+    align-items: stretch;
+    margin-right: 1rem;
+}
+.filter__brand select{
+    background: var(--neutral-800);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+.filter__brand select:focus{
+    outline: 1px solid hsl(202, 93%, 53%);
+}
+.filter-submit {
+   padding: .4rem 1.7rem;
+   background: #000;
+   color: #fff;
+   border: 2px solid #fff;
+   border-radius: 3px;
+   cursor: pointer;
+   transition: .15s;
+}
+.filter-submit:hover {
+   background-color: hsla(208, 75%, 55%, 0.993);
+   box-shadow: 0 0 1rem hsla(208, 75%, 55%, 0.993);
+}
+.filter-icon {
+    transition: .16s;
+}
+.filter-icon:hover {
+    filter: drop-shadow(0 0 2px #fff);
+    transform: scale(1.2);
+}

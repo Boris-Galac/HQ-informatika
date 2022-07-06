@@ -1,0 +1,28 @@
+.socials {
+    position: fixed;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    display: var(--d-flex);
+    flex-direction: column;
+    border-right: 3px solid white;
+    transform: translateX(-2rem);
+    transition: .2s;
+}
+.socials:hover {
+    padding-left: .5rem;
+    background: var(--neutral-900);
+    transform: translateX(0rem);
+}
+.socials__btn {
+    padding: .5rem;
+    background: var(--neutral-900);
+    transition: .2s;
+}
+.socials__btn:hover {
+    transform: scale(1.5);
+}
+.socials i{
+    color: var(--white);
+    font-size: 1.5rem;
+}

@@ -33,3 +33,15 @@ body {
     background-attachment: fixed;
     height: 100%;
 }
+::-webkit-scrollbar {
+    background: var(--black);
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--blue-500);
+    width: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-300);
+}
+

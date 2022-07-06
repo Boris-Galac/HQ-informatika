@@ -59,7 +59,7 @@
                 </div>
         </nav>
     </header>
-    <main class="main">
+    <main class="main categories-main">
         <section class="categories">
             <div class="categories__wrapper">
                 <div class="categories__row">
@@ -115,7 +115,43 @@
                     </a>
                 </div>
             </div>
-        </section>    
+        </section>  
+        <section class="filter-bar">
+            <div class="filter__wrapper">
+                <div class="filter-layout__btns filter--box">
+                    <button class="filter-btn">
+                        <img class="filter-icon" src="/src/styles/icons/row.svg" alt="row">
+                    </button>
+                    <button class="filter-btn">
+                        <img class="filter-icon" src="/src/styles/icons/grid.svg" alt="grid">
+                    </button>
+                </div>
+                <div class="filter__price_brand filter--box">
+                    <form>
+                        <div>
+                            <label for="start-price">Cijena od</label>
+                            <input type="number" name="start" id="startPrice" min="0" placeholder="0">
+                        </div>
+                        <div>
+                            <label for="end-price">Cijena do</label>
+                            <input type="number" name="end" id="startPrice" min="0" placeholder="0">
+                        </div>
+                    </form>            
+                    <form>
+                        <div class="filter__brand">
+                            <label for="brand-choice">Odaberi brand</label>
+                            <select name="brand" id="brand">
+                              <option value="hp">HP</option>
+                              <option value="acer">Acer</option>
+                              <option value="sony">Sony</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Pretraži" class="filter-submit">
+                      </form>
+                </div>
+            </div>
+        </section>  
     </main>
     <footer class="footer">
         <div class="container">
@@ -157,6 +193,20 @@
             </div>
         </div>
     </footer>
+    <div class="socials">
+        <button class="socials__btn">
+            <i class="fa-brands fa-instagram"></i>
+        </button>
+        <button class="socials__btn">
+            <i class="fa-brands fa-facebook"></i>
+        </button>
+        <button class="socials__btn">
+            <i class="fa-brands fa-youtube"></i>
+        </button>
+        <button class="socials__btn">
+            <i class="fa-brands fa-shopify"></i>
+        </button>
+    </div>
 </body>
 <script type="module" src="js/main.js"></script>
 </html>
