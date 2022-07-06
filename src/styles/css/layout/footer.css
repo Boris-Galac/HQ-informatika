@@ -3,8 +3,8 @@
 }
 .footer .container {
     height: auto;
-    padding: 1rem;
-    padding-inline: 2rem;
+    padding-block: 6rem;
+    padding-inline: 1rem;
 }
 .footer__form {
     min-width: 18rem;
@@ -41,6 +41,7 @@
     background-color: hsl(202, 46%, 8%);
 }
 .footer__fieldset {
+    width: 100%;
     border-radius: 5px;
     padding: 1rem; 
     display: grid;
@@ -89,9 +90,11 @@
     }
 }
 
-@media (min-width:720px) {
+@media (min-width:45rem) {
     .footer__wrapper {
         display: flex;
         justify-content: space-between;
+        max-width: 80rem;
+        margin-inline: auto;
     }    
 }

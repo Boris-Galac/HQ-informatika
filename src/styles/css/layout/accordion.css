@@ -24,8 +24,9 @@
     }
     .accordion__tab {
         cursor: pointer;
-        width: 40vw;
-        min-width: 18rem;
+        width: 50vw;
+        min-width: 16rem;
+        max-width: 50rem;
         background-color: var(--accordion);
         padding: .9rem;
         border-radius: 4px;
