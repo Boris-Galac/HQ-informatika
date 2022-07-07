@@ -82,3 +82,20 @@
     filter: drop-shadow(0 0 2px #fff);
     transform: scale(1.2);
 }
+
+/* RESPONSIVE */
+
+@media (min-width: 700px) {
+    .filter__price_brand {
+        background-color: var(--black);
+        width: fit-content;
+        padding: .4rem;
+        border-radius: 3px;
+    }
+    .filter__price_brand  {
+        display: flex;
+        align-items: flex-end;
+        padding: .3rem;
+        gap: .5rem;
+     }
+}
