@@ -7,6 +7,7 @@
 
 @import 'components/buttons.css';
 @import 'components/product.css';
+@import 'components/pagination.css';
 
 @import 'layout/header.css';
 @import 'layout/navbar.css';
@@ -18,7 +19,8 @@
 @import 'layout/accordion.css';
 @import 'layout/footer.css';
 @import 'layout/socials.css';
-@import 'layout/category-navbar.css';
-@import 'layout/filter-bar.css';
+@import 'layout/category-base.css';
+@import 'layout/category-filter.css';
+@import 'layout/category-products.css';
 
 

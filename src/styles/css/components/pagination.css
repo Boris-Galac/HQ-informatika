@@ -1,0 +1,25 @@
+.pagination {
+    position: absolute;
+    inset: auto 0;
+    bottom: 0;
+    margin-top: 1rem;
+    display: var(--d-grid);
+    place-items: center;
+    background-color: var(--black);
+}
+.pagination__wrapper {
+    display: var(--d-flex);
+    padding: var(--measure-1);
+    gap: .3rem;
+}
+.pagination__btn {
+    background-color: var(--neutral-800);
+    color: var(--white);
+    padding: .5rem 1.6rem;
+    transition: .12s;
+}
+.pagination__btn:hover {
+    transform: scale(1.1);
+    background-color: var(--neutral-700);
+
+}
