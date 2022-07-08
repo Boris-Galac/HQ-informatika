@@ -8,6 +8,7 @@
 @import 'components/buttons.css';
 @import 'components/product.css';
 @import 'components/pagination.css';
+@import 'components/tabs.css';
 
 @import 'layout/header.css';
 @import 'layout/navbar.css';
@@ -22,5 +23,6 @@
 @import 'layout/category-base.css';
 @import 'layout/category-filter.css';
 @import 'layout/category-products.css';
+@import 'layout/single-product.css';
 
 

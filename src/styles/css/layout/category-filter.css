@@ -31,7 +31,7 @@
 .filter__price_brand input[type="number"] {
    padding: .4rem;
    background-color: transparent;
-   border: 2px solid #fff;
+   border: 1px solid hsl(215, 100%, 81%);
    border-radius: 3px;
    width: 30vw;
    max-width: 9rem;
@@ -40,7 +40,8 @@
 }
 .filter__price_brand input[type="number"]:focus {
    background-color: var(--neutral-800);
-   box-shadow: 0 0 10px #fff;
+   box-shadow: 0 0 15px hsl(203, 100%, 50%);
+   outline: 1px solid hsl(203, 100%, 50%);
 }
 .filter__price_brand label {
     display: block;
@@ -61,6 +62,8 @@
 }
 .filter__brand select:focus{
     outline: 1px solid hsl(202, 93%, 53%);
+   box-shadow: 0 0 15px rgb(0, 157, 255);
+
 }
 .filter-submit {
    padding: .4rem 1.7rem;
