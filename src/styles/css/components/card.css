@@ -1,0 +1,39 @@
+.card {
+    background-color: var(--neutral-100);
+    width: 60vw;
+    max-width: 14rem;
+    min-width: 13rem;
+    display: var(--d-grid);
+    grid-template-rows: auto 1fr auto;
+    padding: 1rem;
+    box-shadow: 0 3px 2px hsl(0, 0%, 79%);
+}
+.card__img {
+    margin: auto;
+    width: 10rem;
+    aspect-ratio: 1;
+}
+.card__body {
+    display: var(--d-grid);
+    gap: .4rem;
+}
+.card__price {
+    border: 2px solid rgb(213, 212, 212);
+    padding: .3rem;
+    border-radius: 5px;
+    width: max-content;
+    height: min-content;
+    margin-bottom: .5rem;
+}
+.price {
+    font-weight: 500;
+}
+.card__heading {
+    color: var(--neutral-800);
+}
+.card__heading span{
+    color: var(--neutral-600);
+}
+.card__paragraph {
+    color: var(--neutral-600);
+}

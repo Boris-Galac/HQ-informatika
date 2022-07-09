@@ -59,7 +59,7 @@
                 </div>
         </nav>
     </header>
-    <main class="main">
+    <main class="main product-main">
         <div class="single-product">
             <div class="single-product__img">
                 <img src="/src/styles/img/laptop-1.png" alt="laptop">
@@ -76,16 +76,103 @@
                         </div>
                         <p>Raspoloživo</p>
                     </div>
-                    <input type="number" name="start" id="startPrice" min="0" placeholder="0">
                 </div>
-                <button class="buy-btn">Dodaj 
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </button>
+                <div class="single-product__quantity-buy">
+                    <p>Količina</p>
+                    <input type="number" name="start" id="startPrice" min="0" placeholder="0" class="single-product__quantity">
+                    <button class="buy-btn">Dodaj 
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
             </div>
             <div class="tabs">
                 <h3 class="tabs__heading">Detalji</h3>
                 <div class="tab">
-                    
+                    <div class="tab__wrapper">
+                        <div class="tab__btn-wrapper">
+                            <button class="tab__btn active">Opis</button>
+                            <button class="tab__btn">Spec</button>
+                            <button class="tab__btn">Komentari</button>
+                        </div>
+                        <div class="tab__content-wrapper">
+                            <article class="tab__content active">
+                                <h3>This is tab one</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto placeat tempora consectetur praesentium est ducimus in amet repudiandae culpa facilis.</p>
+                            </article>
+                            <article class="tab__content">
+                                <h3>This is tab two</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae exercitationem ex magnam, assumenda voluptates corporis perspiciatis, nisi cupiditate eaque odio modi repellat in repudiandae dolorum iure?
+                                </p>
+                            </article>
+                            <article class="tab__content">
+                                <h3>This is tab three</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, possimus.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slider">
+                <div class="carousel-slider__btns">
+                    <button class="carousel-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel__wrapper">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="/src/styles/img/laptop-2.png" alt="laptop" class="card__img">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
+                            <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__price">
+                                <span class="price">499,00 €</span>
+                            </div>
+                            <button class="buy-btn">Dodaj 
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="/src/styles/img/desktop-1.png" alt="laptop" class="card__img">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
+                            <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nesciunt, quasi porro totam libero nulla.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__price">
+                                <span class="price">349,00 €</span>
+                            </div>
+                            <button class="buy-btn">Dodaj 
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="/src/styles/img/laptop-1.png" alt="laptop" class="card__img">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
+                            <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nesciunt, quasi porro totam libero nulla.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__price">
+                                <span class="price">349,00 €</span>
+                            </div>
+                            <button class="buy-btn">Dodaj 
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

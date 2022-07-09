@@ -1,6 +1,24 @@
+.product-main {
+    background-color: var(--white);
+}
 .single-product {
     background-color: var(--white);
     padding: var(--measure-1);
+    /* width: min-content; */
+    /* margin-inline: auto; */
+}
+.single-product__quantity-buy {
+    display: var(--d-flex);
+    align-items: var(--center);
+    gap: .5rem;
+}
+.single-product__quantity-buy .buy-btn{
+    width: 50%;
+    display: var(--d-flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    gap: .5rem;
+    margin-inline: auto;
 }
 .single-product .buy-btn{
     position: static;
@@ -13,7 +31,7 @@
     gap: .5rem;
 }
 .single-product__availability {
-    padding-block: 1rem;
+    padding-block: var(--measure-1);
     display: var(--d-flex);
     justify-content: space-between;
 }
@@ -28,7 +46,7 @@
     padding: .5rem;
     border: 2px solid hsl(120, 20%, 83%);
 }
-.single-product__availability input[type="number"] {
+.single-product__quantity {
     background-color: var(--neutral-800);
     padding: .4rem;
     border: 1px solid hsl(215, 100%, 81%);
@@ -38,7 +56,7 @@
     color: var(--white);
     transition: .15s;
  }
- .single-product__availability input[type="number"]:focus {
+ .single-product__quantity:focus {
     background-color: var(--neutral-800);
     box-shadow: 0 0 15px hsl(203, 100%, 50%);
     outline: 1px solid hsl(203, 100%, 50%);

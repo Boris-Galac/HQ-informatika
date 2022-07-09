@@ -1,9 +1,34 @@
 .tabs {
-    
+    position: relative;
+    margin-bottom: 2rem;
 }
 .tabs__heading {
-    
+    margin-block: 1.5rem;
 }
-.tab {
-    
+.tab__content-wrapper {
+    position: relative;
+}
+.tab__btn {
+    cursor: pointer;
+    background-color: var(--neutral-100);
+    padding: .7rem 1.5rem;
+}
+.tab__content {
+    padding: 1rem;
+    display: none;
+    border-radius: 0px 3px 3px 3px;
+}
+.tab__btn.active {
+    background-color: hsl(207, 65%, 93%);
+}
+.tab__btn.active:hover {
+    background-color: hsl(207, 65%, 94.5%);
+}
+.tab__content.active {
+    background-color: hsl(207, 65%, 93%);
+    box-shadow: 0 2px 0 hsl(204, 16%, 78%);
+    display: block;
+}
+.tab__content h3 {
+    margin-bottom: 1rem;
 }
