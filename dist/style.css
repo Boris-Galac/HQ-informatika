@@ -237,6 +237,18 @@ select {
     margin-inline: auto;
 }
 
+.price {
+    display: var(--d-flex);
+    align-items: var(--center);
+    justify-content: var(--center);
+    justify-self: var(--center);
+    padding: .5rem;
+    border-radius: 50px;
+    border: 4px solid hsl(198, 22%, 91%);
+    background-color: var(--white);
+    font-weight: 500;
+}
+
 button {
     background: none;
     border: none;
@@ -313,8 +325,8 @@ button {
     max-width: 650px;
     margin: auto;
     display: var(--d-grid);
-    grid-template-columns: 7% 1fr 1fr;
-    height: 250px;
+    grid-template-columns: 1fr 1fr;
+    height: 15.625rem;
 }
 
 .product__stars {
@@ -364,16 +376,6 @@ button {
     display: var(--d-grid);
     grid-template-columns: 1fr 1fr;
     place-items: var(--center);
-}
-
-.product__price {
-    display: flex;
-    align-items: var(--center);
-    justify-content: var(--center);
-    justify-self: var(--center);
-    padding: .5rem;
-    border-radius: 50px;
-    border: 4px solid rgb(235, 240, 242);
 }
 
 .buy-btn {
@@ -449,15 +451,15 @@ button {
 }
 
 .tab__btn.active {
-    background-color: hsl(207, 65%, 93%);
+    background-color: var(--neutral-200);
 }
 
 .tab__btn.active:hover {
-    background-color: hsl(207, 65%, 94.5%);
+    background-color: hsl(198, 43%, 91%);
 }
 
 .tab__content.active {
-    background-color: hsl(207, 65%, 93%);
+    background-color: var(--neutral-200);
     box-shadow: 0 2px 0 hsl(204, 16%, 78%);
     display: block;
 }
@@ -467,7 +469,8 @@ button {
 }
 
 .card {
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-200);
+    border: 2px solid rgb(200, 212, 223);
     width: 60vw;
     max-width: 14rem;
     min-width: 13rem;
@@ -489,20 +492,7 @@ button {
 }
 
 .card__price {
-    border: 2px solid rgb(213, 212, 212);
-    padding: .3rem;
-    border-radius: 5px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
     margin-bottom: .5rem;
-}
-
-.price {
-    font-weight: 500;
 }
 
 .card__heading {
@@ -514,7 +504,7 @@ button {
 }
 
 .card__paragraph {
-    color: var(--neutral-600);
+    color: var(--neutral-700);
 }
 
 .header {
@@ -617,6 +607,12 @@ button {
     gap: 3rem;
 }
 
+.nav__list  {
+    display: var(--d-flex);
+    justify-content: var(--center);
+    gap: 3rem;
+}
+
 .nav__link {
     position: relative;
     color: var(--white);
@@ -625,6 +621,9 @@ button {
     text-transform: uppercase;
     padding: .5rem 1.7rem;
     isolation: isolate;
+    /* display: var(--d-flex); */
+    /* align-items: var(--center); */
+    /* justify-content: var(--center); */
 }
 
 .nav__link::after {
@@ -1300,7 +1299,7 @@ button {
     padding: 1rem;
 }
 
-.main__product__price {
+/* .main__product__price {
     display: var(--d-flex);
     align-items: var(--center);
     justify-content: var(--center);
@@ -1308,7 +1307,7 @@ button {
     padding: .5rem;
     border-radius: 50px;
     border: 4px solid hsl(197, 21%, 94%);
-}
+} */
 
 .main__product-second .buy-btn{
     position: static;
@@ -1360,46 +1359,73 @@ button {
 .single-product {
     background-color: var(--white);
     padding: var(--measure-1);
-    /* width: min-content; */
-    /* margin-inline: auto; */
+    max-width: 43rem;
+    margin-inline: auto;
 }
 
-.single-product__quantity-buy {
+.single-product__info {
+    margin-bottom: 1rem;
+}
+
+.single-product__body {
+    min-width: 20rem;
+    border: 1px solid lightgray;
+    padding: .5rem;
+    background-color: var(--neutral-100);
+    border-radius: 5px;
+}
+
+.single-product__body p{
+    font-weight: 500;
+}
+
+.single-product__row-1,
+.single-product__row-2 {
     display: var(--d-flex);
+    justify-content: space-between;
+    align-items: var(--center);
+}
+
+.single-product__row-2 {
+    align-items: flex-end;
+}
+
+.single-product__avilability{
     align-items: var(--center);
     gap: .5rem;
 }
 
-.single-product__quantity-buy .buy-btn{
-    width: 50%;
+.single-product__img img{
+    aspect-ratio: 1;
+    width: 20vw;
+    min-width: 10rem;
+    max-width: 20rem;
+}
+
+.single-product__row-1 div{
+    display: var(--d-flex);
+}
+
+.single-product__quant {
+    background-color: var(--neutral-800);
+    padding: .4rem;
+    border: 1px solid hsl(215, 100%, 81%);
+    border-radius: 3px;
+    width: 20vw;
+    max-width: 6rem;
+    color: var(--white);
+    transition: .15s;
+}
+
+.single-product .buy-btn{
     display: var(--d-flex);
     justify-content: var(--center);
     align-items: var(--center);
     gap: .5rem;
-    margin-inline: auto;
-}
-
-.single-product .buy-btn{
     position: static;
     transform: none;
-    width: 100%;
-}
-
-.single-product__availability > div{
-    display: var(--d-flex);
-    align-items: var(--center);
-    gap: .5rem;
-}
-
-.single-product__availability {
-    padding-block: var(--measure-1);
-    display: var(--d-flex);
-    justify-content: space-between;
-}
-
-.single-product__availability p{
-    font-weight: 500;
-    color: var(--neutral-800);
+    width: 50%;
+    max-width: 20rem;
 }
 
 .single-product__icon {
@@ -1410,15 +1436,8 @@ button {
     border: 2px solid hsl(120, 20%, 83%);
 }
 
-.single-product__quantity {
-    background-color: var(--neutral-800);
-    padding: .4rem;
-    border: 1px solid hsl(215, 100%, 81%);
-    border-radius: 3px;
-    width: 30vw;
-    max-width: 9rem;
-    color: var(--white);
-    transition: .15s;
+.single-product__quantity:hover {
+    background-color: var(--neutral-700);
  }
 
 .single-product__quantity:focus {
@@ -1429,14 +1448,24 @@ button {
 
 .carousel-slider {
     position: relative;
-    padding: .5rem;
-    background-color: var(--neutral-500);
     overflow: hidden;
-    margin-inline: auto; 
-    width: -webkit-max-content; 
-    width: -moz-max-content; 
-    width: max-content;
-    margin-inline: auto;
+    width: 70vw;
+    max-width: 30rem;
+}
+
+.carousel-slider::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: linear-gradient(90deg, transparent, hsl(0, 0%, 100%));
+    width: 8rem;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.carousel-slider__heading {
+    margin-bottom: 1rem;
 }
 
 .carousel-slider__btns {
@@ -1446,7 +1475,8 @@ button {
     display: var(--d-flex);
     justify-content: space-between;
     width: 100%;
-    padding-inline: 1rem;
+    padding-inline: .5rem;
+    z-index: 2;
 }
 
 .carousel-left,
@@ -1467,9 +1497,8 @@ button {
 
 .carousel__wrapper {
     display: var(--d-flex);
-    gap: .5rem;
-    /* width: 50vw; */
-    /* padding: .5rem; */
+    gap: .2rem;
+    width: 10rem;
 }
 
 

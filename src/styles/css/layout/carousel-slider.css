@@ -1,11 +1,21 @@
 .carousel-slider {
     position: relative;
-    padding: .5rem;
-    background-color: var(--neutral-500);
     overflow: hidden;
-    margin-inline: auto; 
-    width: max-content;
-    margin-inline: auto;
+    width: 70vw;
+    max-width: 30rem;
+}
+.carousel-slider::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: linear-gradient(90deg, transparent, hsl(0, 0%, 100%));
+    width: 8rem;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+.carousel-slider__heading {
+    margin-bottom: 1rem;
 }
 .carousel-slider__btns {
     position: absolute;
@@ -14,7 +24,8 @@
     display: var(--d-flex);
     justify-content: space-between;
     width: 100%;
-    padding-inline: 1rem;
+    padding-inline: .5rem;
+    z-index: 2;
 }
 .carousel-left,
 .carousel-right {
@@ -32,7 +43,6 @@
 }
 .carousel__wrapper {
     display: var(--d-flex);
-    gap: .5rem;
-    /* width: 50vw; */
-    /* padding: .5rem; */
+    gap: .2rem;
+    width: 10rem;
 }

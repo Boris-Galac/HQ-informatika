@@ -44,7 +44,7 @@
         <nav class="nav">
                 <ul class="nav__list">
                     <li><a class="nav__link" href="#">It oprema</a></li>
-                    <li><a class="nav__link" href="#">Multimedija</a></li>
+                    <li><a class="nav__link" href="#">Multimedija</a><i class="fa-solid fa-sort-down"></i></li>
                     <li><a class="nav__link" href="#">Mobile</a></li>
                     <li><a class="nav__link" href="#">Kontakt</a></li>
                 </ul>
@@ -69,24 +69,29 @@
                 <p>Core i5 1035G7, 8GB, 256GB SSD, Intel Graphics, 13.5" Touch, Windows 10, crni</p>
             </div>
             <div class="single-product__body">
-                <div class="single-product__availability">
-                    <div>
+                <div class="single-product__row-1">
+                    <div class="single-product__avilability">
                         <div class="single-product__icon">
                             <img src="/src/styles/icons/checked.svg" alt="available">
                         </div>
                         <p>Raspoloživo</p>
                     </div>
+                    <div class="single-product__price">
+                        <span class="price">699,00€</span>
+                    </div>
                 </div>
-                <div class="single-product__quantity-buy">
-                    <p>Količina</p>
-                    <input type="number" name="start" id="startPrice" min="0" placeholder="0" class="single-product__quantity">
+                <div class="single-product__row-2">
+                    <div class="single__product__quantity-wrapper">
+                        <p>Količina</p>
+                        <input type="number" name="start" id="startPrice" min="0" placeholder="0" class="single-product__quant">
+                    </div>
                     <button class="buy-btn">Dodaj 
                         <i class="fa-solid fa-cart-shopping"></i>
                     </button>
                 </div>
             </div>
             <div class="tabs">
-                <h3 class="tabs__heading">Detalji</h3>
+                <h2 class="tabs__heading">Detalji</h2>
                 <div class="tab">
                     <div class="tab__wrapper">
                         <div class="tab__btn-wrapper">
@@ -112,7 +117,8 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-slider">
+            <section class="carousel-slider">
+                <h2 class="carousel-slider__heading">Recommended</h2>
                 <div class="carousel-slider__btns">
                     <button class="carousel-left">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -174,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
     <footer class="footer">

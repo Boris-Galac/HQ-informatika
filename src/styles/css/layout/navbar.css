@@ -9,6 +9,11 @@
     justify-content: var(--center);
     gap: 3rem;
 }
+.nav__list  {
+    display: var(--d-flex);
+    justify-content: var(--center);
+    gap: 3rem;
+}
 .nav__link {
     position: relative;
     color: var(--white);
@@ -17,6 +22,9 @@
     text-transform: uppercase;
     padding: .5rem 1.7rem;
     isolation: isolate;
+    /* display: var(--d-flex); */
+    /* align-items: var(--center); */
+    /* justify-content: var(--center); */
 }
 .nav__link::after {
     content: '';

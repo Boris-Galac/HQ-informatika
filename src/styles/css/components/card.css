@@ -1,5 +1,6 @@
 .card {
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-200);
+    border: 2px solid rgb(200, 212, 223);
     width: 60vw;
     max-width: 14rem;
     min-width: 13rem;
@@ -18,15 +19,7 @@
     gap: .4rem;
 }
 .card__price {
-    border: 2px solid rgb(213, 212, 212);
-    padding: .3rem;
-    border-radius: 5px;
-    width: max-content;
-    height: min-content;
     margin-bottom: .5rem;
-}
-.price {
-    font-weight: 500;
 }
 .card__heading {
     color: var(--neutral-800);
@@ -35,5 +28,5 @@
     color: var(--neutral-600);
 }
 .card__paragraph {
-    color: var(--neutral-600);
+    color: var(--neutral-700);
 }

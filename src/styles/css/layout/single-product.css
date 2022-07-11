@@ -4,40 +4,63 @@
 .single-product {
     background-color: var(--white);
     padding: var(--measure-1);
-    /* width: min-content; */
-    /* margin-inline: auto; */
+    max-width: 43rem;
+    margin-inline: auto;
 }
-.single-product__quantity-buy {
+.single-product__info {
+    margin-bottom: 1rem;
+}
+.single-product__body {
+    min-width: 20rem;
+    border: 1px solid lightgray;
+    padding: .5rem;
+    background-color: var(--neutral-100);
+    border-radius: 5px;
+}
+.single-product__body p{
+    font-weight: 500;
+}
+.single-product__row-1,
+.single-product__row-2 {
     display: var(--d-flex);
+    justify-content: space-between;
+    align-items: var(--center);
+}
+.single-product__row-2 {
+    align-items: flex-end;
+}
+.single-product__avilability{
     align-items: var(--center);
     gap: .5rem;
 }
-.single-product__quantity-buy .buy-btn{
-    width: 50%;
+.single-product__img img{
+    aspect-ratio: 1;
+    width: 20vw;
+    min-width: 10rem;
+    max-width: 20rem;
+}
+.single-product__row-1 div{
+    display: var(--d-flex);
+}
+.single-product__quant {
+    background-color: var(--neutral-800);
+    padding: .4rem;
+    border: 1px solid hsl(215, 100%, 81%);
+    border-radius: 3px;
+    width: 20vw;
+    max-width: 6rem;
+    color: var(--white);
+    transition: .15s;
+}
+.single-product .buy-btn{
     display: var(--d-flex);
     justify-content: var(--center);
     align-items: var(--center);
     gap: .5rem;
-    margin-inline: auto;
-}
-.single-product .buy-btn{
     position: static;
     transform: none;
-    width: 100%;
-}
-.single-product__availability > div{
-    display: var(--d-flex);
-    align-items: var(--center);
-    gap: .5rem;
-}
-.single-product__availability {
-    padding-block: var(--measure-1);
-    display: var(--d-flex);
-    justify-content: space-between;
-}
-.single-product__availability p{
-    font-weight: 500;
-    color: var(--neutral-800);
+    width: 50%;
+    max-width: 20rem;
 }
 .single-product__icon {
     background-color: var(--green-400);
@@ -46,15 +69,8 @@
     padding: .5rem;
     border: 2px solid hsl(120, 20%, 83%);
 }
-.single-product__quantity {
-    background-color: var(--neutral-800);
-    padding: .4rem;
-    border: 1px solid hsl(215, 100%, 81%);
-    border-radius: 3px;
-    width: 30vw;
-    max-width: 9rem;
-    color: var(--white);
-    transition: .15s;
+ .single-product__quantity:hover {
+    background-color: var(--neutral-700);
  }
  .single-product__quantity:focus {
     background-color: var(--neutral-800);

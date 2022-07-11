@@ -19,13 +19,13 @@
     border-radius: 0px 3px 3px 3px;
 }
 .tab__btn.active {
-    background-color: hsl(207, 65%, 93%);
+    background-color: var(--neutral-200);
 }
 .tab__btn.active:hover {
-    background-color: hsl(207, 65%, 94.5%);
+    background-color: hsl(198, 43%, 91%);
 }
 .tab__content.active {
-    background-color: hsl(207, 65%, 93%);
+    background-color: var(--neutral-200);
     box-shadow: 0 2px 0 hsl(204, 16%, 78%);
     display: block;
 }
