@@ -14,6 +14,14 @@
     justify-content: var(--center);
     gap: 3rem;
 }
+.nav__item {
+    position: relative;
+}
+.nav__item i{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
 .nav__link {
     position: relative;
     color: var(--white);
@@ -22,9 +30,6 @@
     text-transform: uppercase;
     padding: .5rem 1.7rem;
     isolation: isolate;
-    /* display: var(--d-flex); */
-    /* align-items: var(--center); */
-    /* justify-content: var(--center); */
 }
 .nav__link::after {
     content: '';
