@@ -17,3 +17,26 @@
     background-color: var(--white);
     font-weight: 500;
 }
+
+/* registration and sign up */
+
+.sign-up,
+.registration {
+    color: var(--white);
+    font-weight: 500;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: .5rem 1.7rem;
+    transition: var(--time-transition);
+    display: none;
+}
+.sign-up:hover {
+        background: hsla(0, 0%, 100%, 0.150);
+    }
+.registration {
+    margin-left: .6rem;
+    background-color: var(--buy-btn);
+}
+.registration:hover {
+    background-color: hsl(105, 46%, 53%);
+}

@@ -1,0 +1,16 @@
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    cursor: pointer;
+    animation: overlay-active .8s;
+}
+@keyframes overlay-active {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

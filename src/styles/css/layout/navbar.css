@@ -1,14 +1,104 @@
 .nav {
-    background: rgba(173, 206, 255, 0.171);
+    background: rgba(83, 100, 131, 0.7);
+    box-shadow: 0 0 20px 10px hsla(240, 97%, 52%, 0.386);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.278);
+    padding: var(--measure-1);
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 30rem;
+    transition: .3s;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+.nav.active {
+    display: var(--d-grid);
+    transform: scaleY(1);
+}
+.nav__list {
+    display: var(--d-flex);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
+}
+.nav__item {
+    position: relative;
+}
+.nav__item:nth-child(2) {
+    margin-right: 1rem;
+}
+.nav__list-multimedia {
+    display: var(--d-flex);
+    flex-direction: column;
+    align-items: flex-end;
+    transition: .3s;
+    transform-origin: top;
+    transform: scaleY(0);
+    display: none;
+}
+.nav__list-multimedia.active {
+    transform: scaleY(1);
+}
+.nav__list-multimedia .nav__link{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: var(--measure-1);
+    transition: .3s;
+}
+.nav__list-multimedia .nav__link:hover{
+    transform: scale(1.2);
+}
+.nav__item i{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: var(--white);
+}
+.nav__link {
+    position: relative;
+    color: var(--white);
+    font-size: 1.125rem;
+    border-radius: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: .5rem 1.7rem;
+    isolation: isolate;
+    transition: .3s;
+}
+.nav__link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: var(--time-transition);
+    z-index: -1;
+    border-radius: 3px;
+    background: hsla(0, 0%, 100%, 0.200);
+    transform-origin: center;
+    transform: scale(0);
+}
+.nav__link:hover:after {
+    transform: scale(1);
+}
+.nav__sign-in-btns {
+    display: var(--d-flex);
+    margin-left: auto;
+    margin-block: 1rem;
+}
+.nav__sign-in-btns .sign-up,
+.nav__sign-in-btns .registration {
+    display: block;
+}
+/*
+ .nav {
+    background-color: rgba(173, 206, 255, 0.171);
+    background-color: rgba(173, 206, 255, 0.171);
     padding: var(--measure-1);
     margin-bottom: 2rem;
     display: none;
-}
-.nav__list  {
-    display: var(--d-flex);
-    justify-content: var(--center);
-    gap: 3rem;
-}
+} 
 .nav__list  {
     display: var(--d-flex);
     justify-content: var(--center);
@@ -44,7 +134,8 @@
 }
 .nav__link:hover::after {
     transform: scale(1);
-}
+} 
+*/
 @media (min-width: 960px) {
     .nav {
         display: flex;
