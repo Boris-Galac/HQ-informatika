@@ -1,4 +1,12 @@
 let overlay = document.createElement('div');
+const createOverlay = (content) => {
+  overlay.classList.add('overlay');
+  document.body.append(overlay);
+  overlay.addEventListener('click', (e) => {
+    content.classList.remove('active');
+    overlay.remove();
+  });
+};
 
 // nav menu
 
@@ -11,13 +19,22 @@ hamIcon.addEventListener('click', (e) => {
     line.classList.add('active');
   });
   navMenu.classList.add('active');
-  overlay.classList.add('overlay');
-  document.body.append(overlay);
+  createOverlay(navMenu);
   overlay.addEventListener('click', (e) => {
-    navMenu.classList.remove('active');
-    overlay.remove();
     lines.forEach((line) => {
       line.classList.remove('active');
     });
+  });
+});
+
+// shopping cart open
+
+let shoppingCartIcons = document.querySelectorAll('.cart-btn');
+const shoppingCartMenu = document.querySelector('.shopping-cart');
+
+shoppingCartIcons.forEach((cart) => {
+  cart.addEventListener('click', (e) => {
+    shoppingCartMenu.classList.toggle('active');
+    createOverlay(shoppingCartMenu);
   });
 });

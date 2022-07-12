@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header__wrapper">
             <a href="index.html">
                 <h1 class="header__logo">
                     <img src="/src/styles/img/logo.png" alt="hq-informatika-logo">
@@ -24,7 +24,7 @@
                     <button class="header__search-btn">
                         <img src="/src/styles/icons/search.svg" alt="search">
                     </button>
-                    <button class="header__cart-btn">
+                    <button class="header__cart-btn cart-btn">
                         <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
                         <span id="header__amount-items"></span>
                     </button>
@@ -33,10 +33,10 @@
                         <div class="ham-line"></div>
                         <div class="ham-line"></div>
                     </button>
-                    <button class="header__sign-up">
+                    <button class="header__sign-up sign-up" id="sign-up">
                         Prijavi se
                     </button>
-                    <button class="header__registration">
+                    <button class="header__registration registration" id="registration">
                         Registracija
                     </button>
             </div>
@@ -49,6 +49,12 @@
                     <li class="nav__item">
                         <a class="nav__link" href="#">Multimedija</a>
                         <i class="fa-solid fa-sort-down"></i>
+                        <ul class="nav__list-multimedia">
+                            <li><a class="nav__link" href="#">Tv/audio video</a></li>
+                            <li><a class="nav__link" href="#">Konzole</a></li>
+                            <li><a class="nav__link" href="#">Sport i oprema</a></li>
+                            <li><a class="nav__link" href="#">Mali kućanski alati</a></li>
+                        </ul>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link" href="#">Mobile</a>
@@ -66,7 +72,46 @@
                         <span id="header__amount-items"></span>
                     </button>
                 </div>
+                <div class="nav__sign-in-btns">
+                   <button class="nav__sign-up sign-up" id="sign-up">
+                       Prijavi se
+                   </button>
+                   <button class="nav__registration registration" id="registration">
+                       Registracija
+                   </button>
+            </div>
         </nav>
+        <div class="shopping-cart">
+            <div class="shopping-cart__amount-items">
+                <div class="shopping-cart__amount-wrapper">
+                    <h3 class="shopping-cart__amount-heading">MyCart</h3>
+                    <h4 class="shopping-cart__amount-items">(3) items</h4>
+                </div>
+                <button class="shopping-cart__scroll-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                </button>
+                <div class="shopping-cart__header-row">
+                    <p>Proizvod</p>
+                    <p>Cijena</p>
+                    <p>Komada</p>
+                    <p>Ukupno</p>
+                </div>
+                <ul class="shopping-cart__item-list">
+                    <li class="shopping-cart__item">
+                        <p class="shopping-cart__info">
+                            LAPTOP
+                        </p>
+                        <h3 class="shopping-cart__price">17.234</h3>
+                        <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
+                        <h3 class="shopping-cart__overall">17.249,00 kn</h3>
+                    </li>
+                </ul>
+                <button class="shopping-cart__scroll-down">
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <button class="shopping-cart__checkout">Checkout</button>
+            </div>
+        </div>
     </header>
     <main class="main product-main">
         <div class="single-product">

@@ -1,15 +1,17 @@
 .header {
     color: var(--white);
     padding-block: .3rem;
-}
-.header .container {
     position: relative;
+    z-index: 1;
+}
+.header__wrapper {
     display: var(--d-flex);
     justify-content: space-between;
     align-items: var(--center);
     height: auto;
+    padding-inline: 1rem;
 }
-.header .container a{
+.header__wrapper a{
     color: var(--white);
 }
 .header__logo {
