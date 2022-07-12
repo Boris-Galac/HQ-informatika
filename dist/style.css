@@ -1097,6 +1097,7 @@ button {
 }
 
 .action__ad-nintendo {
+    position: relative;
     display: var(--d-grid);
 }
 
@@ -1118,6 +1119,28 @@ button {
 .action__subheading {
     color: var(--neutral-300);
     font-size: clamp(1rem, 3.5vw, 2rem);
+}
+
+.action__price {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--neutral-300);
+    right: 1rem;
+    top: 5rem;
+    transform: rotate(20deg);
+    opacity: .8;
+    z-index: 2;
+}
+
+.action__price:after {
+    content: 'samo';
+    position: absolute;
+    font-size: 1.4rem;
+    color: var(--neutral-300);
+    left: 0rem;
+    top: -.8rem;
+    opacity: .7;
 }
 
 .action__countdown {
