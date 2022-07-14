@@ -824,6 +824,16 @@ button {
 
 }
 
+.hero__slider {
+    position: relative;
+    /* height: 100%; */
+}
+
+.hero__slider > picture {
+    position: absolute;
+    inset: 0;
+}
+
 .header {
     color: var(--white);
     padding-block: .3rem;
@@ -1129,14 +1139,6 @@ button {
 
 .hero {
     position: relative;
-}
-
-.hero__slider {
-    display: flex;
-}
-
-.hero__slider > picture {
-    display: flex;
 }
 
 .hero img {

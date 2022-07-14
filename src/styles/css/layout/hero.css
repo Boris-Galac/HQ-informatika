@@ -1,12 +1,6 @@
 .hero {
     position: relative;
 }
-.hero__slider {
-    display: flex;
-}
-.hero__slider > picture {
-    display: flex;
-}
 .hero img {
     image-rendering: optimizeSpeed;
     width: 100%;   

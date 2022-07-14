@@ -132,20 +132,29 @@
     <main class="main">
         <section class="hero">
             <div class="hero__slider">
-                <picture>
-                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet).png">
-                    <img src="/src/styles/img/Advertisement(mobile).png" alt="advertisement">
+                <picture class="hero__slider-picture current">
+                    <source media="(min-width:960px)" srcset="/src/styles/img/Advertisement(desktop).png">
                     <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet).png">
                     <img src="/src/styles/img/Advertisement(mobile).png" alt="advertisement">
                 </picture>
-                <div class="hero__arrows">
-                    <button class="left">
-                        <i class="fa-solid fa-chevron-left left-arrow"></i>
-                    </button>
-                    <button class="right">
-                        <i class="fa-solid fa-chevron-right right-arrow"></i>
-                    </button>
-                </div>
+                <picture class="hero__slider-picture">
+                    <source media="(min-width:960px)" srcset="/src/styles/img/Advertisement(desktop-server).png">
+                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet-server).png">
+                    <img src="/src/styles/img/Advertisement(mobile-server).png" alt="advertisement">
+                </picture>
+                <picture class="hero__slider-picture">
+                    <source media="(min-width:960px)" srcset="/src/styles/img/Advertisement(gaming-desktop).png">
+                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(gaming-tablet).png">
+                    <img src="/src/styles/img/Advertisement(gaming-mobile).png" alt="advertisement">
+                </picture>
+            </div>
+            <div class="hero__arrows">
+                <button class="left">
+                    <i class="fa-solid fa-chevron-left left-arrow"></i>
+                </button>
+                <button class="right">
+                    <i class="fa-solid fa-chevron-right right-arrow"></i>
+                </button>
             </div>
         </section>
         <section class="categories">
