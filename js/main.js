@@ -16,9 +16,9 @@ const navMenu = document.querySelector('.nav');
 hamIcon.addEventListener('click', (e) => {
   let lines = [...e.currentTarget.children];
   lines.forEach((line) => {
-    line.classList.add('active');
+    line.classList.toggle('active');
   });
-  navMenu.classList.add('active');
+  navMenu.classList.toggle('active');
   createOverlay(navMenu);
   overlay.addEventListener('click', (e) => {
     lines.forEach((line) => {
@@ -36,5 +36,17 @@ shoppingCartIcons.forEach((cart) => {
   cart.addEventListener('click', (e) => {
     shoppingCartMenu.classList.toggle('active');
     createOverlay(shoppingCartMenu);
+  });
+});
+
+// search
+
+const searchBtn = document.querySelectorAll('.search-btn');
+const searchWindow = document.querySelector('.search');
+
+searchBtn.forEach((search) => {
+  search.addEventListener('click', (e) => {
+    searchWindow.classList.toggle('active');
+    createOverlay(searchWindow);
   });
 });

@@ -21,7 +21,7 @@
                 </h1>
             </a>
             <div class="header__btns">
-                    <button class="header__search-btn">
+                    <button class="header__search-btn search-btn">
                         <img src="/src/styles/icons/search.svg" alt="search">
                     </button>
                     <button class="header__cart-btn cart-btn">
@@ -115,10 +115,26 @@
             </div>
         </div>
     </header>
+        <div class="search">
+            <form class="search__form">
+                <fieldset class="search__fieldset">
+                    <label for="search__label">
+                        <input type="search" name="search" class="search__input" id="search-form" placeholder="Pretraži...">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="submit" value="Traži" class="search__submit">
+                    </label>
+                </fieldset>
+                <ul class="search__list">
+                    <li class="search__item"></li>
+                </ul>
+            </form>
+        </div>
     <main class="main">
         <section class="hero">
             <div class="hero__slider">
                 <picture>
+                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet).png">
+                    <img src="/src/styles/img/Advertisement(mobile).png" alt="advertisement">
                     <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet).png">
                     <img src="/src/styles/img/Advertisement(mobile).png" alt="advertisement">
                 </picture>

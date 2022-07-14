@@ -32,6 +32,12 @@ body {
     background: url('/src/styles/img/background-img.jpg');
     background-attachment: fixed;
     height: 100%;
+    padding-top: 4rem;
+}
+@media (min-width: 60rem) {
+    body {
+        padding-top: 11rem;
+    }
 }
 ::-webkit-scrollbar {
     background: var(--black);

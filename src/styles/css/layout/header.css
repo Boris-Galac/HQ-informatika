@@ -1,8 +1,11 @@
 .header {
     color: var(--white);
     padding-block: .3rem;
-    position: relative;
+    position: fixed;
+    inset: auto 0;
     z-index: 1;
+    background: url('/src/styles/img/background-img.jpg');
+    top: 0;
 }
 .header__wrapper {
     display: var(--d-flex);
