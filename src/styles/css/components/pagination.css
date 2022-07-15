@@ -21,5 +21,4 @@
 .pagination__btn:hover {
     transform: scale(1.1);
     background-color: var(--neutral-700);
-
 }

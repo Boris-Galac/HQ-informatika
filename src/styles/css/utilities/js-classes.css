@@ -4,4 +4,56 @@
     z-index: 0;
     background-color: hsla(0, 0%, 0%, 0.9);
     cursor: pointer;
+    transition: .3s;
+}
+
+/* search active*/
+
+.search {
+    opacity: 0;
+    pointer-events: none;
+}
+.search.active {
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transition: .5s;
+    opacity: 1;
+    pointer-events: visible;
+}
+
+/* shopping cart active */
+
+.shopping-cart {
+    transition: var(--time-transition);
+    transform-origin: top;
+    opacity: 0;
+    transform: scaleY(0);
+    pointer-events: none;
+}
+.shopping-cart.active {
+    transform: scaleY(1);
+    pointer-events: visible;
+    opacity: 1;
+}
+
+/* accordion active */
+
+.accordion__body.active {
+    display: grid;
+    animation: accordion .7s forwards;
+}
+@keyframes accordion {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.arrow.active{
+    transform: rotateZ(180deg);
 }

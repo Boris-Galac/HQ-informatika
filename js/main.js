@@ -101,3 +101,39 @@ leftArrow.addEventListener('click', () => {
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
+// action countdown
+
+const countdown = () => {
+  const countDate = new Date('September 30, 2022 00:00:00').getTime();
+  const currentTime = new Date().getTime();
+  const gap = countDate - currentTime;
+
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const textDay = Math.floor(gap / day);
+  const textHour = Math.floor((gap % day) / hour);
+  const textMinute = Math.floor((gap % hour) / minute);
+  const textSecond = Math.floor((gap % minute) / second);
+
+  document.querySelector('.day').innerText = textDay;
+  document.querySelector('.hour').innerText = textHour;
+  document.querySelector('.minute').innerText = textMinute;
+  document.querySelector('.second').innerText = textSecond;
+};
+
+setInterval(countdown, 1000);
+
+// accordion
+
+const accordionHeader = document.querySelectorAll('.accordion__header');
+
+accordionHeader.forEach((headerTab) => {
+  headerTab.addEventListener('click', (e) => {
+    headerTab.nextElementSibling.classList.toggle('active');
+    headerTab.lastElementChild.classList.toggle('active');
+  });
+});

@@ -1,0 +1,64 @@
+.accordion {
+        position: relative;
+        background-color: hsl(116, 32%, 57%);
+        color: var(--white);
+        display: var(--d-grid);
+        place-items: center;
+        padding: 2rem;
+        isolation: isolate;
+    }
+    .accordion:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('/src/styles/img/geometry.png') no-repeat center center/cover;
+        mix-blend-mode: plus-lighter;
+        z-index: -2;
+    }
+    .accordion__wrapper {
+        display: var(--d-grid);
+        gap: 1rem;
+    }
+    .accordion__heading {
+        margin-bottom: 1.5rem;
+    }
+    .accordion__tab {
+        cursor: pointer;
+        width: 50vw;
+        min-width: 16rem;
+        max-width: 50rem;
+        background-color: var(--accordion);
+        border-radius: 4px;
+        transition: var(--time-transition);
+    }
+    .accordion__tab:hover {
+        box-shadow: 0 2px 2px hsl(120, 23%, 46%);
+    }
+    .accordion__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: var(--time-transition);
+    }
+    .accordion__header:hover {
+        background-color: hsl(115, 49%, 86%);
+        border-radius: inherit;
+    }
+    .accordion__tab-heading {
+        color: var(--neutral-900);
+        padding: .9rem;
+    }
+    .arrow {
+        font-size: 1.1rem;
+        padding: .9rem;
+        transition: var(--time-transition);
+    }
+    .accordion__body {
+        margin-top: 1rem;
+        color: var(--neutral-700);
+        line-height: 1.6;
+        user-select: none;
+        cursor: auto;
+        padding: .9rem;
+        display: none;
+    }

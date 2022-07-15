@@ -1,6 +1,9 @@
 .search {
     position: absolute;
-    background-color: rgba(16, 27, 38, 0.918);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: hsla(211, 36%, 36%, 0.918);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
@@ -13,22 +16,8 @@
     box-shadow: 0 0 16px rgb(17, 17, 242);
     cursor: auto;
     z-index: 2;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    pointer-events: none;
 }
-.search.active {
-    position: absolute;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    transition: .5s;
-    opacity: 1;
-    pointer-events: visible;
-}
+
 .search__form i{
     padding: 5px;
 }

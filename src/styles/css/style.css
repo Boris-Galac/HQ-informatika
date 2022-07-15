@@ -10,6 +10,7 @@
 @import 'components/product.css';
 @import 'components/pagination.css';
 @import 'components/tabs.css';
+@import 'components/accordion.css';
 @import 'components/card.css';
 @import 'components/shopping-cart.css';
 @import 'components/search.css';
@@ -22,7 +23,6 @@
 @import 'layout/action.css';
 @import 'layout/best-offer.css';
 @import 'layout/advertisement.css';
-@import 'layout/accordion.css';
 @import 'layout/footer.css';
 @import 'layout/socials.css';
 @import 'layout/category-base.css';
