@@ -23,7 +23,7 @@ const shoppingItemsArr = [
   {
     category: 'desktop',
     img: '/src/styles/img/desktop-1.png',
-    product: 'DESKTOP: Stolno računalo',
+    product: 'Stolno računalo',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     price: 799,
   },

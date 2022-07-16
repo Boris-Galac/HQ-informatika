@@ -138,7 +138,7 @@ accordionHeader.forEach((headerTab) => {
   });
 });
 
-////////// SHOPPING
+//////////////////////////////  SHOPPING
 
 const shopList = document.querySelector('.best-offer__wrapper');
 let cart = [];
@@ -177,7 +177,7 @@ let displayItems = () => {
 };
 displayItems();
 
-// add items to cart arr
+// add items to cart and cart arr
 
 let addToCart = (category) => {
   let search = cart.find((obj) => obj.id === category.id);
@@ -190,30 +190,44 @@ let addToCart = (category) => {
     search.item += 1;
   }
   displayCartItems();
+  cartIndicator();
 };
 
 // display items in shopping cart
 
-const shopCart = document.querySelector('.shopping-cart__item-list');
-
-let displayCartItems = (val) => {
+const displayCartItems = (val) => {
   let cartItem = cart
     .map((obj) => {
       let search = shoppingItemsArr.find((x) => obj.id === x.category) || [];
       return `
-      <li class="shopping-cart__item">
-        <p class="shopping-cart__info">
-            ${search.product}
-        </p>
-        <h3 class="shopping-cart__price">€${search.price}</h3>
-        <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
-        <h3 class="shopping-cart__overall">${search.price},00 kn</h3>
-      </li>
+    <li class="shopping-cart__item">
+    <p class="shopping-cart__info">
+    ${search.product}
+    </p>
+    <h3 class="shopping-cart__price">€${search.price}</h3>
+    <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
+    <h3 class="shopping-cart__overall">${search.price},00 kn</h3>
+    </li>
     `;
     })
     .join('');
 
+  const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
 };
 
 displayCartItems();
+
+// display cart indicator of items
+
+const cartIndicator = () => {
+  let cartItems = document.querySelectorAll('.header__amount-items');
+  let x = cart.filter((obj) => obj.item);
+  cartItems.forEach((item) => {
+    item.innerHTML = x.length;
+    if (x.length) {
+      item.classList.add('active');
+    } else return;
+  });
+};
+cartIndicator();
