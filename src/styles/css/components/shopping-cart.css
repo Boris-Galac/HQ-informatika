@@ -45,9 +45,6 @@
     display: flex;
     justify-content: space-between;
 }
-.shopping-cart__amount-heading {
-
-}
 .shopping-cart__amount-items {
     letter-spacing: 1px;
 }
@@ -70,6 +67,18 @@
 .shopping-cart__header-row {
     display: var(--d-flex);
     justify-content: space-between;
+    gap: .5rem;
+}
+@media (min-width: 25rem) {
+    .shopping-cart {
+        width: 25rem;
+    }
+    .shopping-cart__header-row {
+        gap: 1.5rem;
+    }
+}
+.shopping-cart__info {
+    width: min-content;
 }
 .shopping-cart__header-row p{
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);

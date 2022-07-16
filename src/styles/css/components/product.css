@@ -27,6 +27,9 @@
     display: var(--d-grid);
     justify-content: space-evenly;
 }
+.product__heading {
+    text-align: left;
+}
 .product__info {
     display: var(--d-grid);
     place-items: var(--center);
@@ -41,6 +44,11 @@
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+}
+.product__description {
+    width: 8rem;
+    max-width: 30vw;
+    text-align: left;
 }
 .product__footer {
     display: var(--d-grid);

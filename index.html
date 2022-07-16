@@ -99,20 +99,13 @@
                     <p>Ukupno</p>
                 </div>
                 <ul class="shopping-cart__item-list">
-                    <li class="shopping-cart__item">
-                        <p class="shopping-cart__info">
-                            LAPTOP
-                        </p>
-                        <h3 class="shopping-cart__price">17.234</h3>
-                        <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
-                        <h3 class="shopping-cart__overall">17.249,00 kn</h3>
-                    </li>
+
                 </ul>
                 <button class="shopping-cart__scroll-down">
                     <i class="fa-solid fa-caret-down"></i>
                 </button>
                 <div class="shopping-cart__total-bill" title="total bill">
-                    <h3 class="shopping-cart__total">17.249,00 kn</h3>
+                    <h3 class="shopping-cart__total"></h3>
                 </div>
                 <button class="shopping-cart__checkout">Checkout</button>
             </div>
@@ -152,10 +145,10 @@
                 </picture>
             </div>
             <div class="hero__arrows">
-                <button class="left">
+                <button class="hero__left">
                     <i class="fa-solid fa-chevron-left left-arrow"></i>
                 </button>
-                <button class="right">
+                <button class="hero__right">
                     <i class="fa-solid fa-chevron-right right-arrow"></i>
                 </button>
             </div>
@@ -163,7 +156,7 @@
         <section class="categories">
             <div class="categories__wrapper">
                 <div class="categories__row">
-                    <a href="categories.html">
+                    <a href="categories.html" title="Desktop">
                         <button class="categories__btn">
                             <img src="/src/styles/icons/desktop.svg" alt="desktop">
                         </button>
@@ -171,7 +164,7 @@
                             Desktop
                         </h3>
                     </a>
-                    <a href="#">
+                    <a href="#" title="Accessories">
                         <button class="categories__btn">
                             <img src="/src/styles/icons/keyboard.svg" alt="keyboard">
                         </button>
@@ -179,7 +172,7 @@
                             Accessories
                         </h3>                      
                     </a>
-                    <a href="#">
+                    <a href="#" title="Mreže">
                         <button class="categories__btn">
                             <img src="/src/styles/icons/network.svg" alt="network">
                         </button>
@@ -189,7 +182,7 @@
                     </a>
                 </div>
                 <div class="categories__row">
-                    <a href="#">
+                    <a href="#" title="Laptopi">
                         <button class="categories__btn">
                             <img src="/src/styles/icons/laptop.svg" alt="laptop">
                         </button>
@@ -197,7 +190,7 @@
                             Laptopi
                         </h3>                      
                     </a>
-                    <a href="#">
+                    <a href="#" title="Monitori">
                         <button class="categories__btn">
                             <img src="/src/styles/icons/monitor.svg" alt="monitor">
                         </button>
@@ -205,7 +198,7 @@
                             Monitori
                         </h3>                      
                     </a>
-                    <a href="#">
+                    <a href="#" title="Software">
                         <button class="categories__btn">
                             <img src="/src/styles/icons/software.svg" alt="software">
                         </button>
@@ -246,91 +239,8 @@
             <div class="best-offer__header">
                 <h2 class="best-offer__heading">Izdvojena ponuda</h2>
             </div>
-            <div class="best-offer__wrapper">
-                <div class="product">
-                    <div class="product__left">
-                        <div class="product__img">
-                            <img src="/src/styles/img/laptop-1.png" alt="product">
-                        </div>
-                        <h3 class="product__price price">499,00 <span>€</span></h3>
-                    </div>
-                    <div class="product__right">
-                        <div class="product__info">
-                            <div>
-                                <h3 class="product__heading">LAPTOP: Acer 5</h3>
-                                <p>Intel i5-9500U</p>
-                                <p>8GB - 256SSD</p>
-                                <p>VGA Intel UHD</p>
-                            </div>
-                        </div>
-                        <button class="buy-btn">Dodaj 
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                </div>                             
-                <div class="product">
-                    <div class="product__left">
-                        <div class="product__img">
-                            <img src="/src/styles/img/laptop-2.png" alt="product">
-                        </div>
-                        <h3 class="product__price price">499,00 <span>€</span></h3>
-                    </div>
-                    <div class="product__right">
-                        <div class="product__info">
-                            <div>
-                                <h3 class="product__heading">LAPTOP: Acer 5</h3>
-                                <p>Intel i5-9500U</p>
-                                <p>8GB - 256SSD</p>
-                                <p>VGA Intel UHD</p>
-                            </div>
-                        </div>
-                        <button class="buy-btn">Dodaj 
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                </div>                             
-                <div class="product">
-                    <div class="product__left">
-                        <div class="product__img">
-                            <img src="/src/styles/img/periferija-1.png" alt="product">
-                        </div>
-                        <h3 class="product__price price">499,00 <span>€</span></h3>
-                    </div>
-                    <div class="product__right">
-                        <div class="product__info">
-                            <div>
-                                <h3 class="product__heading">LAPTOP: Acer 5</h3>
-                                <p>Intel i5-9500U</p>
-                                <p>8GB - 256SSD</p>
-                                <p>VGA Intel UHD</p>
-                            </div>
-                        </div>
-                        <button class="buy-btn">Dodaj 
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                </div>                             
-                <div class="product">
-                    <div class="product__left">
-                        <div class="product__img">
-                            <img src="/src/styles/img/network.png" alt="product">
-                        </div>
-                        <h3 class="product__price price">499,00 <span>€</span></h3>
-                    </div>
-                    <div class="product__right">
-                        <div class="product__info">
-                            <div>
-                                <h3 class="product__heading">LAPTOP: Acer 5</h3>
-                                <p>Intel i5-9500U</p>
-                                <p>8GB - 256SSD</p>
-                                <p>VGA Intel UHD</p>
-                            </div>
-                        </div>
-                        <button class="buy-btn">Dodaj 
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                </div>                             
+            <div class="best-offer__wrapper">                            
+                                           
             </div>
             <footer class="best-offer__footer">
                 <button class="best-offer__load-more">Učitaj još</button>
@@ -432,5 +342,6 @@
         </button>
     </div>
 </body>
-<script type="module" src="js/main.js"></script>
+<script src="/js/database.js"></script>
+<script src="js/main.js"></script>
 </html>

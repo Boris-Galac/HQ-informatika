@@ -13,19 +13,20 @@
     justify-content: space-between;
     width: 100%;
 }
-.left,
-.right {
+.hero__left,
+.hero__right {
+    position: relative;
     color: var(--white);
     font-size: clamp(2rem, 5vw, 2.5rem);
     transition: var(--time-transition);
 }
-.left:hover,
-.right:hover{
+.hero__left:hover,
+.hero__right:hover{
     transform: scale(1.25);
 }
-.left {
+.hero__left {
     margin-left: 1rem;
 }
-.right {
+.hero__right {
     margin-right: 1rem;
 } 

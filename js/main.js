@@ -8,7 +8,7 @@ const createOverlay = (content) => {
   });
 };
 
-// nav menu
+////////// HAMBURGER MENU
 
 const hamIcon = document.querySelector('.header__ham-btn');
 const navMenu = document.querySelector('.nav');
@@ -27,7 +27,7 @@ hamIcon.addEventListener('click', (e) => {
   });
 });
 
-// shopping cart open
+////////// OPEN SHOPPING CART MENU
 
 let shoppingCartIcons = document.querySelectorAll('.cart-btn');
 const shoppingCartMenu = document.querySelector('.shopping-cart');
@@ -39,7 +39,7 @@ shoppingCartIcons.forEach((cart) => {
   });
 });
 
-// search
+////////// SEARCH BAR
 
 const searchBtn = document.querySelectorAll('.search-btn');
 const searchWindow = document.querySelector('.search');
@@ -51,10 +51,10 @@ searchBtn.forEach((search) => {
   });
 });
 
-//  image carousel
+//////////  IMAGE CAROUSEL
 
-const leftArrow = document.querySelector('.left');
-const rightArrow = document.querySelector('.right');
+const leftArrow = document.querySelector('.hero__left');
+const rightArrow = document.querySelector('.hero__right');
 const carouselSlider = document.querySelector('.hero__slider');
 const images = document.querySelectorAll('.hero__slider-picture');
 
@@ -102,7 +102,7 @@ if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
 
-// action countdown
+////////// COUNTDOWN
 
 const countdown = () => {
   const countDate = new Date('September 30, 2022 00:00:00').getTime();
@@ -127,7 +127,7 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-// accordion
+////////// ACCORDION
 
 const accordionHeader = document.querySelectorAll('.accordion__header');
 
@@ -137,3 +137,83 @@ accordionHeader.forEach((headerTab) => {
     headerTab.lastElementChild.classList.toggle('active');
   });
 });
+
+////////// SHOPPING
+
+const shopList = document.querySelector('.best-offer__wrapper');
+let cart = [];
+// display items
+
+let displayItems = () => {
+  let itemsArr = shoppingItemsArr
+    .map((item) => {
+      let = { category, img, product, description, price } = item;
+      return `
+        <div id="${category}" class="product">
+        <div class="product__left">
+        <div class="product__img">
+          <a href="categories.html">
+              <img src="${img}" alt="product">
+              </a>
+          </div>
+          <h3 class="product__price price">${price},00 <span>€</span></h3>
+        </div>
+        <div class="product__right">
+           <div class="product__info">
+              <div>
+                  <h3 class="product__heading">${product}</h3>
+                  <p class="product__description">${description}</p>
+              </div>
+          </div>
+          <button onclick="addToCart(${category})" class="buy-btn">Dodaj
+              <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    `;
+    })
+    .join('');
+  shopList.innerHTML = itemsArr;
+};
+displayItems();
+
+// add items to cart arr
+
+let addToCart = (category) => {
+  let search = cart.find((obj) => obj.id === category.id);
+  if (!search) {
+    cart.push({
+      id: category.id,
+      item: 1,
+    });
+  } else {
+    search.item += 1;
+  }
+  displayCartItems();
+};
+
+// display items in shopping cart
+
+const shopCart = document.querySelector('.shopping-cart__item-list');
+
+let displayCartItems = (val) => {
+  let cartItem = cart
+    .map((obj) => {
+      let search = shoppingItemsArr.find((x) => obj.id === x.category) || [];
+      return `
+      <li class="shopping-cart__item">
+        <p class="shopping-cart__info">
+            ${search.product}
+        </p>
+        <h3 class="shopping-cart__price">€${search.price}</h3>
+        <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
+        <h3 class="shopping-cart__overall">${search.price},00 kn</h3>
+      </li>
+    `;
+    })
+    .join('');
+
+  shopCart.innerHTML = cartItem;
+};
+
+displayCartItems();
