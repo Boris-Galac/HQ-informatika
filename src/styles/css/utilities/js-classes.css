@@ -39,6 +39,15 @@
     opacity: 1;
 }
 
+/* shopping cart clear all */
+
+.shopping-cart__clear-all {
+    display: none;
+}
+.shopping-cart__clear-all.active {
+    display: block;
+}
+
 /* accordion active */
 
 .accordion__body.active {
@@ -56,4 +65,14 @@
 
 .arrow.active{
     transform: rotateZ(180deg);
+}
+
+/* buy btn activated */
+
+.buy-btn.activated {
+    background-color: var(--gray-200);
+    pointer-events: none;
+}
+.buy-btn.activated:hover {
+    background-color: var(--gray-200);
 }

@@ -180,15 +180,11 @@ displayItems();
 // add items to cart and cart arr
 
 let addToCart = (category) => {
-  let search = cart.find((obj) => obj.id === category.id);
-  if (!search) {
-    cart.push({
-      id: category.id,
-      item: 1,
-    });
-  } else {
-    search.item += 1;
-  }
+  category.querySelector('.buy-btn').classList.add('activated');
+  cart.push({
+    id: category.id,
+    item: 1,
+  });
   displayCartItems();
   cartIndicator();
 };
@@ -200,13 +196,15 @@ const displayCartItems = (val) => {
     .map((obj) => {
       let search = shoppingItemsArr.find((x) => obj.id === x.category) || [];
       return `
-    <li class="shopping-cart__item">
-    <p class="shopping-cart__info">
-    ${search.product}
-    </p>
-    <h3 class="shopping-cart__price">€${search.price}</h3>
-    <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
-    <h3 class="shopping-cart__overall">${search.price},00 kn</h3>
+    <li class="shopping-cart__item" id="${obj.id}">
+        <p class="shopping-cart__info">
+        ${search.product}
+        </p>
+        <h3 class="shopping-cart__price">${search.price}</h3>
+        <input type="number" name="amount" value=${(val =
+          obj.item)} placeholder="0" min="0" id="amount" class="shopping-cart__amount" onclick=amountItems(event)>
+        <h3 class="shopping-cart__overall">${val * search.price},00€</h3>
+        <i onclick=removeItem(event) class="fa-solid fa-trash-can remove-icon"></i>
     </li>
     `;
     })
@@ -218,10 +216,35 @@ const displayCartItems = (val) => {
 
 displayCartItems();
 
-// display cart indicator of items
+// increase / decrease amount of items
 
+const amountItems = (e) => {
+  let num = Number(e.target.value);
+  let search = cart.find((obj) => obj.id === e.target.parentElement.id);
+  search.item += 1;
+  let priceElement = e.target.nextElementSibling;
+  let arr = shoppingItemsArr.find(
+    (obj) => obj.category == e.target.parentElement.id
+  );
+  priceElement.innerHTML = `${arr.price * num},00€`;
+};
+
+// clear all
+
+const clearAll = document
+  .querySelectorAll('.shopping-cart__clear-all')
+  .forEach((clearBtn) => {
+    if (cart.length) {
+      clearBtn.classList.add('active');
+    }
+    console.log(cart.length);
+    clearBtn.addEventListener('click', (e) => {});
+  });
+
+// display cart number indicator of items
+
+let cartItems = document.querySelectorAll('.header__amount-items');
 const cartIndicator = () => {
-  let cartItems = document.querySelectorAll('.header__amount-items');
   let x = cart.filter((obj) => obj.item);
   cartItems.forEach((item) => {
     item.innerHTML = x.length;
@@ -231,3 +254,17 @@ const cartIndicator = () => {
   });
 };
 cartIndicator();
+
+// remove item
+
+const removeItem = (e) => {
+  const currItem = e.target.parentElement;
+  cart = cart.filter((obj) => obj.id !== currItem.id);
+  cartIndicator();
+  if (cart.length === 0) {
+    cartItems.forEach((item) => {
+      item.classList.remove('active');
+    });
+  }
+  displayCartItems();
+};

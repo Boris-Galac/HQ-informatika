@@ -6,6 +6,7 @@
     z-index: 1;
     background: url('/src/styles/img/background-img.jpg');
     top: 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.516);
 }
 .header__wrapper {
     display: var(--d-flex);
