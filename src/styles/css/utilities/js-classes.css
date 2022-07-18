@@ -39,13 +39,15 @@
     opacity: 1;
 }
 
-/* shopping cart clear all */
+/* shopping cart body */
 
-.shopping-cart__clear-all {
-    display: none;
+.shopping-cart__body {
+    pointer-events: none;
+    opacity: 0;
 }
-.shopping-cart__clear-all.active {
-    display: block;
+.shopping-cart__body.active {
+    pointer-events: visible;
+    opacity: 1;
 }
 
 /* accordion active */
@@ -67,12 +69,13 @@
     transform: rotateZ(180deg);
 }
 
-/* buy btn activated */
+/* buy btn deactivated */
 
-.buy-btn.activated {
+.buy-btn.deactivated {
     background-color: var(--gray-200);
     pointer-events: none;
 }
-.buy-btn.activated:hover {
+.buy-btn.deactivated:hover {
     background-color: var(--gray-200);
 }
+

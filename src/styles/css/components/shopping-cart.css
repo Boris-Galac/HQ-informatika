@@ -1,5 +1,5 @@
 .shopping-cart {
-    background: rgba(87, 111, 148, 0.3);
+    background-color: rgba(87, 111, 148, 0.3);
     box-shadow: 0 0 16px  rgba(23, 38, 251, .9);
     backdrop-filter: blur( 18px );
     -webkit-backdrop-filter: blur( 18px );
@@ -48,37 +48,45 @@
 .shopping-cart__amount-items {
     letter-spacing: 1px;
 }
-.shopping-cart__scroll-up,
-.shopping-cart__scroll-down {
+.shopping-cart__scroll,
+.shopping-cart__scroll {
     width: 100%;
     background-color: var(--neutral-300);
     border-radius: 2px;
     margin-block: 3px;
     transition: var(--time-transition);
 }
-.shopping-cart__scroll-up:hover,
-.shopping-cart__scroll-down:hover {
+.scroll-up:hover,
+.scroll-down:hover {
     background-color: var(--neutral-400);
 }
-.shopping-cart__scroll-up:active,
-.shopping-cart__scroll-down:active {
+.scroll-up:active,
+.scroll-down:active {
     background-color: var(--neutral-500);
 }
 .shopping-cart__header-row {
     display: var(--d-flex);
-    /* justify-content: space-between; */
     gap: .5rem;
 }
 @media (min-width: 25rem) {
     .shopping-cart {
         width: 22rem;
     }
-    .shopping-cart__header-row {
-        /* gap: 1.5rem; */
-    }
 }
 .shopping-cart__info {
     width: min-content;
+}
+.shopping-cart__body {
+    position: relative;
+}
+.shopping-cart__cart-message {
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+     transform: translate(-50%, -50%);
+    top: 65%;
+    left: 50%; 
+    width: max-content;
 }
 .shopping-cart__header-row p{
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -133,7 +141,6 @@
     border: 2px solid rgba(255, 255, 255, 0.442);
     padding-block: .6rem;
     width: 100%;
-    display: none;
 }
 .shopping-cart__clear-all::after {
     content: '';
@@ -163,21 +170,6 @@
 .shopping-cart__checkout:hover {
     background-color: hsl(102, 62%, 40%);
 }
-/* .shopping-cart__checkout::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    transition: transform .7s;
-    transform-origin: right;
-    transform: scaleX(0);
-    background-color: hsl(120, 49%, 45%);
-    z-index: -1;
-}
-.shopping-cart__checkout:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-} */
-
 .remove-icon {
     position: absolute;
     right: 1rem;
