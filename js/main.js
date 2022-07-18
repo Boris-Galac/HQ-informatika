@@ -296,19 +296,24 @@ cartIndicator();
 // remove item
 
 const removeItem = (e) => {
-  const currParentItem = e.target.parentElement;
-  let currItem = currParentItem.firstElementChild.innerText;
-  let x = [...shopList.children];
-  let itemFromCart = cart.find((obj) => obj.product === currItem);
-  let abc = x.find((item) => {
+  const currItem = e.target.parentElement;
+  let currItemHeading = currItem.firstElementChild.innerText;
+  let bestOfferItems = [...shopList.children];
+  let itemFromCart = cart.find((obj) => obj.product === currItemHeading);
+  // show me items which are not in cart
+  let removedItems = bestOfferItems.find((item) => {
     if (
       item.querySelector('.product__heading').innerText === itemFromCart.product
     ) {
       return item;
     }
   });
-  abc.querySelector('.buy-btn').classList.remove('deactivated');
-  cart = cart.filter((obj) => obj.id !== currParentItem.id);
+  removedItems.querySelector('.buy-btn').classList.remove('deactivated');
+  // show in cart all items which are not targeted
+  // in summary: delete target item, others leave alone
+  cart = cart.filter((obj) => obj.id !== currItem.id);
+  // if cart doesnt have length:
+  // hide body, show msg 'košara je prazna'
   if (!cart.length) {
     shopCartBody.forEach((cartBody) => {
       cartBody.classList.remove('active');
