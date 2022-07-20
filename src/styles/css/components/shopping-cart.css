@@ -106,8 +106,14 @@
     border-radius: 3px;
     border: 2px solid hsl(120, 22%, 82%);
 }
-.shopping-cart__total {
+.shopping-cart__total-body {
     color: var(--gray-800);
+}
+.shopping-cart__total-body {
+    color: var(--gray-800);
+}
+.shopping-cart__total {
+    color: var(--black);
 }
 
 /* ITEM */

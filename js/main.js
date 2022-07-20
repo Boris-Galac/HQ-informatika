@@ -200,6 +200,7 @@ let addToCart = (category) => {
   clrAll();
   displayCartItems();
   cartIndicator();
+  totalBill();
 };
 
 // display items in shopping cart
@@ -226,7 +227,6 @@ const displayCartItems = (val) => {
   const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
 };
-
 displayCartItems();
 
 // increase / decrease amount of items
@@ -234,12 +234,14 @@ displayCartItems();
 const amountItems = (e) => {
   let num = Number(e.target.value);
   let search = cart.find((obj) => obj.id === e.target.parentElement.id);
-  search.item += 1;
+  search.item = num;
   let priceElement = e.target.nextElementSibling;
   let arr = shoppingItemsArr.find(
     (obj) => obj.category == e.target.parentElement.id
   );
-  priceElement.innerHTML = `${arr.price * num},00€`;
+  let totalAmount = arr.price * num;
+  priceElement.innerHTML = `${totalAmount},00€`;
+  totalBill();
 };
 
 // clear all
@@ -275,6 +277,7 @@ const clrAll = () => {
       }
       displayCartItems();
       cartIndicator();
+      totalBill();
     });
   });
 };
@@ -326,4 +329,18 @@ const removeItem = (e) => {
   }
   cartIndicator();
   displayCartItems();
+  totalBill();
+};
+
+// total bill
+
+const totalBill = () => {
+  let total = document.querySelectorAll('.shopping-cart__total');
+  let x = cart
+    .map((obj) => {
+      let a = shoppingItemsArr.find((item) => item.product === obj.product);
+      return a.price * obj.item;
+    })
+    .reduce((a, b) => a + b, 0);
+  total.forEach((total) => (total.innerHTML = `${x}€`));
 };
