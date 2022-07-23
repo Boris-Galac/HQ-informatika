@@ -1,10 +1,16 @@
 .product {
     padding: 1rem;
-    max-width: 650px;
+    max-width: 40.625rem;
     margin: auto;
     display: var(--d-grid);
     grid-template-columns: 1fr 1fr;
     height: 15.625rem;
+}
+/* .product:not(:nth-child(-n + 5)) {
+    display: none;
+} */
+.product.active {
+    display: var(--d-grid);
 }
 .product__stars {
     display: var(--d-grid);
@@ -39,7 +45,8 @@
     padding: 1rem;
 }
 .product__img img {
-    max-width: 80%;
+    max-width: 50%;
+    min-width: 7rem;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;

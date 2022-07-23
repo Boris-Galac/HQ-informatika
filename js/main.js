@@ -146,16 +146,15 @@ let cart = [];
 // display items
 
 let displayItems = () => {
+  shoppingItemsArr.length = 25;
   let itemsArr = shoppingItemsArr
     .map((item) => {
       let = { category, img, product, description, price } = item;
       return `
-        <div id="${category}" class="product">
+        <li id="${category}" class="product">
         <div class="product__left">
         <div class="product__img">
-          <a href="categories.html">
-              <img src="${img}" alt="product">
-              </a>
+              <img src="${img}" alt="product" loading="lazy">
           </div>
           <h3 class="product__price price">${price},00 <span>€</span></h3>
         </div>
@@ -166,11 +165,11 @@ let displayItems = () => {
                   <p class="product__description">${description}</p>
               </div>
           </div>
-          <button onclick="addToCart(${category})" class="buy-btn">Dodaj
+          <button class="buy-btn">Dodaj
               <i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-      </div>
+      </li>
     `;
     })
     .join('');
@@ -182,48 +181,58 @@ displayItems();
 
 const cartMsg = document.querySelectorAll('.shopping-cart__cart-message');
 
-let addToCart = (category) => {
-  category.querySelector('.buy-btn').classList.add('deactivated');
-  const productName = category.querySelector('.product__heading').innerText;
-  cart.push({
-    id: category.id,
-    item: 1,
-    product: productName,
+let buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    let itemCategory = e.currentTarget.parentElement.parentElement.id;
+    let productName =
+      e.currentTarget.parentElement.parentElement.querySelector(
+        '.product__heading'
+      ).innerText;
+    cart.push({
+      id: itemCategory,
+      item: 1,
+      product: productName,
+    });
+    let productBuyBtn =
+      e.target.parentElement.parentElement.querySelector('.buy-btn');
+    productBuyBtn.classList.add('deactivated');
+    cartMsg.forEach((msg) => {
+      if (cart.length) {
+        msg.style = `
+      display: none;
+    `;
+      }
+    });
+
+    clrAll();
+    displayCartItems();
+    cartIndicator();
+    totalBill();
   });
-  cartMsg.forEach((msg) => {
-    if (cart.length) {
-      msg.style = `
-        display: none;
-      `;
-    }
-  });
-  clrAll();
-  displayCartItems();
-  cartIndicator();
-  totalBill();
-};
+});
 
 // display items in shopping cart
 
 const displayCartItems = (val) => {
   let cartItem = cart
     .map((obj) => {
-      let search = shoppingItemsArr.find((x) => obj.id === x.category) || [];
+      let search =
+        shoppingItemsArr.find((x) => obj.product === x.product) || [];
       return `
     <li class="shopping-cart__item" id="${obj.id}">
         <p class="shopping-cart__info">
         ${search.product}
         </p>
         <h3 class="shopping-cart__price">${search.price}</h3>
-        <input type="number" name="amount" value=${(val =
-          obj.item)} placeholder="0" min="0" id="amount" class="shopping-cart__amount" onclick=amountItems(event)>
-        <h3 class="shopping-cart__overall">${val * search.price},00€</h3>
+        <input type="number" name="amount" value="${
+          obj.item
+        }" placeholder="0" min="0" id="amount" class="shopping-cart__amount" onclick=amountItems(event)>
+        <h3 class="shopping-cart__overall">${obj.item * search.price},00€</h3>
         <i onclick=removeItem(event) class="fa-solid fa-trash-can remove-icon"></i>
     </li>
     `;
     })
     .join('');
-
   const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
 };
@@ -235,12 +244,11 @@ const amountItems = (e) => {
   let num = Number(e.target.value);
   let search = cart.find((obj) => obj.id === e.target.parentElement.id);
   search.item = num;
-  let priceElement = e.target.nextElementSibling;
-  let arr = shoppingItemsArr.find(
-    (obj) => obj.category == e.target.parentElement.id
-  );
+  let priceElement = e.target.parentElement.firstElementChild.innerText;
+  let arr = shoppingItemsArr.find((obj) => obj.product === priceElement);
   let totalAmount = arr.price * num;
-  priceElement.innerHTML = `${totalAmount},00€`;
+  let total = e.target.nextElementSibling;
+  total.innerHTML = `${totalAmount},00€`;
   totalBill();
 };
 
@@ -256,7 +264,7 @@ const clrAll = () => {
         cartBody.classList.add('active');
       });
     }
-    // when we click on clear btn
+    // when we click on clear btn delete cart arr and cart content
     clearBtn.addEventListener('click', (e) => {
       cart = [];
       let allChildren =
@@ -344,3 +352,14 @@ const totalBill = () => {
     .reduce((a, b) => a + b, 0);
   total.forEach((total) => (total.innerHTML = `${x}€`));
 };
+
+////////// LOAD MORE
+
+const loadMoreBtn = document.querySelector('.best-offer__load-more');
+loadMoreBtn.addEventListener('click', () => {
+  let num = 5;
+  let products = document.querySelectorAll('.product');
+  for (let i = num; i < num + 5; i++) {
+    products[i].classList.add('active');
+  }
+});

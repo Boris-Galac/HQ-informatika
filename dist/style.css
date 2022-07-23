@@ -311,6 +311,8 @@ select {
     pointer-events: visible;
 }
 
+/* best offer load more */
+
 /* shopping cart active */
 
 .shopping-cart {
@@ -453,11 +455,19 @@ button {
 
 .product {
     padding: 1rem;
-    max-width: 650px;
+    max-width: 40.625rem;
     margin: auto;
     display: var(--d-grid);
     grid-template-columns: 1fr 1fr;
     height: 15.625rem;
+}
+
+/* .product:not(:nth-child(-n + 5)) {
+    display: none;
+} */
+
+.product.active {
+    display: var(--d-grid);
 }
 
 .product__stars {
@@ -500,7 +510,8 @@ button {
 }
 
 .product__img img {
-    max-width: 80%;
+    max-width: 50%;
+    min-width: 7rem;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -807,16 +818,8 @@ button {
     gap: .5rem;
 }
 
-@media (min-width: 25rem) {
-    .shopping-cart {
-        width: 22rem;
-    }
-}
-
 .shopping-cart__info {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
+    width: 5rem;
 }
 
 .shopping-cart__body {
@@ -827,7 +830,7 @@ button {
     position: absolute;
     text-align: center;
     text-transform: uppercase;
-     transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     top: 65%;
     left: 50%; 
     width: -webkit-max-content; 
@@ -867,6 +870,18 @@ button {
 
 .shopping-cart__total {
     color: var(--black);
+}
+
+@media (min-width: 25rem) {
+    .shopping-cart {
+        width: 25rem;
+    }
+    .shopping-cart__info {
+        width: 7rem;
+    }
+    .shopping-cart__header-row {
+        gap: 1.5rem;
+    }
 }
 
 /* ITEM */
@@ -939,13 +954,19 @@ button {
 
 .remove-icon {
     position: absolute;
-    right: 1rem;
+    right: 0;
     cursor: pointer;
     transition: var(--time-transition);
 }
 
 .remove-icon:hover {
     color: var(--red-300);
+}
+
+@media (min-width: 25rem) {
+    .remove-icon {
+        right: 1.5rem;
+    }
 }
 
 .search {
@@ -1261,28 +1282,14 @@ button {
     display: var(--d-flex);
     flex-direction: column;
     align-items: flex-end;
-    transition: .3s;
-    transform-origin: top;
-    transform: scaleY(0);
-    display: none;
+    transition: .5s;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav__item:hover .nav__list-multimedia {
-    display: var(--d-flex);
-    -webkit-animation: multimedia-dropdown .3s forwards;
-            animation: multimedia-dropdown .3s forwards;
-}
-
-@-webkit-keyframes multimedia-dropdown {
-    to {
-        transform: scaleY(1);
-    }
-}
-
-@keyframes multimedia-dropdown {
-    to {
-        transform: scaleY(1);
-    }
+    pointer-events: visible;
+    opacity: 1;
 }
 
 .nav__list-multimedia .nav__link{

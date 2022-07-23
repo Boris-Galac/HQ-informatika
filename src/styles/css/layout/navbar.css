@@ -34,19 +34,13 @@
     display: var(--d-flex);
     flex-direction: column;
     align-items: flex-end;
-    transition: .3s;
-    transform-origin: top;
-    transform: scaleY(0);
-    display: none;
+    transition: .5s;
+    opacity: 0;
+    pointer-events: none;
 }
 .nav__item:hover .nav__list-multimedia {
-    display: var(--d-flex);
-    animation: multimedia-dropdown .3s forwards;
-}
-@keyframes multimedia-dropdown {
-    to {
-        transform: scaleY(1);
-    }
+    pointer-events: visible;
+    opacity: 1;
 }
 .nav__list-multimedia .nav__link{
     text-transform: uppercase;
