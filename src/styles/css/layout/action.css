@@ -28,6 +28,7 @@
     top: 5rem;
     transform: rotate(20deg);
     opacity: .8;
+    z-index: 1;
 }
 .action__price:after {
     content: 'samo';
@@ -60,7 +61,6 @@
     position: relative;
     display: var(--d-grid);
     padding: var(--measure-1);
-    /* gap: var(--measure-1); */
     place-items: var(--center);
     background-color: var(--gray-900);
 }

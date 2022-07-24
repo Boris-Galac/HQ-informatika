@@ -10,27 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/css/style.css">
     <script src="js/database.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/categories.js" defer></script>
     <title>HQ Informatika</title>
 </head>
 <body>
     <header class="header">
         <div class="header__wrapper">
-            <a href="index.html">
+            <a href="index.html" title="Home page">
                 <h1 class="header__logo">
                     <img src="/src/styles/img/logo.png" alt="hq-informatika-logo">
                     HQ Informatika
                 </h1>
             </a>
             <div class="header__btns">
-                    <button class="header__search-btn">
+                    <button class="header__search-btn search-btn" title="search">
                         <img src="/src/styles/icons/search.svg" alt="search">
                     </button>
-                    <button class="header__cart-btn cart-btn">
+                    <button class="header__cart-btn cart-btn" title="cart">
                         <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
                         <span class="header__amount-items"></span>
                     </button>
-                    <button class="header__ham-btn">
+                    <button class="header__ham-btn" title="menu">
                         <div class="ham-line"></div>
                         <div class="ham-line"></div>
                         <div class="ham-line"></div>
@@ -69,10 +70,12 @@
                     <button class="search-btn">
                         <img src="/src/styles/icons/search.svg" alt="search">
                     </button>
-                    <button class="cart-btn">
-                        <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                        <span class="header__amount-items"></span>
-                    </button>
+                    <div class="nav__shopping-cart-wrapper">
+                        <button class="cart-btn">
+                            <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
+                            <span class="header__amount-items"></span>
+                        </button>
+                    </div>
                 </div>
                 <div class="nav__sign-in-btns">
                    <button class="nav__sign-up sign-up" id="sign-up">
@@ -83,11 +86,10 @@
                    </button>
             </div>
         </nav>
-        <div class="shopping-cart">
+        <div class="shopping-cart" title="shopping cart">
             <div class="shopping-cart__amount-items">
                 <div class="shopping-cart__amount-wrapper">
                     <h3 class="shopping-cart__amount-heading">MyCart</h3>
-                    <h4 class="shopping-cart__amount-items">(3) items</h4>
                 </div>
                 <div class="shopping-cart__header-row">
                     <p>Proizvod</p>
@@ -95,23 +97,22 @@
                     <p>Komada</p>
                     <p>Ukupno</p>
                 </div>
-                <button class="shopping-cart__scroll-up">
-                    <i class="fa-solid fa-caret-up"></i>
-                </button>
-                <ul class="shopping-cart__item-list">
-                    <li class="shopping-cart__item">
-                        <p class="shopping-cart__info">
-                            LAPTOP
-                        </p>
-                        <h3 class="shopping-cart__price">17.234</h3>
-                        <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
-                        <h3 class="shopping-cart__overall">17.249,00 kn</h3>
-                    </li>
-                </ul>
-                <button class="shopping-cart__scroll-down">
-                    <i class="fa-solid fa-caret-down"></i>
-                </button>
-                <button class="shopping-cart__checkout">Checkout</button>
+                <p class="shopping-cart__cart-message">Košarica je prazna</p>
+                <div class="shopping-cart__body">
+                    <button class="shopping-cart__scroll scroll-up">
+                        <i class="fa-solid fa-caret-up"></i>
+                    </button>
+                    <ul class="shopping-cart__item-list">
+                    </ul>
+                    <button class="shopping-cart__scroll scroll-down">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
+                    <div class="shopping-cart__total-bill" title="total bill">
+                        <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
+                    </div>
+                    <button class="shopping-cart__checkout" title="checkout">Checkout</button>
+                </div>
             </div>
         </div>
     </header>
@@ -127,7 +128,7 @@
             <ul class="search__list">
                 <li class="search__item"></li>
             </ul>
-        </form>
+        </form> 
     </div>
     <main class="main categories-main">
         <section class="categories">
@@ -223,98 +224,7 @@
             </div>
         </section>  
         <section class="main-products product-grid">
-            <div class="main__product product-grid">
-                <div class="main__product-first product-grid">
-                    <a href="single-product.html">
-                        <div class="main__product__img">
-                            <img src="/src/styles/img/network.png" alt="product">
-                        </div>
-                    </a>
-                    <div class="main__product__info">
-                        <div>
-                            <h3 class="main__product__heading">LAPTOP: Acer 5</h3>
-                            <p>Intel i5-9500U</p>
-                            <p>8GB - 256SSD</p>
-                            <p>VGA Intel UHD</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__product-second product-grid">
-                    <h3 class="main__product__price price">499,00 <span>€</span></h3>
-                    <button class="buy-btn">Dodaj 
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="main__product product-grid">
-                <div class="main__product-first product-grid">
-                    <a href="single-product.html">
-                        <div class="main__product__img">
-                            <img src="/src/styles/img/network.png" alt="product">
-                        </div>
-                    </a>
-                    <div class="main__product__info">
-                        <div>
-                            <h3 class="main__product__heading">LAPTOP: Acer 5</h3>
-                            <p>Intel i5-9500U</p>
-                            <p>8GB - 256SSD</p>
-                            <p>VGA Intel UHD</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__product-second product-grid">
-                    <h3 class="main__product__price price">499,00 <span>€</span></h3>
-                    <button class="buy-btn">Dodaj 
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div> 
-            <div class="main__product product-grid">
-                <div class="main__product-first product-grid">
-                    <a href="single-product.html">
-                        <div class="main__product__img">
-                            <img src="/src/styles/img/network.png" alt="product">
-                        </div>
-                    </a>
-                    <div class="main__product__info">
-                        <div>
-                            <h3 class="main__product__heading">LAPTOP: Acer 5</h3>
-                            <p>Intel i5-9500U</p>
-                            <p>8GB - 256SSD</p>
-                            <p>VGA Intel UHD</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__product-second product-grid">
-                    <h3 class="main__product__price price">499,00 <span>€</span></h3>
-                    <button class="buy-btn">Dodaj 
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>   
-            <div class="main__product product-grid">
-                <div class="main__product-first product-grid">
-                    <a href="single-product.html">
-                        <div class="main__product__img">
-                            <img src="/src/styles/img/network.png" alt="product">
-                        </div>
-                    </a>
-                    <div class="main__product__info">
-                        <div>
-                            <h3 class="main__product__heading">LAPTOP: Acer 5</h3>
-                            <p>Intel i5-9500U</p>
-                            <p>8GB - 256SSD</p>
-                            <p>VGA Intel UHD</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__product-second product-grid">
-                    <h3 class="main__product__price price">499,00 <span>€</span></h3>
-                    <button class="buy-btn">Dodaj 
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>   
+  
             <div class="pagination">
                 <div class="pagination__wrapper">
                     <button class="pagination__btn">

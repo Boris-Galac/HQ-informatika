@@ -23,8 +23,23 @@
     opacity: 1;
     pointer-events: visible;
 }
-/* best offer load more */
 
+/* best offer product */
+
+.best-offer__wrapper .product:not(:nth-child(-n + 5)) {
+    display: none;
+} 
+.best-offer__wrapper .product:not(:nth-child(-n + 5)).active {
+    display: grid;
+} 
+
+/* best offer load more deactivated */
+
+.best-offer__load-more.deactivated {
+    background-color: var(--gray-300);
+    color: var(--gray-500);
+    cursor: no-drop;
+}
 
 /* shopping cart active */
 

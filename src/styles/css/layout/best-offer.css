@@ -12,6 +12,7 @@
     text-align: center;
     isolation: isolate;
 }
+
 .best-offer__heading::after {
     content: '';
     max-width: 65vw;
