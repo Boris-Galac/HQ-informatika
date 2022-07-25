@@ -273,7 +273,7 @@ const removeItem = (e) => {
   removedItems.querySelector('.buy-btn').classList.remove('deactivated');
   // show in cart all items which are not targeted
   // in summary: delete target item, others leave alone
-  cart = cart.filter((obj) => obj.id !== currItem.id);
+  cart = cart.filter((obj) => obj.product !== currItemHeading);
   // if cart doesnt have length:
   // hide body, show msg 'košara je prazna'
   if (!cart.length) {
