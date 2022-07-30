@@ -88,10 +88,11 @@ accordionHeader.forEach((headerTab) => {
 });
 
 //////////////////////////////  SHOPPING
-
+let cart = JSON.parse(localStorage.getItem('data')) || [];
+let numStorage = JSON.parse(localStorage.getItem('num')) || [];
 const shopList = document.querySelector('.best-offer__wrapper');
 const categoriesWrapper = document.querySelector('.product-grid');
-let cart = [];
+// let cart = [];
 
 // display items
 
@@ -154,7 +155,7 @@ let buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
     `;
       }
     });
-
+    localStorage.setItem('data', JSON.stringify(cart));
     clrAll();
     displayCartItems();
     cartIndicator();
@@ -187,7 +188,7 @@ const displayCartItems = (val) => {
   const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
 };
-displayCartItems();
+displayCartItems(numStorage);
 
 // increase / decrease amount of items
 
