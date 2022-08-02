@@ -56,6 +56,9 @@
     margin-block: 3px;
     transition: var(--time-transition);
 }
+.shopping-cart__amount-heading {
+    margin-block: .5rem;
+}
 .scroll-up:hover,
 .scroll-down:hover {
     background-color: var(--neutral-400);

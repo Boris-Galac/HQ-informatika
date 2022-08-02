@@ -287,7 +287,7 @@ select {
 .overlay {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 2;
     background-color: hsla(0, 0%, 0%, 0.9);
     cursor: pointer;
     transition: .3s;
@@ -302,7 +302,7 @@ select {
 
 .search.active {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -825,6 +825,10 @@ button {
     transition: var(--time-transition);
 }
 
+.shopping-cart__amount-heading {
+    margin-block: .5rem;
+}
+
 .scroll-up:hover,
 .scroll-down:hover {
     background-color: var(--neutral-400);
@@ -1185,7 +1189,7 @@ button {
     background: url('/src/styles/img/background-img.jpg');
     top: 0;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.516);
-    z-index: 2;
+    z-index: 3;
 }
 
 .header__wrapper {
