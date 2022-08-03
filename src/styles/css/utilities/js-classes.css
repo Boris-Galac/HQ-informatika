@@ -96,3 +96,13 @@
     background-color: var(--gray-200);
 }
 
+/* scroll items up and down in shopping cart */
+
+.shopping-cart__scroll,
+.shopping-cart__scroll {
+    display: none;
+}
+
+.shopping-cart__scroll.active {
+    display: block;
+}

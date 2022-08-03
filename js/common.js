@@ -55,6 +55,9 @@ searchBtn.forEach((search) => {
 
 //////////////////// SHOPPING CART ////////////////////////
 
+const shopCartBody = document.querySelectorAll('.shopping-cart__body');
+const cartMsg = document.querySelectorAll('.shopping-cart__cart-message');
+
 let cart = JSON.parse(localStorage.getItem('data')) || [];
 let numStorage = JSON.parse(localStorage.getItem('num')) || [];
 
@@ -68,7 +71,7 @@ const displayCartItems = (val) => {
       return `
     <li class="shopping-cart__item" id="${obj.id}">
         <p class="shopping-cart__info">
-        ${search.product}
+        ${obj.product}
         </p>
         <h3 class="shopping-cart__price">${search.price}</h3>
         <input type="number" name="amount" value="${(val =
@@ -81,17 +84,27 @@ const displayCartItems = (val) => {
     .join('');
   const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
+  // totalBill();
+  // if cart has items show items
+  if (cart.length) {
+    shopCartBody.forEach((body) => body.classList.add('active'));
+    cartMsg.forEach((msg) => {
+      if (cart.length) {
+        msg.style = `
+        display: none;
+        `;
+      }
+    });
+  }
 };
-// displayCartItems(numStorage);
+displayCartItems(numStorage);
 
 /////////////// add items to cart and cart arr
 
-const cartMsg = document.querySelectorAll('.shopping-cart__cart-message');
-
-let buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
+const buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    let itemCategory = e.currentTarget.parentElement.parentElement.id;
-    let productName =
+    const itemCategory = e.currentTarget.parentElement.parentElement.id;
+    const productName =
       e.currentTarget.parentElement.parentElement.querySelector(
         '.product__heading'
       ).innerText;
@@ -100,9 +113,10 @@ let buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
       item: 1,
       product: productName,
     });
-    let productBuyBtn =
+    const productBuyBtn =
       e.target.parentElement.parentElement.querySelector('.buy-btn');
     productBuyBtn.classList.add('deactivated');
+    //// if cart has items msg should disappear
     cartMsg.forEach((msg) => {
       if (cart.length) {
         msg.style = `
@@ -110,6 +124,9 @@ let buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
         `;
       }
     });
+    // if listItem cart length is more than 3 items show scroll
+    showScroll();
+
     localStorage.setItem('data', JSON.stringify(cart));
     clrAll();
     displayCartItems();
@@ -135,8 +152,6 @@ const amountItems = (e) => {
 };
 
 /////////////// clear all
-
-let shopCartBody = document.querySelectorAll('.shopping-cart__body');
 
 const clrAll = () => {
   document.querySelectorAll('.shopping-cart__clear-all').forEach((clearBtn) => {
@@ -172,10 +187,11 @@ const clrAll = () => {
     });
   });
 };
+clrAll();
 
 /////////////// display cart number indicator of items
 
-let cartItems = document.querySelectorAll('.header__amount-items');
+const cartItems = document.querySelectorAll('.header__amount-items');
 const cartIndicator = () => {
   let x = cart.filter((obj) => obj.item);
   cartItems.forEach((item) => {
@@ -219,6 +235,9 @@ const removeItem = (e) => {
       `;
     });
   }
+  // if listItem cart length is more than 3 items show scroll
+  showScroll();
+
   localStorage.setItem('data', JSON.stringify(cart));
   localStorage.setItem('num', JSON.stringify(cart.length));
   displayCartItems(numStorage);
@@ -238,3 +257,45 @@ const totalBill = () => {
     .reduce((a, b) => a + b, 0);
   total.forEach((total) => (total.innerHTML = `${x}€`));
 };
+totalBill();
+
+//////////// SCROLL ITEMS IN SHOPPING CART
+
+const scrollUp = document.querySelectorAll('.scroll-up');
+const scrollDown = document.querySelectorAll('.scroll-down');
+
+const showScroll = () => {
+  if (cart.length > 3) {
+    document.querySelectorAll('.shopping-cart__scroll').forEach((scroll) => {
+      scroll.classList.add('active');
+    });
+  } else {
+    document.querySelectorAll('.shopping-cart__scroll').forEach((scroll) => {
+      scroll.classList.remove('active');
+    });
+  }
+};
+showScroll();
+
+scrollUp.forEach((up) => {
+  up.addEventListener('click', (e) => {
+    const itemHeight = document.querySelector('.shopping-cart__item');
+    const heightItem = itemHeight.scrollHeight + 8;
+    up.nextElementSibling.scrollBy({
+      top: -heightItem,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+});
+scrollDown.forEach((down) => {
+  down.addEventListener('click', (e) => {
+    const itemHeight = document.querySelector('.shopping-cart__item');
+    const heightItem = itemHeight.scrollHeight + 8;
+    down.previousElementSibling.scrollBy({
+      top: heightItem,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+});

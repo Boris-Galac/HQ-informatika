@@ -94,8 +94,11 @@
     margin-right: 2.2rem;
 }
 .shopping-cart__item-list {
-    display: var(--d-grid);
+    display: grid;
     gap: .5rem;
+    height: max-content;
+    max-height: 16rem;
+    overflow: hidden;
 }
 .shopping-cart__total-bill {
     margin-top: .3rem;
@@ -132,6 +135,9 @@
     display: var(--d-flex);
     gap: 1.2rem;
     align-items: var(--center);
+    height: 5rem;
+    background: hsla(0, 0%, 100%, 0.025);
+    padding: .4rem;
 }
 .shopping-cart__price,
 .shopping-cart__overall {

@@ -398,6 +398,17 @@ select {
     background-color: var(--gray-200);
 }
 
+/* scroll items up and down in shopping cart */
+
+.shopping-cart__scroll,
+.shopping-cart__scroll {
+    display: none;
+}
+
+.shopping-cart__scroll.active {
+    display: block;
+}
+
 button {
     background: none;
     border: none;
@@ -874,8 +885,13 @@ button {
 }
 
 .shopping-cart__item-list {
-    display: var(--d-grid);
+    display: grid;
     gap: .5rem;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    max-height: 16rem;
+    overflow: hidden;
 }
 
 .shopping-cart__total-bill {
@@ -917,6 +933,9 @@ button {
     display: var(--d-flex);
     gap: 1.2rem;
     align-items: var(--center);
+    height: 5rem;
+    background: hsla(0, 0%, 100%, 0.025);
+    padding: .4rem;
 }
 
 .shopping-cart__price,
