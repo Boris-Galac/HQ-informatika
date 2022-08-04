@@ -37,6 +37,13 @@
     cursor: pointer;
     outline: 1px solid lightgray;
 }
+.product-grid .product__info {
+    display: grid;
+    place-items: center;
+}
+.product-grid .product__right {
+    grid-template-rows: 3fr 1fr;
+}
 .product__header {
     position: relative;
     display: var(--d-grid);

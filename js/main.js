@@ -93,9 +93,9 @@ accordionHeader.forEach((headerTab) => {
 
 const displayBestOffer = () => {
   // shoppingItemsArr.length = 15;
-  let itemsArr = shoppingItemsArr
+  const itemsArr = shoppingItemsArr
     .map((item) => {
-      let = { category, img, product, description, price } = item;
+      const { category, img, product, description, price } = item;
       return `
         <li id="${category}" class="product">
         <div class="product__left">
@@ -105,10 +105,12 @@ const displayBestOffer = () => {
           <h3 class="product__price price">${price},00 <span>€</span></h3>
         </div>
         <div class="product__right">
+        <a href="categories.html">
           <div class="product__category">${category}</div>
+        </a>
            <div class="product__info">
-              <div>
-                  <h3 class="product__heading">${product}</h3>
+              <div>       
+                  <h3 class="product__heading">${product}</h3>                 
                   <p class="product__description">${description}</p>
               </div>
           </div>
@@ -130,15 +132,15 @@ const loadMoreBtn = document.querySelector('.best-offer__load-more');
 let startIndex = 5;
 
 loadMoreBtn.addEventListener('click', () => {
-  let products = Array.from(
+  const products = Array.from(
     document.querySelectorAll('.best-offer__wrapper .product')
   );
 
-  let productsTodisplay = products.slice(startIndex, startIndex + 5);
+  const productsTodisplay = products.slice(startIndex, startIndex + 5);
   productsTodisplay.forEach((product) => {
     product.classList.add('active');
   });
-  let items = products
+  const items = products
     .filter((product, index) => {
       return index > 4;
     })

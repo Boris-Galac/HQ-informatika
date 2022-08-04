@@ -12,12 +12,6 @@ const btnCreate = (klasa, naziv) => {
 let currentPage = 1;
 let rows = 4;
 
-//// load and show items on browser load
-
-// window.addEventListener('DOMContentLoaded', (e) => {
-//   displayCategoryItems(shoppingItemsArr, currentPage);
-// });
-
 filterBtns.forEach((btn) => {
   ///// label reference link
   btn.addEventListener('click', (e) => {
@@ -137,3 +131,15 @@ const pagination = (arr) => {
 
 pagination(shoppingItemsArr);
 displayCategoryItems(shoppingItemsArr, currentPage);
+
+///// CHANGE LAYOUT OF ITEMS
+
+const rowBtn = document.querySelector('.filter-btn-row');
+const gridBtn = document.querySelector('.filter-btn-grid');
+
+rowBtn.addEventListener('click', (e) => {
+  console.log(e.target);
+});
+gridBtn.addEventListener('click', (e) => {
+  console.log(e.target);
+});
