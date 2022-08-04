@@ -106,3 +106,10 @@
 .shopping-cart__scroll.active {
     display: block;
 }
+
+/* active class for category btn */
+
+.categories__btn.active {
+    background-color: var(--blue-600);
+    outline: 1px dashed #fff;
+}

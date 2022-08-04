@@ -139,6 +139,11 @@
     background: hsla(0, 0%, 100%, 0.025);
     padding: .4rem;
 }
+.shopping-cart__footer-btns {
+    display: var(--d-grid);
+    gap: .4rem;
+    margin-top: .3rem;
+}
 .shopping-cart__price,
 .shopping-cart__overall {
  font-size: .9rem;
@@ -184,7 +189,7 @@
     border-radius: 3px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #fff;
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
     transition: var(--time-transition);
     isolation: isolate;
 }

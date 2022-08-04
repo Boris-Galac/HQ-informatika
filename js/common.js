@@ -60,6 +60,7 @@ const cartMsg = document.querySelectorAll('.shopping-cart__cart-message');
 
 let cart = JSON.parse(localStorage.getItem('data')) || [];
 let numStorage = JSON.parse(localStorage.getItem('num')) || [];
+let price = JSON.parse(localStorage.getItem('price')) || [];
 
 /////////////// display items in shopping cart
 
@@ -84,7 +85,6 @@ const displayCartItems = (val) => {
     .join('');
   const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
-  // totalBill();
   // if cart has items show items
   if (cart.length) {
     shopCartBody.forEach((body) => body.classList.add('active'));
@@ -101,39 +101,43 @@ displayCartItems(numStorage);
 
 /////////////// add items to cart and cart arr
 
-const buyBtn = document.querySelectorAll('.buy-btn').forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    const itemCategory = e.currentTarget.parentElement.parentElement.id;
-    const productName =
-      e.currentTarget.parentElement.parentElement.querySelector(
-        '.product__heading'
-      ).innerText;
-    cart.push({
-      id: itemCategory,
-      item: 1,
-      product: productName,
-    });
-    const productBuyBtn =
-      e.target.parentElement.parentElement.querySelector('.buy-btn');
-    productBuyBtn.classList.add('deactivated');
-    //// if cart has items msg should disappear
-    cartMsg.forEach((msg) => {
-      if (cart.length) {
-        msg.style = `
+const buyItem = (e) => {
+  const itemCategory = e.currentTarget.parentElement.parentElement.id;
+  const price = Number(
+    e.target.closest('.product').querySelector('.price').innerText.slice(0, -5)
+  );
+  const productName =
+    e.currentTarget.parentElement.parentElement.querySelector(
+      '.product__heading'
+    ).innerText;
+  cart.push({
+    id: itemCategory,
+    item: 1,
+    price: price,
+    product: productName,
+  });
+  const productBuyBtn =
+    e.target.parentElement.parentElement.querySelector('.buy-btn');
+  productBuyBtn.classList.add('deactivated');
+  //// if cart has items msg should disappear
+  cartMsg.forEach((msg) => {
+    if (cart.length) {
+      msg.style = `
         display: none;
         `;
-      }
-    });
-    // if listItem cart length is more than 3 items show scroll
-    showScroll();
-
-    localStorage.setItem('data', JSON.stringify(cart));
-    clrAll();
-    displayCartItems();
-    cartIndicator();
-    totalBill();
+    }
   });
-});
+  console.log(cart);
+  // if listItem cart length is more than 3 items show scroll
+  showScroll();
+
+  localStorage.setItem('data', JSON.stringify(cart));
+  // localStorage.setItem('price', JSON.stringify(cart));
+  clrAll();
+  displayCartItems();
+  cartIndicator();
+  totalBill();
+};
 
 /////////////// increase / decrease amount of items
 
@@ -163,19 +167,20 @@ const clrAll = () => {
     }
     // when we click on clear btn delete cart arr and cart content
     clearBtn.addEventListener('click', (e) => {
+      // delete items
       cart = [];
-      let allChildren =
-        e.target.previousElementSibling.previousElementSibling.children;
-      [...allChildren] = [];
+      // if cart have no itemsshow msg 'Košarica je prazna'
       if (!cart.length) {
         cartMsg.forEach((msg) => {
           msg.style = `
-              display: block;
-            `;
+          display: block;
+          `;
+          // hide body (scroll btns, total, checkout btn)
           shopCartBody.forEach((cartBody) => {
             cartBody.classList.remove('active');
           });
         });
+        // every buy btn need to be active to buy
         document.querySelectorAll('.buy-btn').forEach((buyBtn) => {
           buyBtn.classList.remove('deactivated');
         });
@@ -249,12 +254,7 @@ const removeItem = (e) => {
 
 const totalBill = () => {
   let total = document.querySelectorAll('.shopping-cart__total');
-  let x = cart
-    .map((obj) => {
-      let a = shoppingItemsArr.find((item) => item.product === obj.product);
-      return a.price * obj.item;
-    })
-    .reduce((a, b) => a + b, 0);
+  let x = cart.map((obj) => obj.price * obj.item).reduce((a, b) => a + b, 0);
   total.forEach((total) => (total.innerHTML = `${x}€`));
 };
 totalBill();
@@ -297,5 +297,14 @@ scrollDown.forEach((down) => {
       left: 0,
       behavior: 'smooth',
     });
+  });
+});
+
+///// SWITCH CATEGORIES FROM INDEX HTML TO CATEGORES HTML
+
+const categoryBtns = document.querySelectorAll('.home-category-btn');
+categoryBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    location.assign('categories.html');
   });
 });

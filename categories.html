@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/css/style.css">
     <script defer src="js/database.js" ></script>
-    <script defer src="js/categories.js" ></script>
+    <script defer src="js/categories.js"></script>
     <script defer src="js/common.js"></script>
     <title>HQ Informatika</title>
 </head>
@@ -107,11 +107,13 @@
                     <button class="shopping-cart__scroll scroll-down">
                         <i class="fa-solid fa-caret-down"></i>
                     </button>
-                    <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
-                    <div class="shopping-cart__total-bill" title="total bill">
-                        <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
+                    <div class="shopping-cart__footer-btns">
+                        <div class="shopping-cart__total-bill" title="total bill">
+                            <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
+                        </div>
+                        <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
+                        <button class="shopping-cart__checkout" title="checkout">Checkout</button>
                     </div>
-                    <button class="shopping-cart__checkout" title="checkout">Checkout</button>
                 </div>
             </div>
         </div>
@@ -135,7 +137,7 @@
             <div class="categories__wrapper">
                 <div class="categories__row">
                     <a href="#">
-                        <button class="categories__btn">
+                        <button class="categories__btn" data-id="desktop">
                             <img src="/src/styles/icons/desktop.svg" alt="desktop">
                         </button>
                         <h3 class="categories__name-category">
@@ -143,7 +145,7 @@
                         </h3>
                     </a>
                     <a href="#">
-                        <button class="categories__btn">
+                        <button class="categories__btn" data-id="accessories">
                             <img src="/src/styles/icons/keyboard.svg" alt="keyboard">
                         </button>
                         <h3 class="categories__name-category">
@@ -151,7 +153,7 @@
                         </h3>                      
                     </a>
                     <a href="#">
-                        <button class="categories__btn">
+                        <button class="categories__btn" data-id="network">
                             <img src="/src/styles/icons/network.svg" alt="network">
                         </button>
                         <h3 class="categories__name-category">
@@ -161,7 +163,7 @@
                 </div>
                 <div class="categories__row">
                     <a href="#">
-                        <button class="categories__btn">
+                        <button class="categories__btn" data-id="laptop">
                             <img src="/src/styles/icons/laptop.svg" alt="laptop">
                         </button>
                         <h3 class="categories__name-category">
@@ -169,7 +171,7 @@
                         </h3>                      
                     </a>
                     <a href="#">
-                        <button class="categories__btn">
+                        <button class="categories__btn" data-id="monitori">
                             <img src="/src/styles/icons/monitor.svg" alt="monitor">
                         </button>
                         <h3 class="categories__name-category">
@@ -177,7 +179,7 @@
                         </h3>                      
                     </a>
                     <a href="#">
-                        <button class="categories__btn">
+                        <button class="categories__btn" data-id="software">
                             <img src="/src/styles/icons/software.svg" alt="software">
                         </button>
                         <h3 class="categories__name-category">
@@ -228,18 +230,18 @@
             </ul> 
             <div class="pagination">
                 <div class="pagination__wrapper">
-                    <button class="pagination__btn">
+                    <!-- <button class="pagination__btn first">
                         first
                     </button>
-                    <button class="pagination__btn">
+                    <button class="pagination__btn prev">
                         <i class="fa-solid fa-chevron-left pagination__left-arrow"></i>
                     </button>
-                    <button class="pagination__btn">
+                    <button class="pagination__btn next">
                         <i class="fa-solid fa-chevron-right pagination__right-arrow"></i>
                     </button>
-                    <button class="pagination__btn">
+                    <button class="pagination__btn last">
                         last
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </section>

@@ -14,6 +14,9 @@ button {
     border-radius: 4px;
     transition: .15s;
 }
+.categories__btn img{
+    pointer-events: none;
+}
 .categories__btn:hover {
     background: hsl(207, 100%, 60%);
     outline: 1px solid #fff;

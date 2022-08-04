@@ -409,6 +409,13 @@ select {
     display: block;
 }
 
+/* active class for category btn */
+
+.categories__btn.active {
+    background-color: var(--blue-600);
+    outline: 1px dashed #fff;
+}
+
 button {
     background: none;
     border: none;
@@ -425,6 +432,10 @@ button {
     place-items: center;
     border-radius: 4px;
     transition: .15s;
+}
+
+.categories__btn img{
+    pointer-events: none;
 }
 
 .categories__btn:hover {
@@ -938,6 +949,12 @@ button {
     padding: .4rem;
 }
 
+.shopping-cart__footer-btns {
+    display: var(--d-grid);
+    gap: .4rem;
+    margin-top: .3rem;
+}
+
 .shopping-cart__price,
 .shopping-cart__overall {
  font-size: .9rem;
@@ -988,7 +1005,7 @@ button {
     border-radius: 3px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #fff;
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
     transition: var(--time-transition);
     isolation: isolate;
 }
@@ -2101,16 +2118,6 @@ button {
     position: relative;
     padding: 1rem;
 }
-
-/* .main__product__price {
-    display: var(--d-flex);
-    align-items: var(--center);
-    justify-content: var(--center);
-    justify-self: var(--center);
-    padding: .5rem;
-    border-radius: 50px;
-    border: 4px solid hsl(197, 21%, 94%);
-} */
 
 .main__product-second .buy-btn{
     position: static;

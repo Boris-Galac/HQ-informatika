@@ -92,7 +92,7 @@ accordionHeader.forEach((headerTab) => {
 ///////// display offer items
 
 const displayBestOffer = () => {
-  shoppingItemsArr.length = 15;
+  // shoppingItemsArr.length = 15;
   let itemsArr = shoppingItemsArr
     .map((item) => {
       let = { category, img, product, description, price } = item;
@@ -112,7 +112,7 @@ const displayBestOffer = () => {
                   <p class="product__description">${description}</p>
               </div>
           </div>
-          <button class="buy-btn">Dodaj
+          <button onclick=buyItem(event) class="buy-btn">Dodaj
               <i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>
@@ -124,7 +124,7 @@ const displayBestOffer = () => {
 };
 displayBestOffer();
 
-////////// LOAD MORE
+////////// LOAD MORE ITEMS
 
 const loadMoreBtn = document.querySelector('.best-offer__load-more');
 let startIndex = 5;
