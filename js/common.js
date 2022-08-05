@@ -307,6 +307,5 @@ categoryBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     // console.log(e.target.dataset.id);
     location.assign('categories.html');
-    console.log('asdnasjkdn');
   });
 });

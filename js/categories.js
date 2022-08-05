@@ -138,8 +138,61 @@ const rowBtn = document.querySelector('.filter-btn-row');
 const gridBtn = document.querySelector('.filter-btn-grid');
 
 rowBtn.addEventListener('click', (e) => {
-  console.log(e.target);
+  document
+    .querySelectorAll('.product')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product-grid')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product__left')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product__left .product__price')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product__right')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product-grid .product__info')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product-grid .product__right')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.product__img img')
+    .forEach((item) => item.classList.remove('grid'));
+  document
+    .querySelectorAll('.buy-btn')
+    .forEach((item) => item.classList.remove('grid'));
 });
+
 gridBtn.addEventListener('click', (e) => {
-  console.log(e.target);
+  document
+    .querySelectorAll('.product')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product-grid')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product__left')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product__left .product__price')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product__right')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product-grid .product__info')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product-grid .product__right')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.product__img img')
+    .forEach((item) => item.classList.add('grid'));
+  document
+    .querySelectorAll('.buy-btn')
+    .forEach((item) => item.classList.add('grid'));
 });

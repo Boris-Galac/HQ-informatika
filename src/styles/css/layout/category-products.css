@@ -1,4 +1,4 @@
-.main-products {
+/* .main-products {
     position: relative;
     padding-top: 2rem;
     padding-bottom: 5rem;
@@ -34,11 +34,11 @@
 .main__product__info {
     display: var(--d-grid);
     place-items: var(--center);
-}
+} */
 
 /* GRID layout products */
-
-/* .main-products.product-grid {
+/* 
+.main-products.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(9.3rem, 1fr));
     grid-template-columns: 1fr 1fr;
