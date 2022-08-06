@@ -3,14 +3,14 @@
     padding: .5rem;
 }
 .filter__wrapper {
-    display: var(--d-grid);
-    grid-template-columns: 1fr 5fr;
+    display: var(--d-flex);
+    flex-wrap: wrap;
     gap: 1rem;
 }
 .filter-layout__btns {
     display: var(--d-grid);
     place-items: center;
-    width: fit-content;
+    width: max-content;
     gap: .5rem;
     background-color: var(--black);
     padding: 8px;
@@ -18,13 +18,14 @@
 }
 .filter__price_brand {
     background-color: var(--black);
-    width: fit-content;
+    width: 70vw;
     padding: .4rem;
     border-radius: 3px;
 }
 .filter__price_brand form {
    display: var(--d-flex);
    justify-content: space-between;
+   align-items: flex-end;
    padding: .3rem;
    gap: .5rem;
 }

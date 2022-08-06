@@ -200,28 +200,26 @@
                     </button>
                 </div>
                 <div class="filter__price_brand filter--box">
-                    <form>
-                        <div>
-                            <label for="start-price">Cijena od</label>
-                            <input type="number" name="start" id="startPrice" min="0" placeholder="0">
-                        </div>
-                        <div>
-                            <label for="end-price">Cijena do</label>
-                            <input type="number" name="end" id="startPrice" min="0" placeholder="0">
-                        </div>
-                    </form>            
-                    <form>
-                        <div class="filter__brand">
-                            <label for="brand-choice">Odaberi brand</label>
-                            <select name="brand" id="brand">
-                              <option value="hp">HP</option>
-                              <option value="acer">Acer</option>
-                              <option value="sony">Sony</option>
-                              <option value="audi">Audi</option>
-                            </select>
-                        </div>
-                        <input type="submit" value="Pretraži" class="filter-submit">
-                      </form>
+                    <form class="filter__wrapper" id="filter-bar">
+                            <div>
+                                <label for="start-price">Cijena od</label>
+                                <input type="number" name="start" id="startPrice" min="0" placeholder="0">
+                            </div>
+                            <div>
+                                <label for="end-price">Cijena do</label>
+                                <input type="number" name="end" id="startPrice" min="0" placeholder="0">
+                            </div>
+                            <div class="filter__brand">
+                                <label for="brand-choice">Odaberi brand</label>
+                                <select name="brand" id="brand">
+                                  <option value="hp">HP</option>
+                                  <option value="acer">Acer</option>
+                                  <option value="sony">Sony</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Pretraži" class="filter-submit" name="submit">
+                    </form>
                 </div>
             </div>
         </section>  

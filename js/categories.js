@@ -196,3 +196,11 @@ gridBtn.addEventListener('click', (e) => {
     .querySelectorAll('.buy-btn')
     .forEach((item) => item.classList.add('grid'));
 });
+
+/////////// FILTER PRODUCTS BAR
+
+const filterProducts = document.getElementById('filter-bar');
+filterProducts.addEventListener('input', (e) => {
+  e.preventDefault();
+  console.log(e.target.value);
+});
