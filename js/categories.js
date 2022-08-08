@@ -44,7 +44,7 @@ const filter = (e) => {
   }
 };
 
-/////////////// display items
+/////////////// display items in categories wrapper
 
 let itemList = document.querySelector('.product-grid');
 
@@ -57,7 +57,9 @@ const displayCategoryItems = (menuItems, pageNum) => {
         <li id="${category}" class="product">
         <div class="product__left">
         <div class="product__img">
+            <a href="single-product.html" class="product__link">
               <img src="${img}" alt="product" loading="lazy">
+           </a>
           </div>
           <h3 class="product__price price">${price},00 <span>€</span></h3>
         </div>
@@ -246,13 +248,17 @@ filterProducts.addEventListener('submit', (e) => {
   });
 
   /// show items that are filtered
-  let itemsArr = x.map((item) => {
-    let = { category, img, product, description, price } = item;
-    return `
+
+  let itemsArr = x
+    .map((item) => {
+      let = { category, img, product, description, price } = item;
+      return `
         <li id="${category}" class="product">
         <div class="product__left">
         <div class="product__img">
+            <a href="single-product.html" class="product__link">
               <img src="${img}" alt="product" loading="lazy">
+            </a>
           </div>
           <h3 class="product__price price">${price},00 <span>€</span></h3>
         </div>
@@ -269,7 +275,8 @@ filterProducts.addEventListener('submit', (e) => {
         </div>
       </li>
     `;
-  });
+    })
+    .join('');
   itemList.innerHTML = itemsArr;
   if (!itemList.firstElementChild) {
     itemList.innerHTML = `

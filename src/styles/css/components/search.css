@@ -13,7 +13,7 @@
     padding: 3rem;
     border-radius: 3px;
     color: var(--white);
-    box-shadow: 0 0 16px rgb(17, 17, 242);
+    box-shadow: 0 0 16px hsl(240, 80%, 48%);
     cursor: auto;
     z-index: 2;
 }

@@ -11,5 +11,6 @@
     place-items: var(--center);
     gap: 1.5rem;
     border: 2px solid hsl(206, 12%, 48%);
+    box-shadow: 0 0 16px hsl(240, 80%, 48%);
     z-index: 4;
 }

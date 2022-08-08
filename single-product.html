@@ -83,82 +83,75 @@
                    </button>
             </div>
         </nav>
-        <div class="shopping-cart">
+        <div class="shopping-cart" title="shopping cart">
             <div class="shopping-cart__amount-items">
                 <div class="shopping-cart__amount-wrapper">
                     <h3 class="shopping-cart__amount-heading">MyCart</h3>
-                    <h4 class="shopping-cart__amount-items">(3) items</h4>
                 </div>
-                <button class="shopping-cart__scroll-up">
-                    <i class="fa-solid fa-caret-up"></i>
-                </button>
                 <div class="shopping-cart__header-row">
                     <p>Proizvod</p>
                     <p>Cijena</p>
                     <p>Komada</p>
                     <p>Ukupno</p>
                 </div>
-                <ul class="shopping-cart__item-list">
-                    <li class="shopping-cart__item">
-                        <p class="shopping-cart__info">
-                            LAPTOP
-                        </p>
-                        <h3 class="shopping-cart__price">17.234</h3>
-                        <input type="number" name="amount" placeholder="0" min="0" id="amount" class="shopping-cart__amount">
-                        <h3 class="shopping-cart__overall">17.249,00 kn</h3>
-                    </li>
-                </ul>
-                <button class="shopping-cart__scroll-down">
-                    <i class="fa-solid fa-caret-down"></i>
-                </button>
-                <button class="shopping-cart__checkout">Checkout</button>
+                <p class="shopping-cart__cart-message">Košarica je prazna</p>
+                <div class="shopping-cart__body">
+                    <button class="shopping-cart__scroll scroll-up">
+                        <i class="fa-solid fa-caret-up"></i>
+                    </button>
+                    <ul class="shopping-cart__item-list">
+                    </ul>
+                    <button class="shopping-cart__scroll scroll-down">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <div class="shopping-cart__footer-btns">
+                        <div class="shopping-cart__total-bill" title="total bill">
+                            <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
+                        </div>
+                        <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
+                        <button class="shopping-cart__checkout" title="checkout">Checkout</button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-            <div class="search">
-            <form class="search__form">
-                <fieldset class="search__fieldset">
-                    <label for="search__label">
-                        <input type="search" name="search" class="search__input" id="search-form" placeholder="Pretraži...">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="submit" value="Traži" class="search__submit">
-                    </label>
-                </fieldset>
-                <ul class="search__list">
-                    <li class="search__item"></li>
-                </ul>
-            </form>
-        </div>
+    <div class="search">
+        <form class="search__form">
+            <fieldset class="search__fieldset">
+                <label for="search__label">
+                    <input type="search" name="search" class="search__input" id="search-form" placeholder="Pretraži...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="submit" value="Traži" class="search__submit">
+                </label>
+            </fieldset>
+            <ul class="search__list">
+                <li class="search__item"></li>
+            </ul>
+        </form> 
+    </div>
     <main class="main product-main">
+        <div class="breadcrumb">
+            <div class="breadcrumb__wrapper">
+                <nav class="breadcrumb__nav">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="index.html">Home</a>
+                        </li>
+                        <i class="fa-solid fa-angle-right breadcrumb__arrow"></i>
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="categories.html">Categories</a>
+                        </li>
+                        <i class="fa-solid fa-angle-right breadcrumb__arrow"></i>
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link current" href="single-product.html">Single product</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class="single-product">
-            <div class="single-product__img">
-                <img src="/src/styles/img/laptop-1.png" alt="laptop">
-            </div>
-            <div class="single-product__info">
-                <h2>LAPTOP Acer</h2>
-                <p>Core i5 1035G7, 8GB, 256GB SSD, Intel Graphics, 13.5" Touch, Windows 10, crni</p>
-            </div>
-            <div class="single-product__body">
-                <div class="single-product__row-1">
-                    <div class="single-product__avilability">
-                        <div class="single-product__icon">
-                            <img src="/src/styles/icons/checked.svg" alt="available">
-                        </div>
-                        <p>Raspoloživo</p>
-                    </div>
-                    <div class="single-product__price">
-                        <span class="price">699,00€</span>
-                    </div>
-                </div>
-                <div class="single-product__row-2">
-                    <div class="single__product__quantity-wrapper">
-                        <p>Količina</p>
-                        <input type="number" name="start" id="startPrice" min="0" placeholder="0" class="single-product__quant">
-                    </div>
-                    <button class="buy-btn">Dodaj 
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
+            <div class="single-product__product">
+
             </div>
             <div class="tabs">
                 <h2 class="tabs__heading">Detalji</h2>
@@ -200,7 +193,7 @@
                 <div class="carousel__wrapper">
                     <div class="card">
                         <div class="card__header">
-                            <img src="/src/styles/img/laptop-2.png" alt="laptop" class="card__img">
+                            <img src="/src/styles/img/laptop/laptop-2.png" alt="laptop" class="card__img">
                         </div>
                         <div class="card__body">
                             <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
@@ -217,7 +210,7 @@
                     </div>
                     <div class="card">
                         <div class="card__header">
-                            <img src="/src/styles/img/desktop-1.png" alt="laptop" class="card__img">
+                            <img src="/src/styles/img/laptop/laptop-3.png" alt="laptop" class="card__img">
                         </div>
                         <div class="card__body">
                             <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
@@ -234,7 +227,7 @@
                     </div>
                     <div class="card">
                         <div class="card__header">
-                            <img src="/src/styles/img/laptop-1.png" alt="laptop" class="card__img">
+                            <img src="/src/styles/img/laptop/laptop-4.png" alt="laptop" class="card__img">
                         </div>
                         <div class="card__body">
                             <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>

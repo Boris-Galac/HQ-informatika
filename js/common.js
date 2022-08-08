@@ -331,3 +331,67 @@ document.body.addEventListener('scroll', (e) => {
     });
   }
 });
+
+//////// DISPLAY SINGLE PRODUCT
+
+const clickedProduct = document
+  .querySelectorAll('.product__link')
+  .forEach((item) => {
+    item.addEventListener('click', (e) => {
+      let productName = e.target
+        .closest('.product')
+        .querySelector('.product__heading').innerText;
+      let objItem = shoppingItemsArr.find((obj) => obj.product === productName);
+      localStorage.setItem('product', JSON.stringify(objItem));
+    });
+  });
+
+//// display single item in wrapper
+
+const displaySingleProduct = () => {
+  let someProduct = JSON.parse(localStorage.getItem('product'));
+  let product = `
+      <div class="single-product__wrapper">
+      <div class="single-product__img">
+      <img src="${someProduct.img}" alt="laptop">
+      </div>
+      <div class="single-product__info">
+      <h2>${someProduct.product}</h2>
+      <p>${someProduct.description}</p>
+      </div>
+            <div class="single-product__body">
+            <div class="single-product__row-1">
+                    <div class="single-product__avilability">
+                        <div class="single-product__icon">
+                            <img src="/src/styles/icons/checked.svg" alt="available">
+                            </div>
+                            <p>Raspoloživo</p>
+                    </div>
+                    <div class="single-product__price">
+                    <span class="price">${someProduct.price},00€</span>
+                    </div>
+                    </div>
+                    <div class="single-product__row-2">
+                    <div class="single__product__quantity-wrapper">
+                    <p>Količina</p>
+                        <input type="number" name="start" id="startPrice" min="0" placeholder="0" class="single-product__quant">
+                        </div>
+                        <button onlclick=buyItemOne(event) class="buy-btn">Dodaj 
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        </div>
+                        </div>
+                        </div>
+      `;
+
+  document.querySelector('.single-product__product').innerHTML = product;
+};
+
+if (location.href.includes('single-product.html')) {
+  console.log(cart);
+  let buyItemOne = (e) => {
+    console.log('helloooooooooo');
+  };
+  buyItemOne();
+  displaySingleProduct();
+}

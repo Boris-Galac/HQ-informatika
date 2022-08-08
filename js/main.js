@@ -92,7 +92,6 @@ accordionHeader.forEach((headerTab) => {
 ///////// display offer items
 
 const displayBestOffer = () => {
-  // shoppingItemsArr.length = 15;
   const itemsArr = shoppingItemsArr
     .map((item) => {
       const { category, img, product, description, price } = item;

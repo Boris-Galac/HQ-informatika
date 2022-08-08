@@ -126,6 +126,9 @@
     cursor: pointer;
     outline: 1px solid lightgray;
 }
+.product__link {
+    /* position: relative; */
+}
 .product-grid .product__info.grid {
     display: grid;
     place-items: center;
@@ -141,6 +144,10 @@
 .product__img img.grid {
     position: relative;
     aspect-ratio: 1;
+    margin-inline: auto;
+    transform: none;
+    top: 0;
+    left: 0;
 }
 .buy-btn.grid {
     position: static;
