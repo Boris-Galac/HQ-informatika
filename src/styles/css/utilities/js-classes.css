@@ -113,3 +113,35 @@
     background-color: var(--blue-600);
     outline: 1px dashed #fff;
 }
+
+/* popup filter */
+
+.alert-filter {
+    pointer-events: none;
+    opacity: 0;
+}
+.alert-filter.active {
+    pointer-events: visible;
+    opacity: 1;
+}
+
+/* no requested results */
+
+.no-results {
+    font-size: 1.3rem;
+    color: var(--gray-700);
+    text-align: center;
+    padding-block: 5rem;
+    user-select: none;
+}
+
+/* back to top btn */
+
+.back-to-top {
+    opacity: 0;
+    pointer-events: none;
+}
+.back-to-top.active {
+    opacity: 1;
+    pointer-events: visible;
+}

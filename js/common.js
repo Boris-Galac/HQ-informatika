@@ -309,3 +309,25 @@ categoryBtns.forEach((btn) => {
     location.assign('categories.html');
   });
 });
+
+////// BACK TO TOP
+
+document.body.addEventListener('scroll', (e) => {
+  const scrollBtn = document.querySelectorAll('.back-to-top');
+  if (document.body.scrollTop > 250) {
+    scrollBtn.forEach((btn) => {
+      btn.classList.add('active');
+      btn.addEventListener('click', (e) => {
+        document.body.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth',
+        });
+      });
+    });
+  } else {
+    scrollBtn.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+  }
+});

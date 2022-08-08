@@ -54,4 +54,19 @@ button {
     perspective(500px)
     rotateY(360deg);   
 }
+.secondary-btn {
+    color: var(--white);
+    background-color: var(--black);
+    padding: .5rem 1.7rem;
+    border-radius: 3px;
+    transition: var(--time-transition);
+    border: 2px solid white;
+    cursor: pointer;
+}
+.secondary-btn:hover {
+    color: var(--white);
+    background-color: var(--blue-400);
+    box-shadow: 0 0 20px rgb(33, 93, 244);
+    padding: .5rem 1.7rem;border-radius: 3px;
+}
 

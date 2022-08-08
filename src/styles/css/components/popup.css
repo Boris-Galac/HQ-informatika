@@ -1,0 +1,15 @@
+.alert-filter {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--neutral-700);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 3px;
+    display: var(--d-grid);
+    place-items: var(--center);
+    gap: 1.5rem;
+    border: 2px solid hsl(206, 12%, 48%);
+    z-index: 4;
+}

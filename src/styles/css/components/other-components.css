@@ -1,0 +1,18 @@
+.back-to-top {
+    aspect-ratio: 1;
+    width: 3rem;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: var(--blue-600);
+    border: 3px solid #000;
+    color: var(--white);
+    transition: var(--time-transition);
+}
+.back-to-top:hover {
+    border: 3px solid rgb(4, 47, 85);
+    background-color: var(--blue-400);
+    box-shadow: 0 0 10px blue;
+}

@@ -416,6 +416,42 @@ select {
     outline: 1px dashed #fff;
 }
 
+/* popup filter */
+
+.alert-filter {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.alert-filter.active {
+    pointer-events: visible;
+    opacity: 1;
+}
+
+/* no requested results */
+
+.no-results {
+    font-size: 1.3rem;
+    color: var(--gray-700);
+    text-align: center;
+    padding-block: 5rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+}
+
+/* back to top btn */
+
+.back-to-top {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    pointer-events: visible;
+}
+
 button {
     background: none;
     border: none;
@@ -489,6 +525,23 @@ button {
     transform: 
     perspective(500px)
     rotateY(360deg);   
+}
+
+.secondary-btn {
+    color: var(--white);
+    background-color: var(--black);
+    padding: .5rem 1.7rem;
+    border-radius: 3px;
+    transition: var(--time-transition);
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    color: var(--white);
+    background-color: var(--blue-400);
+    box-shadow: 0 0 20px rgb(33, 93, 244);
+    padding: .5rem 1.7rem;border-radius: 3px;
 }
 
 .product {
@@ -1363,6 +1416,42 @@ button {
     }
 }
 
+.alert-filter {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--neutral-700);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 3px;
+    display: var(--d-grid);
+    place-items: var(--center);
+    gap: 1.5rem;
+    border: 2px solid hsl(206, 12%, 48%);
+    z-index: 4;
+}
+
+.back-to-top {
+    aspect-ratio: 1;
+    width: 3rem;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: var(--blue-600);
+    border: 3px solid #000;
+    color: var(--white);
+    transition: var(--time-transition);
+}
+
+.back-to-top:hover {
+    border: 3px solid rgb(4, 47, 85);
+    background-color: var(--blue-400);
+    box-shadow: 0 0 10px blue;
+}
+
 .header {
     color: var(--white);
     padding-block: .3rem;
@@ -2185,21 +2274,6 @@ button {
     outline: 1px solid hsl(202, 93%, 53%);
    box-shadow: 0 0 15px rgb(0, 157, 255);
 
-}
-
-.filter-submit {
-   padding: .4rem 1.7rem;
-   background: #000;
-   color: #fff;
-   border: 2px solid #fff;
-   border-radius: 3px;
-   cursor: pointer;
-   transition: .15s;
-}
-
-.filter-submit:hover {
-   background-color: hsla(208, 75%, 55%, 0.993);
-   box-shadow: 0 0 1rem hsla(208, 75%, 55%, 0.993);
 }
 
 .filter-icon {

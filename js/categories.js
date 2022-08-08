@@ -137,6 +137,8 @@ displayCategoryItems(shoppingItemsArr, currentPage);
 const rowBtn = document.querySelector('.filter-btn-row');
 const gridBtn = document.querySelector('.filter-btn-grid');
 
+///// show items in row layout
+
 rowBtn.addEventListener('click', (e) => {
   document
     .querySelectorAll('.product')
@@ -166,6 +168,8 @@ rowBtn.addEventListener('click', (e) => {
     .querySelectorAll('.buy-btn')
     .forEach((item) => item.classList.remove('grid'));
 });
+
+///// show items in grid layout
 
 gridBtn.addEventListener('click', (e) => {
   document
@@ -200,7 +204,86 @@ gridBtn.addEventListener('click', (e) => {
 /////////// FILTER PRODUCTS BAR
 
 const filterProducts = document.getElementById('filter-bar');
-filterProducts.addEventListener('input', (e) => {
+
+filterProducts.addEventListener('submit', (e) => {
   e.preventDefault();
-  console.log(e.target.value);
+  let startPrice = Number(document.getElementById('startPrice').value);
+  let endPrice = Number(document.getElementById('endPrice').value);
+  let brandProduct = document.getElementById('brand').value;
+  /// if the values are ampty show popup msg
+  if (startPrice === 0 && endPrice === 0 && brandProduct === 'all') {
+    const alertPopup = document.querySelector('.alert-filter');
+    alertPopup.classList.toggle('active');
+    createOverlay(alertPopup);
+    return alertPopup
+      .querySelector('.secondary-btn')
+      .addEventListener('click', (e) => {
+        alertPopup.classList.remove('active');
+        overlay.remove();
+      });
+  }
+  /// filter products
+  let x = shoppingItemsArr.filter((obj) => {
+    if (
+      obj.price >= startPrice &&
+      obj.price <= endPrice &&
+      brandProduct === 'all'
+    ) {
+      return obj;
+    } else if (
+      startPrice === 0 &&
+      endPrice === 0 &&
+      brandProduct === obj.brand
+    ) {
+      return obj;
+    } else if (
+      obj.price >= startPrice &&
+      obj.price <= endPrice &&
+      brandProduct === obj.brand
+    ) {
+      return obj;
+    }
+  });
+
+  /// show items that are filtered
+  let itemsArr = x.map((item) => {
+    let = { category, img, product, description, price } = item;
+    return `
+        <li id="${category}" class="product">
+        <div class="product__left">
+        <div class="product__img">
+              <img src="${img}" alt="product" loading="lazy">
+          </div>
+          <h3 class="product__price price">${price},00 <span>€</span></h3>
+        </div>
+        <div class="product__right">
+           <div class="product__info">
+              <div>
+                  <h3 class="product__heading">${product}</h3>
+                  <p class="product__description">${description}</p>
+              </div>
+          </div>
+          <button onclick=buyItem(event) class="buy-btn">Dodaj
+              <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </li>
+    `;
+  });
+  itemList.innerHTML = itemsArr;
+  if (!itemList.firstElementChild) {
+    itemList.innerHTML = `
+      <p class="no-results">Nema traženih rezultata</p>
+    `;
+  }
+  while (pagsWrapper.firstChild) {
+    pagsWrapper.removeChild(pagsWrapper.lastChild);
+  }
+  const returnFilterBtn = document.createElement('button');
+  returnFilterBtn.classList.add('secondary-btn');
+  returnFilterBtn.innerText = 'Poništi filter';
+  returnFilterBtn.addEventListener('click', (e) => {
+    location.reload();
+  });
+  pagsWrapper.append(returnFilterBtn);
 });
