@@ -1,13 +1,16 @@
 .card {
     background-color: var(--neutral-200);
-    border: 2px solid rgb(200, 212, 223);
+    border: 2px solid #d6e3ee;
+    border-radius: 5px;
     width: 60vw;
     max-width: 14rem;
     min-width: 13rem;
-    display: var(--d-grid);
     grid-template-rows: auto 1fr auto;
     padding: 1rem;
     box-shadow: 0 3px 2px hsl(0, 0%, 79%);
+    height: fit-content;
+    scroll-snap-align: start;
+
 }
 .card__img {
     margin: auto;
@@ -19,14 +22,18 @@
     gap: .4rem;
 }
 .card__price {
-    margin-bottom: .5rem;
+    margin-block: .5rem;
 }
 .card__heading {
     color: var(--neutral-800);
+    font-size: 1.3rem;
 }
 .card__heading span{
     color: var(--neutral-600);
 }
 .card__paragraph {
     color: var(--neutral-700);
+}
+.card .buy-btn {
+    width: 100% !important;
 }

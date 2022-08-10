@@ -126,9 +126,6 @@
     cursor: pointer;
     outline: 1px solid lightgray;
 }
-.product__link {
-    /* position: relative; */
-}
 .product-grid .product__info.grid {
     display: grid;
     place-items: center;
@@ -209,3 +206,5 @@
         bottom: 0;
     }
 }
+
+/* SINGLE PRODUCT PAGE */

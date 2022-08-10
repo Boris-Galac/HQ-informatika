@@ -12,11 +12,17 @@
     cursor: pointer;
     background-color: var(--neutral-100);
     padding: .7rem 1.5rem;
+    transition: var(--time-transition);
+}
+.tab__btn:hover {
+    background-color:hsla(204, 38%, 95%, 0.842);
 }
 .tab__content {
     padding: 1rem;
-    display: none;
     border-radius: 0px 3px 3px 3px;
+    display: none;
+    transform-origin: top;
+    transform: scaleY(0);
 }
 .tab__btn.active {
     background-color: var(--neutral-200);
@@ -28,6 +34,15 @@
     background-color: var(--neutral-200);
     box-shadow: 0 2px 0 hsl(204, 16%, 78%);
     display: block;
+    animation: tab .5s forwards;
+}
+@keyframes tab {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
 }
 .tab__content h3 {
     margin-bottom: 1rem;

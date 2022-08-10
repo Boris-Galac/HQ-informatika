@@ -70,3 +70,17 @@ button {
     padding: .5rem 1.7rem;border-radius: 3px;
 }
 
+/* commenting delete btn */
+
+.del-comment-btn {
+    padding: .4rem 1.2rem; 
+    margin-top: 2rem;
+    background-color: var(--red-400);
+    border-radius: 3px;
+    color: var(--white);
+    transition: var(--time-transition);
+}
+.del-comment-btn:hover {
+    background-color: var(--red-500);
+}
+

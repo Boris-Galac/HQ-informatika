@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/css/style.css">
     <script defer src="js/database.js" ></script>
-    <script defer src="js/categories.js"></script>
-    <script defer src="js/common.js"></script>
+    <script defer src="js/main.js"></script>
     <title>HQ Informatika</title>
 </head>
 <body>
@@ -112,7 +111,7 @@
                             <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
                         </div>
                         <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
-                        <button class="shopping-cart__checkout" title="checkout">Checkout</button>
+                        <a href="checkout.html"><button class="shopping-cart__checkout" title="checkout">Checkout</button></a>
                     </div>
                 </div>
             </div>
@@ -192,11 +191,11 @@
         <section class="filter-bar">
             <div class="filter__wrapper">
                 <div class="filter-layout__btns filter--box">
-                    <button>
-                        <img class="filter-icon filter-btn-row" src="/src/styles/icons/row.svg" alt="row">
+                    <button class="filter-btn-row">
+                        <img class="filter-icon " src="/src/styles/icons/row.svg" alt="row">
                     </button>
                     <button class="filter-btn-grid">
-                        <img class="filter-icon filter-btn-row" src="/src/styles/icons/grid.svg" alt="grid">
+                        <img class="filter-icon" src="/src/styles/icons/grid.svg" alt="grid">
                     </button>
                 </div>
                 <div class="filter__price_brand filter--box">
@@ -261,6 +260,12 @@
     </main>
     <footer class="footer">
         <div class="container">
+            <div class="footer__logo">
+                 <a href="index.html">
+                    <img src="/src/styles/img/logo.png" alt="HQ infomatika">
+                    <h3>HQ Informatika</h3>
+                </a>
+            </div>
             <div class="footer__wrapper">
                 <form class="footer__form">
                     <fieldset class="footer__fieldset">

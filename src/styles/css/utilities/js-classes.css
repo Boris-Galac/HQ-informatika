@@ -133,7 +133,7 @@
     opacity: 1;
 }
 
-/* no requested results */
+/* no requested results in filter container */
 
 .no-results {
     font-size: 1.3rem;
@@ -152,4 +152,29 @@
 .back-to-top.active {
     opacity: 1;
     pointer-events: visible;
+}
+/* comment submit */
+
+.commenting__submit.deactivated {
+    color: var(--gray-300);
+    cursor: no-drop;
+}
+.commenting__submit.deactivated:hover {
+    background-color: var(--gray-200);
+}
+
+/* like */
+#like {
+    transition: var(--time-transition);
+}
+#like.active {
+    transform: scale(1.6);
+}
+
+/* grid or row items */
+
+.filter-btn-row.active,
+.filter-btn-grid.active {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #fff);
 }

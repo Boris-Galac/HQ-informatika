@@ -1,8 +1,14 @@
 .carousel-slider {
     position: relative;
-    overflow: hidden;
-    width: 70vw;
-    max-width: 30rem;
+}
+.carousel__container {
+}
+.carousel__wrapper {
+    display: var(--d-flex);
+    gap: 1rem;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1rem;
 }
 .carousel-slider::after {
     content: '';
@@ -19,11 +25,11 @@
 }
 .carousel-slider__btns {
     position: absolute;
+    width: 100%;
     transform: translateY(-50%);
     top: 50%;
     display: var(--d-flex);
     justify-content: space-between;
-    width: 100%;
     padding-inline: .5rem;
     z-index: 2;
 }
@@ -41,8 +47,7 @@
 .carousel-right:hover {
     background-color: var(--neutral-600);
 }
-.carousel__wrapper {
-    display: var(--d-flex);
-    gap: .2rem;
-    width: 10rem;
+.fa-chevron-right,
+.fa-chevron-left {
+    pointer-events: none;
 }

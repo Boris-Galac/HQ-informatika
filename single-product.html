@@ -10,27 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/css/style.css">
     <script defer src="js/database.js"></script>
-    <script defer src="js/common.js"></script>
+    <script defer src="js/main.js"></script>
     <title>HQ Informatika</title>
 </head>
 <body>
     <header class="header">
         <div class="header__wrapper">
-            <a href="index.html">
+            <a href="index.html" title="Home page">
                 <h1 class="header__logo">
                     <img src="/src/styles/img/logo.png" alt="hq-informatika-logo">
                     HQ Informatika
                 </h1>
             </a>
             <div class="header__btns">
-                    <button class="header__search-btn">
+                    <button class="header__search-btn search-btn" title="search">
                         <img src="/src/styles/icons/search.svg" alt="search">
                     </button>
-                    <button class="header__cart-btn cart-btn">
+                    <button class="header__cart-btn cart-btn" title="cart">
                         <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                        <span id="header__amount-items"></span>
+                        <span class="header__amount-items"></span>
                     </button>
-                    <button class="header__ham-btn">
+                    <button class="header__ham-btn" title="menu">
                         <div class="ham-line"></div>
                         <div class="ham-line"></div>
                         <div class="ham-line"></div>
@@ -69,10 +69,12 @@
                     <button class="search-btn">
                         <img src="/src/styles/icons/search.svg" alt="search">
                     </button>
-                    <button class="cart-btn">
-                        <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                        <span id="header__amount-items"></span>
-                    </button>
+                    <div class="nav__shopping-cart-wrapper">
+                        <button class="cart-btn">
+                            <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
+                            <span class="header__amount-items"></span>
+                        </button>
+                    </div>
                 </div>
                 <div class="nav__sign-in-btns">
                    <button class="nav__sign-up sign-up" id="sign-up">
@@ -109,7 +111,7 @@
                             <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
                         </div>
                         <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
-                        <button class="shopping-cart__checkout" title="checkout">Checkout</button>
+                        <a href="checkout.html"><button class="shopping-cart__checkout" title="checkout">Checkout</button></a>
                     </div>
                 </div>
             </div>
@@ -149,30 +151,54 @@
                 </nav>
             </div>
         </div>
-        <div class="single-product">
+        <section class="single-product">
             <div class="single-product__product">
 
+            </div>
+            <div class="like-product">
+                <div class="like-product__wrapper">
+                    <button>
+                        <img src="/src/styles/icons/like.svg" id="like" class="like-product__like" alt="like">
+                    </button>
+                    <button>
+                        <img src="/src/styles/icons/dislike.svg" id="like" class="like-product__dislike" alt="dislike">
+                    </button>
+                </div>
+            </div>
+            <div class="commenting">
+                <h2 class="commenting__heading">Komentiraj</h2>
+                <div class="commenting__box">
+                    <form id="addComment">
+                        <p class="commenting__subheading"><label for="comment">Reci što misliš o proizvodu:</label></p>
+                        <textarea class="commenting__create-comment" id="comment" name="comment" rows="4" cols="50" placeholder="Komentiraj nešto..."></textarea>
+                        <br>
+                        <input type="submit" value="Dodaj komentar" class="commenting__submit deactivated" id="submit-comment">
+                    </form>
+                </div>
+                <ul class="commenting__container" id="comments">
+   
+                </ul>
             </div>
             <div class="tabs">
                 <h2 class="tabs__heading">Detalji</h2>
                 <div class="tab">
                     <div class="tab__wrapper">
                         <div class="tab__btn-wrapper">
-                            <button class="tab__btn active">Opis</button>
-                            <button class="tab__btn">Spec</button>
-                            <button class="tab__btn">Komentari</button>
+                            <button class="tab__btn active" data-id="tab-1">Opis</button>
+                            <button class="tab__btn" data-id="tab-2">Spec</button>
+                            <button class="tab__btn" data-id="tab-3">Komentari</button>
                         </div>
                         <div class="tab__content-wrapper">
-                            <article class="tab__content active">
-                                <h3>This is tab one</h3>
+                            <article class="tab__content active" id="tab-1">
+                                <h3>Ovaj proizvod</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto placeat tempora consectetur praesentium est ducimus in amet repudiandae culpa facilis.</p>
                             </article>
-                            <article class="tab__content">
+                            <article class="tab__content" id="tab-2">
                                 <h3>This is tab two</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae exercitationem ex magnam, assumenda voluptates corporis perspiciatis, nisi cupiditate eaque odio modi repellat in repudiandae dolorum iure?
                                 </p>
                             </article>
-                            <article class="tab__content">
+                            <article class="tab__content" id="tab-3">
                                 <h3>This is tab three</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, possimus.</p>
                             </article>
@@ -181,73 +207,31 @@
                 </div>
             </div>
             <section class="carousel-slider">
-                <h2 class="carousel-slider__heading">Recommended</h2>
+                <div class="carousel__container">
+                    <h2 class="carousel-slider__heading">Recommended</h2>
+                    <ul class="carousel__wrapper" id="carouselWrapper">
+                        
+                    </ul>
+                </div>
                 <div class="carousel-slider__btns">
-                    <button class="carousel-left">
+                    <button class="carousel-left" id="carouselLeft">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button class="carousel-right">
+                    <button class="carousel-right" id="carouselRight">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
-                <div class="carousel__wrapper">
-                    <div class="card">
-                        <div class="card__header">
-                            <img src="/src/styles/img/laptop/laptop-2.png" alt="laptop" class="card__img">
-                        </div>
-                        <div class="card__body">
-                            <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
-                            <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__price">
-                                <span class="price">499,00 €</span>
-                            </div>
-                            <button class="buy-btn">Dodaj 
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__header">
-                            <img src="/src/styles/img/laptop/laptop-3.png" alt="laptop" class="card__img">
-                        </div>
-                        <div class="card__body">
-                            <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
-                            <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nesciunt, quasi porro totam libero nulla.</p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__price">
-                                <span class="price">349,00 €</span>
-                            </div>
-                            <button class="buy-btn">Dodaj 
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__header">
-                            <img src="/src/styles/img/laptop/laptop-4.png" alt="laptop" class="card__img">
-                        </div>
-                        <div class="card__body">
-                            <h2 class="card__heading">Laptop: <span>Acer 5</span></h2>
-                            <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nesciunt, quasi porro totam libero nulla.</p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__price">
-                                <span class="price">349,00 €</span>
-                            </div>
-                            <button class="buy-btn">Dodaj 
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </section>
-        </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
+            <div class="footer__logo">
+                <a href="index.html">
+                <img src="/src/styles/img/logo.png" alt="HQ infomatika">
+                <h3>HQ Informatika</h3>
+            </a>
+            </div>
             <div class="footer__wrapper">
                 <form class="footer__form">
                     <fieldset class="footer__fieldset">

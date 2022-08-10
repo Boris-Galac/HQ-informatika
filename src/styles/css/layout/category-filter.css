@@ -76,7 +76,7 @@
 
 /* RESPONSIVE */
 
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
     .filter__price_brand {
         background-color: var(--black);
         width: fit-content;
