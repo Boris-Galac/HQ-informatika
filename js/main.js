@@ -500,6 +500,23 @@ const total = () => {
 };
 displayCheckoutItems();
 
+////// PAY alert
+if (location.href.includes('checkout.html')) {
+  document
+    .querySelector('.payment__footer-pay')
+    .addEventListener('click', (e) => {
+      const alertPopup = document.querySelector('.alert-filter');
+      alertPopup.classList.toggle('active');
+      createOverlay(alertPopup);
+      return alertPopup
+        .querySelector('.secondary-btn')
+        .addEventListener('click', (e) => {
+          alertPopup.classList.remove('active');
+          overlay.remove();
+        });
+    });
+}
+
 ///// DELIVERY PICK
 
 const deliveries = document
