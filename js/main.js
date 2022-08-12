@@ -157,6 +157,7 @@ const amountItems = (e) => {
   localStorage.setItem('data', JSON.stringify(cart));
   localStorage.setItem('num', JSON.stringify(num));
   totalBill();
+  displayCheckoutItems();
 };
 
 /////////////// clear all
@@ -501,6 +502,7 @@ const total = () => {
 displayCheckoutItems();
 
 ////// PAY alert
+
 if (location.href.includes('checkout.html')) {
   document
     .querySelector('.payment__footer-pay')
