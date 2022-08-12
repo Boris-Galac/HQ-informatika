@@ -131,8 +131,104 @@
                 </ul>
             </form> 
         </div>
-    <main class="main">
+    <main class="main main-checkout">
+        <div class="breadcrumb">
+            <div class="breadcrumb__wrapper">
+                <nav class="breadcrumb__nav">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="index.html">Home</a>
+                        </li>
+                        <i class="fa-solid fa-angle-right breadcrumb__arrow"></i>
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="categories.html">Categories</a>
+                        </li>
+                        <i class="fa-solid fa-angle-right breadcrumb__arrow"></i>
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link current" href="checkout.html">Checkout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+            <div class="checkout">
+                <section class="summary">
+                    <div class="summary__header">
+                        <h2 class="summary__heading">Ukupna narudžba</h2>
+                        <p>Provjeri svoje artikle i odaberi način dostave za bolje iskustvo trgovine.</p>
+                    </div>
+                    <div class="summary__body">
 
+                    </div>
+                    <div class="summary__footer">
+                        <h3 class="summary__shipping-headhing">Dostupna metoda dostave</h3>
+                        <div class="summary__footer-shipping-method">
+                            <div>
+                                <img src="/src/styles/img/fedex.png" alt="fedEx">
+                            </div>
+                            <div>
+                                <p>Delivery 2-3 days work</p>
+                                <p class="summary-fedex">Fedex delivery</p>
+                            </div>
+                            <div>
+                                <p>Free</p>
+                                <input type="radio" class="radioBtn">
+                            </div>
+                        </div>
+                        <h4 class="summary__shipping-subheadhing">Internacionalna dostava<i class="fa-solid fa-circle-info"></i></h4>
+                        <div class="summary__footer-shipping-method">
+                            <div>
+                                <img src="/src/styles/img/dhl.png" alt="dhl">
+                            </div>
+                            <div>
+                                <p>Delivery 1-2 days work</p>
+                                <p class="summary-fedex">DHL delivery</p>
+                            </div>
+                            <div>
+                                <p>€15,00</p>
+                                <input type="radio" class="radioBtn">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="payment">
+                    <div class="payment__header">
+                        <h2 class="payment__heading">Detalji kupovine</h2>
+                        <p>Popuni formu da bi se ostvarila kupovina.</p>
+                    </div>
+                    <form class="payment__form">
+                        <div>
+                            <label for="form-email" class="payment__form-email-label">Email adresa</label>
+                            <input type="email" name="email" id="form-email" class="payment__form-email-input" placeholder="&#xf0e0; name@mail.com" style="Font-family:Arial, FontAwesome">
+                        </div>
+                        <div>
+                            <label for="form-card" class="payment__form-card-label">Kartica</label>
+                            <input type="number" name="card" id="form-card" class="payment__form-card-input" placeholder="&#xf1f0; Broj kartice" style="font-family:Arial, FontAwesome">
+                        </div>
+                        <div>
+                            <label for="form-card-holder" class="payment__card-holder-label">Vlasnik kartice</label>
+                            <input type="text" name="form-card-holder" id="form-card-holder"class="payment__card-holder-input" placeholder="&#xf007; John Smith" style="font-family:Arial, FontAwesome">
+                        </div>
+                    </form>
+                    <div class="payment__footer">
+                        <div class="payment__footer-subtotal">
+                            <p>Subtotal</p>
+                            <p>€397,00</p>
+                        </div>
+                        <div class="payment__footer-tax">
+                            <p>PDV</p>
+                            <p>0,00€</p>
+                        </div>
+                        <div class="payment__footer-total">
+                            <p>Total</p>
+                            <p>€397,00</p>
+                        </div>
+                        <button class="payment__footer-pay">
+                            Pay €397,00
+                        </button>
+                    </div>
+                </section>
+            </div>
     </main>
     <footer class="footer">
         <div class="container">

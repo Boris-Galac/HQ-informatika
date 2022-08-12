@@ -1,5 +1,5 @@
 ////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
-//// ********** 👇🏻 MAIN HTML 👇🏻 *********** ///////
+//// ********** 👇🏻 MAIN JS 👇🏻 *********** ///////
 ////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
 
 ///////// OVERLAY
@@ -89,7 +89,7 @@ const displayCartItems = (val) => {
     .join('');
   const shopCart = document.querySelector('.shopping-cart__item-list');
   shopCart.innerHTML = cartItem;
-  // if cart has items show items
+  // if cart has items remove msg and show items
   if (cart.length) {
     shopCartBody.forEach((body) => body.classList.add('active'));
     cartMsg.forEach((msg) => {
@@ -191,6 +191,7 @@ const clrAll = () => {
       }
       localStorage.setItem('data', JSON.stringify(cart));
       displayCartItems();
+      displayCheckoutItems();
       cartIndicator();
       totalBill();
     });
@@ -252,6 +253,7 @@ const removeItem = (e) => {
   displayCartItems(numStorage);
   cartIndicator();
   totalBill();
+  displayCheckoutItems();
 };
 
 /////////////// total bill
@@ -340,7 +342,6 @@ document.body.addEventListener('scroll', (e) => {
 ///// when user clicks on item name of product goes to local storage
 
 const linkProduct = (e) => {
-  console.log(e.target);
   let productName = e.target
     .closest('.product')
     .querySelector('#product-name').innerText;
@@ -382,10 +383,9 @@ const displaySingleProduct = () => {
   document.querySelector('.single-product__product').innerHTML = product;
 };
 
-//////// (single product html) )DISPLAY CARD in CAROUSEL
+//////// (single product html)  DISPLAY CARD in CAROUSEL
 
 const displayCard = () => {
-  // shoppingItemsArr.length = 5;
   const cardCarousel = shoppingItemsArr
     .map((item) => {
       const { category, img, product, description, price } = item;
@@ -410,9 +410,108 @@ const displayCard = () => {
         `;
     })
     .join('');
-
   document.querySelector('.carousel__wrapper').innerHTML = cardCarousel;
 };
+
+////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
+//// ********** 👇🏻 CHECKOUT HTML 👇🏻 *********** ///////
+////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
+
+/////// DISPLAY CART ITEMS IN CHECKOUT
+
+const checkoutBnts = document.querySelectorAll('.shopping-cart__checkout');
+
+checkoutBnts.forEach((checkoutBtn) => {
+  checkoutBtn.addEventListener('click', (e) => {
+    displayCheckoutItems();
+  });
+});
+const displayCheckoutItems = () => {
+  let cart = JSON.parse(localStorage.getItem('data')) || [];
+  let checkoutItem = cart.map((item) => {
+    let itemCart = shoppingItemsArr.find((obj) => obj.product === item.product);
+    return `
+    <div class="summary__body-item">
+      <div class="summary__body-item-col-1">
+          <img src="${itemCart.img}" alt="item">
+      </div>
+      <div class="summary__body-item-col-2">
+          <p class="summary__item-product">${item.product}</p>
+          <p class="summary__item-price">€${item.price},00</p>
+      </div>
+      <div class="summary__body-item-col-3">
+          <form class="summary__body-item-form">
+              <input type="number" name="numberItems" id="number-items" class="summary__number-items" min="0" placeholder="0" value=${
+                item.item
+              } onclick=amountSummaryItems(event)>
+          </form>
+          <strong><p class="summary__sum-items">€${
+            item.item * item.price
+          },00</p></strong>
+      </div>
+    </div>
+    `;
+  });
+  if (location.href.includes('checkout.html')) {
+    //// append cart items in checkout wrapper
+    document.querySelector('.summary__body').innerHTML = checkoutItem;
+
+    if (!cart.length)
+      document.querySelector('.summary__body').innerHTML = `
+        <p style="color: #fff; font-size: 1.2rem; text-align:center;">Nema artikala</p>
+      `;
+    total();
+  }
+};
+
+const amountSummaryItems = (e) => {
+  let num = Number(e.target.value);
+  let nameOfProduct = e.target
+    .closest('.summary__body-item')
+    .querySelector('.summary__item-product').innerText;
+  let priceOfItem = cart.find((obj) => obj.product === nameOfProduct);
+  priceOfItem.item = num;
+  let sumPriceProduct = (e.target
+    .closest('.summary__body-item')
+    .querySelector('.summary__sum-items').innerHTML = `€${
+    num * priceOfItem.price
+  },00`);
+
+  localStorage.setItem('data', JSON.stringify(cart));
+  localStorage.setItem('num', JSON.stringify(num));
+  total();
+  displayCartItems();
+  cartIndicator();
+  totalBill();
+};
+
+const total = () => {
+  const subtotal = document.querySelector(
+    '.payment__footer-subtotal p:nth-child(2)'
+  );
+  const total = document.querySelector('.payment__footer-total p:nth-child(2)');
+  const totalPayBtn = document.querySelector('.payment__footer-pay');
+  let totalBill = cart
+    .map((obj) => obj.price * obj.item)
+    .reduce((a, b) => a + b, 0);
+  subtotal.innerHTML = `${totalBill}€`;
+  total.innerHTML = `${totalBill}€`;
+  totalPayBtn.innerHTML = `Pay ${totalBill},00 €`;
+};
+displayCheckoutItems();
+
+///// DELIVERY PICK
+
+const deliveries = document
+  .querySelectorAll('.summary__footer-shipping-method')
+  .forEach((optionDelivery) => {
+    optionDelivery.addEventListener('click', (e) => {
+      document.querySelectorAll('.radioBtn').forEach((btn) => {
+        btn.checked = false;
+      });
+      optionDelivery.querySelector('.radioBtn').checked = true;
+    });
+  });
 
 ////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
 //// ********** 👇🏻 CATEGORIES HTML 👇🏻 *********** ///////
@@ -935,15 +1034,16 @@ if (location.href.includes('single-product.html')) {
 
   const addComment = document.getElementById('addComment');
   const commentSubmit = document.querySelector('.commenting__submit');
+  // localStorage.getItem('notes');
+  // let notesObj = [];
+  const notes = localStorage.getItem('notes');
+  notesObj = JSON.parse(notes);
 
   //// SAVING COMMENT
 
   addComment.addEventListener('submit', (e) => {
     e.preventDefault();
-    const notes = localStorage.getItem('notes');
     const addTxt = document.getElementById('comment');
-    let notesObj = [];
-    notesObj = JSON.parse(notes);
     notesObj.push(addTxt.value);
     localStorage.setItem('notes', JSON.stringify(notesObj));
     addTxt.value = '';
