@@ -6,19 +6,7 @@
     max-width: 60rem;
     margin-inline: auto;
 }
-.price {
-    display: var(--d-flex);
-    align-items: var(--center);
-    justify-content: var(--center);
-    justify-self: var(--center);
-    padding: .5rem;
-    border-radius: 50px;
-    border: 4px solid hsl(198, 22%, 91%);
-    background-color: var(--white);
-    font-weight: 500;
-    width: 60%;
-    min-width: 6rem;
-}
+
 
 /* registration and sign up */
 
