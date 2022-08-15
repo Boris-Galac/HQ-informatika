@@ -20,12 +20,12 @@ const hamIcon = document.querySelector('.header__ham-btn');
 const navMenu = document.querySelector('.nav');
 
 hamIcon.addEventListener('click', (e) => {
-  let lines = [...e.currentTarget.children];
+  const lines = [...e.currentTarget.children];
   lines.forEach((line) => {
     line.classList.toggle('active');
   });
-  navMenu.classList.toggle('active');
   createOverlay(navMenu);
+  navMenu.classList.toggle('active');
   overlay.addEventListener('click', (e) => {
     lines.forEach((line) => {
       line.classList.remove('active');
@@ -413,6 +413,48 @@ const displayCard = () => {
     .join('');
   document.querySelector('.carousel__wrapper').innerHTML = cardCarousel;
 };
+
+////// REGISTRATION FORM
+
+const signUp = document.querySelectorAll('.sign-up').forEach((signUpBtn) => {
+  signUpBtn.addEventListener('click', (e) => {
+    navMenu.classList.toggle('active');
+    document.querySelectorAll('.ham-line').forEach((line) => {
+      line.classList.remove('active');
+    });
+    const form = document.querySelector('.form-container');
+    form.classList.add('active');
+    createOverlay(form);
+  });
+});
+const regForm = document
+  .querySelectorAll('.form__login-link')
+  .forEach((signUp) => {
+    signUp.addEventListener('click', (e) => {
+      document.querySelector('.registration-form').classList.toggle('active');
+      document.querySelector('.form__login').classList.toggle('deactive');
+    });
+  });
+
+//// show/hide password
+
+const showHidePass = document.querySelectorAll('#showHide').forEach((eye) => {
+  eye.addEventListener('click', (e) => {
+    document.querySelectorAll('.password').forEach((pass) => {
+      if (pass.type === 'password') {
+        pass.type = 'text';
+        document.querySelectorAll('#showHide').forEach((icon) => {
+          icon.classList.replace('fa-eye-slash', 'fa-eye');
+        });
+      } else {
+        pass.type = 'password';
+        document.querySelectorAll('#showHide').forEach((icon) => {
+          icon.classList.replace('fa-eye', 'fa-eye-slash');
+        });
+      }
+    });
+  });
+});
 
 ////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
 //// ********** 👇🏻 CHECKOUT HTML 👇🏻 *********** ///////
@@ -1028,6 +1070,7 @@ if (location.href.includes('single-product.html')) {
       });
     }
   });
+
   //////////// (single product html) CAROUSEL SLIDER CARDS
 
   const carouselLeft = document.getElementById('carouselLeft');

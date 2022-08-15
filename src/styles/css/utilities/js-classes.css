@@ -178,3 +178,22 @@
     transform: scale(1.2);
     filter: drop-shadow(0 0 5px #fff);
 }
+
+/* registration form */
+.form-container {
+    opacity: 0;
+    pointer-events: none;
+}
+.form-container.active {
+    opacity: 1;
+    pointer-events: visible;
+}
+.registration-form {
+    display: none;
+}
+.registration-form.active {
+    display: grid;
+}
+.form__login.deactive {
+    display: none;
+}

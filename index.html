@@ -339,7 +339,8 @@
             </div>
         </div>
     </footer>
-    <div class="socials">
+    <!-- socials bar -->
+    <aside class="socials">
         <button class="socials__btn">
             <i class="fa-brands fa-instagram"></i>
         </button>
@@ -352,7 +353,79 @@
         <button class="socials__btn">
             <i class="fa-brands fa-shopify"></i>
         </button>
-    </div>
+    </aside>
+    <!-- back to top -->
     <button class="back-to-top"><i class="fa-solid fa-angle-up"></i></button>
+    <!-- login form -->
+    <div class="form-container">
+        <div class="forms">
+            <div class="form__login">
+                <span class="form__login-title">Login</span>
+                <form>
+                    <div class="form__login-input-field">
+                        <input type="text" name="input-text" id="inputText" placeholder="myname@gmail.com" required>
+                        <label for="inputText"><i class="fa-solid fa-envelope"></i></label>
+                    </div>
+                    <div class="form__login-input-field">
+                        <input type="password" class="password" name="input-password" id="inputPassword" placeholder="Enter your password" required>
+                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label> 
+                        <i class="fa-solid fa-eye-slash" id="showHide"></i>
+                    </div>
+                    <div class="form__login-checkbox">
+                        <div>
+                            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+                            <label for="checkbox" class="checkbox-label">Remember me</label>
+                        </div>
+                        <a href="#" class="password-link">Forgot password?</a>
+                    </div>
+                    <div class="form__login-submit">
+                        <input type="submit" value="Login Now">
+                    </div>
+                    <div class="form__login-signup">
+                        <span>
+                            Not a member?
+                            <a href="#" class="form__login-link">Signup now</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <!-- Registration form -->
+            <div class="form__login registration-form">
+                <span class="form__login-title">Registration</span>
+                <form>
+                    <div class="form__login-input-field">
+                        <input type="text" name="input-text" id="inputText" placeholder="John Smith" required>
+                        <label for="inputText"><i class="fa-solid fa-user"></i></label>
+                    </div>
+                    <div class="form__login-input-field">
+                        <input type="text" name="input-text" id="inputText" placeholder="myname@gmail.com" required>
+                        <label for="inputText"><i class="fa-solid fa-envelope"></i></label>
+                    </div>
+                    <div class="form__login-input-field">
+                        <input type="password" class="password" name="input-password" id="inputPassword" placeholder="Enter your password" required>
+                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label> 
+                        <i class="fa-solid fa-eye-slash" id="showHide"></i>
+                    </div>
+                    <div class="form__login-input-field">
+                        <input type="password" class="password" name="input-password" id="inputPassword" placeholder="Repeat your password" required>
+                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label> 
+                        <i class="fa-solid fa-eye-slash" id="showHide"></i>
+                    </div>
+                    <div class="form__login-terms">
+                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                    </div>
+                    <div class="form__login-submit">
+                        <input type="submit" value="Login Now">
+                    </div>
+                    <div class="form__login-signup">
+                        <span>
+                            Not a member?
+                            <a href="#" class="form__login-link">Signup now</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
