@@ -496,10 +496,10 @@ if (
     }
     currImg++;
     imgContainer.style = `
-              transition: .3s;
+              transition: .8s ease-in-out;
               transform: translateX(${currImg * -img}px);
           `;
-  }, 3000);
+  }, 4000);
 }
 
 ////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
