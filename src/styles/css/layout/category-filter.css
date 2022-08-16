@@ -26,8 +26,12 @@
    display: var(--d-flex);
    justify-content: space-between;
    align-items: flex-end;
-   padding: .3rem;
    gap: .5rem;
+}
+@media (min-width: 25rem) {
+    .filter__price_brand form {
+        padding: .3rem;
+     }
 }
 .filter__price_brand input[type="number"] {
    padding: .4rem;
@@ -64,7 +68,6 @@
 .filter__brand select:focus{
     outline: 1px solid hsl(202, 93%, 53%);
    box-shadow: 0 0 15px rgb(0, 157, 255);
-
 }
 .filter-icon {
     transition: .16s;
