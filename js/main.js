@@ -416,14 +416,32 @@ const displayCard = () => {
 
 ////// REGISTRATION FORM
 
-const signUp = document.querySelectorAll('.sign-up').forEach((signUpBtn) => {
-  signUpBtn.addEventListener('click', (e) => {
+const signUp = document
+  .querySelectorAll('.header__registration')
+  .forEach((signUpBtn) => {
+    signUpBtn.addEventListener('click', (e) => {
+      navMenu.classList.toggle('active');
+      document.querySelectorAll('.ham-line').forEach((line) => {
+        line.classList.remove('active');
+      });
+      const form = document.querySelector('.form-container');
+      form.classList.add('active');
+      document.querySelector('.registration-form').classList.add('active');
+      document.querySelector('.form__login').classList.add('deactive');
+      createOverlay(form);
+    });
+  });
+
+const signIn = document.querySelectorAll('.sign-up').forEach((signInBtn) => {
+  signInBtn.addEventListener('click', (e) => {
     navMenu.classList.toggle('active');
     document.querySelectorAll('.ham-line').forEach((line) => {
       line.classList.remove('active');
     });
     const form = document.querySelector('.form-container');
     form.classList.add('active');
+    document.querySelector('.registration-form').classList.remove('active');
+    document.querySelector('.form__login').classList.remove('deactive');
     createOverlay(form);
   });
 });
@@ -455,6 +473,34 @@ const showHidePass = document.querySelectorAll('#showHide').forEach((eye) => {
     });
   });
 });
+if (
+  location.href.includes('categories.html') ||
+  location.href.includes('single-product.html')
+) {
+  ////////// CAROUSEL AUTO
+
+  let currImg = 0;
+
+  setInterval(() => {
+    const imgContainer = document.querySelector(
+      '.carousel-auto__img-container'
+    );
+    const img = document.querySelector(
+      '.carousel-auto__img-container > img'
+    ).scrollWidth;
+    let amountImgs = document.querySelectorAll(
+      '.carousel-auto__img-container > img'
+    );
+    if (currImg === amountImgs.length - 1) {
+      currImg = -1;
+    }
+    currImg++;
+    imgContainer.style = `
+              transition: .3s;
+              transform: translateX(${currImg * -img}px);
+          `;
+  }, 3000);
+}
 
 ////✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅/////
 //// ********** 👇🏻 CHECKOUT HTML 👇🏻 *********** ///////

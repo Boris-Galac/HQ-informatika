@@ -1,0 +1,8 @@
+.carousel-auto__container {
+    position: relative;
+    overflow: hidden;
+}
+.carousel-auto__img-container {
+    display: flex;
+}
+

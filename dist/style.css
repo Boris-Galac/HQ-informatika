@@ -1774,6 +1774,15 @@ button {
     color: hsl(214, 79%, 78%);
 }
 
+.carousel-auto__container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-auto__img-container {
+    display: flex;
+}
+
 .back-to-top {
     aspect-ratio: 1;
     width: 3rem;
