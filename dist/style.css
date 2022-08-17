@@ -2218,14 +2218,14 @@ button {
     gap: var(--gap-1);
 }
 
-.categories__wrapper::after {
+/* .categories__wrapper::after {
     content: '';
     position: absolute;
     inset: 0;
     z-index: -1;
     background: url('../../img/categories-bg.png');
     opacity: .2;
-}
+} */
 
 .categories__row {
     display: var(--d-flex);
