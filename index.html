@@ -1,20 +1,27 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HQ informatika is the shop where you can find a lot of good stuffs, primarly technologies for every day life."/>
+    <meta name="description"
+        content="HQ informatika is the shop where you can find a lot of good stuffs, primarly technologies for every day life." />
     <meta name="keywords" content="techologies, mobile, hardware, software" />
     <link rel="shortcut icon" href="/src/styles/icons/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="dist/style.css">
     <script defer src="/js/database.js"></script>
     <script defer src="/js/main.js"></script>
     <title>HQ Informatika</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header__wrapper">
@@ -25,66 +32,66 @@
                 </h1>
             </a>
             <div class="header__btns">
-                    <button class="header__search-btn search-btn" title="search">
-                        <img src="/src/styles/icons/search.svg" alt="search">
-                    </button>
-                    <button class="header__cart-btn cart-btn" title="cart">
-                        <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                        <span class="header__amount-items"></span>
-                    </button>
-                    <button class="header__ham-btn" title="menu">
-                        <div class="ham-line"></div>
-                        <div class="ham-line"></div>
-                        <div class="ham-line"></div>
-                    </button>
-                    <button class="header__sign-up sign-up" id="sign-up">
-                        Prijavi se
-                    </button>
-                    <button class="header__registration registration" id="registration">
-                        Registracija
-                    </button>
+                <button class="header__search-btn search-btn" title="search">
+                    <img src="/src/styles/icons/search.svg" alt="search">
+                </button>
+                <button class="header__cart-btn cart-btn" title="cart">
+                    <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
+                    <span class="header__amount-items"></span>
+                </button>
+                <button class="header__ham-btn" title="menu">
+                    <div class="ham-line"></div>
+                    <div class="ham-line"></div>
+                    <div class="ham-line"></div>
+                </button>
+                <button class="header__sign-up sign-up" id="sign-up">
+                    Prijavi se
+                </button>
+                <button class="header__registration registration" id="registration">
+                    Registracija
+                </button>
             </div>
         </div>
         <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">It oprema</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Multimedija</a>
-                        <i class="fa-solid fa-sort-down"></i>
-                        <ul class="nav__list-multimedia">
-                            <li><a class="nav__link" href="#">Tv/audio video</a></li>
-                            <li><a class="nav__link" href="#">Konzole</a></li>
-                            <li><a class="nav__link" href="#">Sport i oprema</a></li>
-                            <li><a class="nav__link" href="#">Mali kućanski alati</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Mobile</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Kontakt</a>
-                    </li>
-                </ul>
-                <div class="nav__search_cart-wrapper">
-                    <button class="search-btn">
-                        <img src="/src/styles/icons/search.svg" alt="search">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="#">It oprema</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Multimedija</a>
+                    <i class="fa-solid fa-sort-down"></i>
+                    <ul class="nav__list-multimedia">
+                        <li><a class="nav__link" href="#">Tv/audio video</a></li>
+                        <li><a class="nav__link" href="#">Konzole</a></li>
+                        <li><a class="nav__link" href="#">Sport i oprema</a></li>
+                        <li><a class="nav__link" href="#">Mali kućanski alati</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Mobile</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Kontakt</a>
+                </li>
+            </ul>
+            <div class="nav__search_cart-wrapper">
+                <button class="search-btn">
+                    <img src="/src/styles/icons/search.svg" alt="search">
+                </button>
+                <div class="nav__shopping-cart-wrapper">
+                    <button class="cart-btn">
+                        <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
+                        <span class="header__amount-items"></span>
                     </button>
-                    <div class="nav__shopping-cart-wrapper">
-                        <button class="cart-btn">
-                            <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                            <span class="header__amount-items"></span>
-                        </button>
-                    </div>
                 </div>
-                <div class="nav__sign-in-btns">
-                   <button class="nav__sign-up sign-up" id="sign-up">
-                       Prijavi se
-                   </button>
-                   <button class="nav__registration registration" id="registration">
-                       Registracija
-                   </button>
+            </div>
+            <div class="nav__sign-in-btns">
+                <button class="nav__sign-up sign-up" id="sign-up">
+                    Prijavi se
+                </button>
+                <button class="nav__registration registration" id="registration">
+                    Registracija
+                </button>
             </div>
         </nav>
         <div class="shopping-cart" title="shopping cart">
@@ -110,29 +117,31 @@
                     </button>
                     <div class="shopping-cart__footer-btns">
                         <div class="shopping-cart__total-bill" title="total bill">
-                            <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span></h3>
+                            <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span>
+                            </h3>
                         </div>
                         <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
-                        <a href="checkout.html"><button class="shopping-cart__checkout" title="checkout">Checkout</button></a>
+                        <a href="checkout.html"><button class="shopping-cart__checkout"
+                                title="checkout">Checkout</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-        <div class="search">
-            <form class="search__form">
-                <fieldset class="search__fieldset">
-                    <label for="search__label">
-                        <input type="search" name="search" class="search__input" id="search-form" placeholder="Pretraži...">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="submit" value="Traži" class="search__submit">
-                    </label>
-                </fieldset>
-                <ul class="search__list">
-                    <li class="search__item"></li>
-                </ul>
-            </form> 
-        </div>
+    <div class="search">
+        <form class="search__form">
+            <fieldset class="search__fieldset">
+                <label for="search__label">
+                    <input type="search" name="search" class="search__input" id="search-form" placeholder="Pretraži...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="submit" value="Traži" class="search__submit">
+                </label>
+            </fieldset>
+            <ul class="search__list">
+                <li class="search__item"></li>
+            </ul>
+        </form>
+    </div>
     <main class="main">
         <section class="hero">
             <div class="hero__slider">
@@ -178,7 +187,7 @@
                         </button>
                         <h3 class="categories__name-category">
                             Accessories
-                        </h3>                      
+                        </h3>
                     </a>
                     <a href="#">
                         <button class="categories__btn home-category-btn" data-id="network">
@@ -186,7 +195,7 @@
                         </button>
                         <h3 class="categories__name-category">
                             Mreže
-                        </h3>                      
+                        </h3>
                     </a>
                 </div>
                 <div class="categories__row">
@@ -196,7 +205,7 @@
                         </button>
                         <h3 class="categories__name-category">
                             Laptopi
-                        </h3>                      
+                        </h3>
                     </a>
                     <a href="#">
                         <button class="categories__btn home-category-btn" data-id="monitor">
@@ -204,7 +213,7 @@
                         </button>
                         <h3 class="categories__name-category">
                             Monitori
-                        </h3>                      
+                        </h3>
                     </a>
                     <a href="#">
                         <button class="categories__btn home-category-btn" data-id="software">
@@ -212,7 +221,7 @@
                         </button>
                         <h3 class="categories__name-category">
                             Software
-                        </h3>                      
+                        </h3>
                     </a>
                 </div>
             </div>
@@ -220,26 +229,27 @@
         <section class="action">
             <figure class="action__ad-nintendo">
                 <picture>
-                    <source media="(min-width:530px)" srcset="/src/styles/img/nintendo-ad.jpg" class="action__img-nintendo-tablet">
+                    <source media="(min-width:530px)" srcset="/src/styles/img/nintendo-ad.jpg"
+                        class="action__img-nintendo-tablet">
                     <img src="/src/styles/img/nintendo-ad(tablet).jpg" alt="nintendo-ad" class="action__img-nintendo">
                 </picture>
                 <figcaption class="action__info-nintendo">
-                        <div class="action__header">
-                            <h2 class="action__heading">Najnoviji krik tehnologije</h2>
-                            <h3 class="action__subheading">Nintendo joystick</h3>
-                            <p class="action__price">99 €</p>
+                    <div class="action__header">
+                        <h2 class="action__heading">Najnoviji krik tehnologije</h2>
+                        <h3 class="action__subheading">Nintendo joystick</h3>
+                        <p class="action__price">99 €</p>
+                    </div>
+                    <div class="action__footer">
+                        <div class="action__countdown">
+                            <h3 class="day">1</h3><span>d</span>
+                            <h3 class="hour">04</h3><span>h</span>
+                            <h3 class="minute">54</h3><span>m</span>
+                            <h3 class="second">14</h3><span>s</span>
                         </div>
-                        <div class="action__footer">
-                            <div class="action__countdown">
-                                <h3 class="day">1</h3><span>d</span>
-                                <h3 class="hour">04</h3><span>h</span>
-                                <h3 class="minute">54</h3><span>m</span>
-                                <h3 class="second">14</h3><span>s</span>
-                            </div>
-                            <button class="buy-btn">Dodaj 
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </div>
+                        <button class="buy-btn">Dodaj
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
                 </figcaption>
             </figure>
         </section>
@@ -247,8 +257,8 @@
             <div class="best-offer__header">
                 <h2 class="best-offer__heading">Izdvojena ponuda</h2>
             </div>
-            <ul class="best-offer__wrapper item-list">                            
-                                           
+            <ul class="best-offer__wrapper item-list">
+
             </ul>
             <footer class="best-offer__footer">
                 <button class="best-offer__load-more">Učitaj još</button>
@@ -271,7 +281,8 @@
                         <i class="fa-solid fa-chevron-down arrow"></i>
                     </div>
                     <div class="accordion__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea, quibusdam reiciendis nam in illo soluta dolore quis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea, quibusdam reiciendis nam in
+                            illo soluta dolore quis.</p>
                     </div>
                 </div>
                 <div class="accordion__tab">
@@ -280,7 +291,8 @@
                         <i class="fa-solid fa-chevron-down arrow"></i>
                     </div>
                     <div class="accordion__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis ipsum nemo dignissimos debitis vitae, neque eius eligendi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis ipsum nemo
+                            dignissimos debitis vitae, neque eius eligendi!</p>
                     </div>
                 </div>
                 <div class="accordion__tab">
@@ -289,7 +301,8 @@
                         <i class="fa-solid fa-chevron-down arrow"></i>
                     </div>
                     <div class="accordion__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis ipsum nemo dignissimos debitis vitae, neque eius eligendi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis ipsum nemo
+                            dignissimos debitis vitae, neque eius eligendi!</p>
                     </div>
                 </div>
             </div>
@@ -307,7 +320,8 @@
                 <form class="footer__form">
                     <fieldset class="footer__fieldset">
                         <legend class="footer__legend">Pretplati se na naš newsletter</legend>
-                        <input type="text" name="text" id="footer-text" class="footer__text" placeholder="Upišite svoj mail">
+                        <input type="text" name="text" id="footer-text" class="footer__text"
+                            placeholder="Upišite svoj mail">
                         <input type="submit" name="submit" id="footer-submit" class="footer__submit">
                     </fieldset>
                 </form>
@@ -337,7 +351,8 @@
         </div>
         <div class="footer__copyright">
             <div class="footer__copyright-wrapper">
-                <span>Web shop kreirao:</span><h3 class="author">Boris Galac</h3>
+                <span>Web shop kreirao:</span>
+                <h3 class="author">Boris Galac</h3>
             </div>
         </div>
     </footer>
@@ -369,8 +384,9 @@
                         <label for="inputText"><i class="fa-solid fa-envelope"></i></label>
                     </div>
                     <div class="form__login-input-field">
-                        <input type="password" class="password" name="input-password" id="inputPassword" placeholder="Enter your password" required>
-                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label> 
+                        <input type="password" class="password" name="input-password" id="inputPassword"
+                            placeholder="Enter your password" required>
+                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label>
                         <i class="fa-solid fa-eye-slash" id="showHide"></i>
                     </div>
                     <div class="form__login-checkbox">
@@ -404,13 +420,15 @@
                         <label for="inputText"><i class="fa-solid fa-envelope"></i></label>
                     </div>
                     <div class="form__login-input-field">
-                        <input type="password" class="password" name="input-password" id="inputPassword" placeholder="Enter your password" required>
-                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label> 
+                        <input type="password" class="password" name="input-password" id="inputPassword"
+                            placeholder="Enter your password" required>
+                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label>
                         <i class="fa-solid fa-eye-slash" id="showHide"></i>
                     </div>
                     <div class="form__login-input-field">
-                        <input type="password" class="password" name="input-password" id="inputPassword" placeholder="Repeat your password" required>
-                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label> 
+                        <input type="password" class="password" name="input-password" id="inputPassword"
+                            placeholder="Repeat your password" required>
+                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label>
                         <i class="fa-solid fa-eye-slash" id="showHide"></i>
                     </div>
                     <div class="form__login-terms">
@@ -430,4 +448,5 @@
         </div>
     </div>
 </body>
+
 </html>

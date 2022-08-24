@@ -423,10 +423,10 @@ const displayCard = () => {
 ////// REGISTRATION FORM
 
 const signUp = document
-	.querySelectorAll('.header__registration')
+	.querySelectorAll('.registration')
 	.forEach((signUpBtn) => {
 		signUpBtn.addEventListener('click', (e) => {
-			navMenu.classList.toggle('active');
+			navMenu.classList.remove('active');
 			document.querySelectorAll('.ham-line').forEach((line) => {
 				line.classList.remove('active');
 			});
@@ -437,10 +437,9 @@ const signUp = document
 			createOverlay(form);
 		});
 	});
-
 const signIn = document.querySelectorAll('.sign-up').forEach((signInBtn) => {
 	signInBtn.addEventListener('click', (e) => {
-		navMenu.classList.toggle('active');
+		navMenu.classList.remove('active');
 		document.querySelectorAll('.ham-line').forEach((line) => {
 			line.classList.remove('active');
 		});
