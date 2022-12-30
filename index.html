@@ -1,452 +1,591 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="HQ informatika is the shop where you can find a lot of good stuffs, primarly technologies for every day life." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HQ informatika is the shop where you can find a lot of good stuffs, primarly technologies for every day life."
+    />
     <meta name="keywords" content="techologies, mobile, hardware, software" />
-    <link rel="shortcut icon" href="/src/styles/icons/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="dist/style.css">
+      rel="shortcut icon"
+      href="/src/styles/icons/logo.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&      family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
     <script defer src="/js/database.js"></script>
     <script defer src="/js/main.js"></script>
     <title>HQ Informatika</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header__wrapper">
-            <a href="index.html" title="Home page">
-                <h1 class="header__logo">
-                    <img src="/src/styles/img/logo.png" alt="hq-informatika-logo">
-                    HQ Informatika
-                </h1>
-            </a>
-            <div class="header__btns">
-                <button class="header__search-btn search-btn" title="search">
-                    <img src="/src/styles/icons/search.svg" alt="search">
-                </button>
-                <button class="header__cart-btn cart-btn" title="cart">
-                    <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                    <span class="header__amount-items"></span>
-                </button>
-                <button class="header__ham-btn" title="menu">
-                    <div class="ham-line"></div>
-                    <div class="ham-line"></div>
-                    <div class="ham-line"></div>
-                </button>
-                <button class="header__sign-up sign-up" id="sign-up">
-                    Prijavi se
-                </button>
-                <button class="header__registration registration" id="registration">
-                    Registracija
-                </button>
-            </div>
+      <div class="header__wrapper">
+        <a href="index.html" title="Home page">
+          <h1 class="header__logo">
+            <img src="/src/styles/img/logo.png" alt="hq-informatika-logo" />
+            HQ Informatika
+          </h1>
+        </a>
+        <div class="header__btns">
+          <button class="header__search-btn search-btn" title="search">
+            <img src="/src/styles/icons/search.svg" alt="search" />
+          </button>
+          <button class="header__cart-btn cart-btn" title="cart">
+            <img src="/src/styles/icons/cart.svg" alt="shopping-cart-btn" />
+            <span class="header__amount-items"></span>
+          </button>
+          <button class="header__ham-btn" title="menu">
+            <div class="ham-line"></div>
+            <div class="ham-line"></div>
+            <div class="ham-line"></div>
+          </button>
+          <button class="header__sign-up sign-up" id="sign-up">
+            Prijavi se
+          </button>
+          <button class="header__registration registration" id="registration">
+            Registracija
+          </button>
         </div>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a class="nav__link" href="#">It oprema</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">Multimedija</a>
-                    <i class="fa-solid fa-sort-down"></i>
-                    <ul class="nav__list-multimedia">
-                        <li><a class="nav__link" href="#">Tv/audio video</a></li>
-                        <li><a class="nav__link" href="#">Konzole</a></li>
-                        <li><a class="nav__link" href="#">Sport i oprema</a></li>
-                        <li><a class="nav__link" href="#">Mali kućanski alati</a></li>
-                    </ul>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">Mobile</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">Kontakt</a>
-                </li>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">It oprema</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Multimedija</a>
+            <i class="fa-solid fa-sort-down"></i>
+            <ul class="nav__list-multimedia">
+              <li><a class="nav__link" href="#">Tv/audio video</a></li>
+              <li><a class="nav__link" href="#">Konzole</a></li>
+              <li><a class="nav__link" href="#">Sport i oprema</a></li>
+              <li><a class="nav__link" href="#">Mali kućanski alati</a></li>
             </ul>
-            <div class="nav__search_cart-wrapper">
-                <button class="search-btn">
-                    <img src="/src/styles/icons/search.svg" alt="search">
-                </button>
-                <div class="nav__shopping-cart-wrapper">
-                    <button class="cart-btn">
-                        <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn">
-                        <span class="header__amount-items"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="nav__sign-in-btns">
-                <button class="nav__sign-up sign-up" id="sign-up">
-                    Prijavi se
-                </button>
-                <button class="nav__registration registration" id="registration">
-                    Registracija
-                </button>
-            </div>
-        </nav>
-        <div class="shopping-cart" title="shopping cart">
-            <div class="shopping-cart__amount-items">
-                <div class="shopping-cart__amount-wrapper">
-                    <h3 class="shopping-cart__amount-heading">MyCart</h3>
-                </div>
-                <div class="shopping-cart__header-row">
-                    <p>Proizvod</p>
-                    <p>Cijena</p>
-                    <p>Komada</p>
-                    <p>Ukupno</p>
-                </div>
-                <p class="shopping-cart__cart-message">Košarica je prazna</p>
-                <div class="shopping-cart__body">
-                    <button class="shopping-cart__scroll scroll-up">
-                        <i class="fa-solid fa-caret-up"></i>
-                    </button>
-                    <ul class="shopping-cart__item-list">
-                    </ul>
-                    <button class="shopping-cart__scroll scroll-down">
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
-                    <div class="shopping-cart__footer-btns">
-                        <div class="shopping-cart__total-bill" title="total bill">
-                            <h3 class="shopping-cart__total-body">Ukupno: <span class="shopping-cart__total">0</span>
-                            </h3>
-                        </div>
-                        <button class="shopping-cart__clear-all" title="clear all">Clear All</button>
-                        <a href="checkout.html"><button class="shopping-cart__checkout"
-                                title="checkout">Checkout</button></a>
-                    </div>
-                </div>
-            </div>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Mobile</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Kontakt</a>
+          </li>
+        </ul>
+        <div class="nav__search_cart-wrapper">
+          <button class="search-btn">
+            <img src="/src/styles/icons/search.svg" alt="search" />
+          </button>
+          <div class="nav__shopping-cart-wrapper">
+            <button class="cart-btn">
+              <img src="src/styles/icons/cart.svg" alt="shopping-cart-btn" />
+              <span class="header__amount-items"></span>
+            </button>
+          </div>
         </div>
+        <div class="nav__sign-in-btns">
+          <button class="nav__sign-up sign-up" id="sign-up">Prijavi se</button>
+          <button class="nav__registration registration" id="registration">
+            Registracija
+          </button>
+        </div>
+      </nav>
+      <div class="shopping-cart" title="shopping cart">
+        <div class="shopping-cart__amount-items">
+          <div class="shopping-cart__amount-wrapper">
+            <h3 class="shopping-cart__amount-heading">MyCart</h3>
+          </div>
+          <div class="shopping-cart__header-row">
+            <p>Proizvod</p>
+            <p>Cijena</p>
+            <p>Komada</p>
+            <p>Ukupno</p>
+          </div>
+          <p class="shopping-cart__cart-message">Košarica je prazna</p>
+          <div class="shopping-cart__body">
+            <button class="shopping-cart__scroll scroll-up">
+              <i class="fa-solid fa-caret-up"></i>
+            </button>
+            <ul class="shopping-cart__item-list"></ul>
+            <button class="shopping-cart__scroll scroll-down">
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="shopping-cart__footer-btns">
+              <div class="shopping-cart__total-bill" title="total bill">
+                <h3 class="shopping-cart__total-body">
+                  Ukupno: <span class="shopping-cart__total">0</span>
+                </h3>
+              </div>
+              <button class="shopping-cart__clear-all" title="clear all">
+                Clear All
+              </button>
+              <a href="checkout.html"
+                ><button class="shopping-cart__checkout" title="checkout">
+                  Checkout
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="search">
-        <form class="search__form">
-            <fieldset class="search__fieldset">
-                <label for="search__label">
-                    <input type="search" name="search" class="search__input" id="search-form" placeholder="Pretraži...">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="submit" value="Traži" class="search__submit">
-                </label>
-            </fieldset>
-            <ul class="search__list">
-                <li class="search__item"></li>
-            </ul>
-        </form>
+      <form class="search__form">
+        <fieldset class="search__fieldset">
+          <label for="search__label">
+            <input
+              type="search"
+              name="search"
+              class="search__input"
+              id="search-form"
+              placeholder="Pretraži..."
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="submit" value="Traži" class="search__submit" />
+          </label>
+        </fieldset>
+        <ul class="search__list">
+          <li class="search__item"></li>
+        </ul>
+      </form>
     </div>
     <main class="main">
-        <section class="hero">
-            <div class="hero__slider">
-                <picture class="hero__slider-picture current">
-                    <source media="(min-width:960px)" srcset="/src/styles/img/Advertisement(desktop).png">
-                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet).png">
-                    <img src="/src/styles/img/Advertisement(mobile).png" alt="advertisement">
-                </picture>
-                <picture class="hero__slider-picture">
-                    <source media="(min-width:960px)" srcset="/src/styles/img/Advertisement(desktop-server).png">
-                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(tablet-server).png">
-                    <img src="/src/styles/img/Advertisement(mobile-server).png" alt="advertisement">
-                </picture>
-                <picture class="hero__slider-picture">
-                    <source media="(min-width:960px)" srcset="/src/styles/img/Advertisement(gaming-desktop).png">
-                    <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(gaming-tablet).png">
-                    <img src="/src/styles/img/Advertisement(gaming-mobile).png" alt="advertisement">
-                </picture>
+      <section class="hero">
+        <div class="hero__slider">
+          <picture class="hero__slider-picture current">
+            <source
+              media="(min-width:960px)"
+              srcset="/src/styles/img/Advertisement(desktop).png"
+            />
+            <source
+              media="(min-width:465px)"
+              srcset="/src/styles/img/Advertisement(tablet).png"
+            />
+            <img
+              src="/src/styles/img/Advertisement(mobile).png"
+              alt="advertisement"
+            />
+          </picture>
+          <picture class="hero__slider-picture">
+            <source
+              media="(min-width:960px)"
+              srcset="/src/styles/img/Advertisement(desktop-server).png"
+            />
+            <source
+              media="(min-width:465px)"
+              srcset="/src/styles/img/Advertisement(tablet-server).png"
+            />
+            <img
+              src="/src/styles/img/Advertisement(mobile-server).png"
+              alt="advertisement"
+            />
+          </picture>
+          <picture class="hero__slider-picture">
+            <source
+              media="(min-width:960px)"
+              srcset="/src/styles/img/Advertisement(gaming-desktop).png"
+            />
+            <source
+              media="(min-width:465px)"
+              srcset="/src/styles/img/Advertisement(gaming-tablet).png"
+            />
+            <img
+              src="/src/styles/img/Advertisement(gaming-mobile).png"
+              alt="advertisement"
+            />
+          </picture>
+        </div>
+        <div class="hero__arrows">
+          <button class="hero__left">
+            <i class="fa-solid fa-chevron-left left-arrow"></i>
+          </button>
+          <button class="hero__right">
+            <i class="fa-solid fa-chevron-right right-arrow"></i>
+          </button>
+        </div>
+      </section>
+      <section class="categories">
+        <div class="categories__wrapper">
+          <div class="categories__row">
+            <a href="#">
+              <button
+                class="categories__btn home-category-btn"
+                data-id="desktop"
+              >
+                <img src="/src/styles/icons/desktop.svg" alt="desktop" />
+              </button>
+              <h3 class="categories__name-category">Desktop</h3>
+            </a>
+            <a href="#">
+              <button
+                class="categories__btn home-category-btn"
+                data-id="accessorie"
+              >
+                <img src="/src/styles/icons/keyboard.svg" alt="keyboard" />
+              </button>
+              <h3 class="categories__name-category">Accessories</h3>
+            </a>
+            <a href="#">
+              <button
+                class="categories__btn home-category-btn"
+                data-id="network"
+              >
+                <img src="/src/styles/icons/network.svg" alt="network" />
+              </button>
+              <h3 class="categories__name-category">Mreže</h3>
+            </a>
+          </div>
+          <div class="categories__row">
+            <a href="#">
+              <button
+                class="categories__btn home-category-btn"
+                data-id="laptop"
+              >
+                <img src="/src/styles/icons/laptop.svg" alt="laptop" />
+              </button>
+              <h3 class="categories__name-category">Laptopi</h3>
+            </a>
+            <a href="#">
+              <button
+                class="categories__btn home-category-btn"
+                data-id="monitor"
+              >
+                <img src="/src/styles/icons/monitor.svg" alt="monitor" />
+              </button>
+              <h3 class="categories__name-category">Monitori</h3>
+            </a>
+            <a href="#">
+              <button
+                class="categories__btn home-category-btn"
+                data-id="software"
+              >
+                <img src="/src/styles/icons/software.svg" alt="software" />
+              </button>
+              <h3 class="categories__name-category">Software</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="action">
+        <figure class="action__ad-nintendo">
+          <picture>
+            <source
+              media="(min-width:530px)"
+              srcset="/src/styles/img/nintendo-ad.jpg"
+              class="action__img-nintendo-tablet"
+            />
+            <img
+              src="/src/styles/img/nintendo-ad(tablet).jpg"
+              alt="nintendo-ad"
+              class="action__img-nintendo"
+            />
+          </picture>
+          <figcaption class="action__info-nintendo">
+            <div class="action__header">
+              <h2 class="action__heading">Najnoviji krik tehnologije</h2>
+              <h3 class="action__subheading">Nintendo joystick</h3>
+              <p class="action__price">99 €</p>
             </div>
-            <div class="hero__arrows">
-                <button class="hero__left">
-                    <i class="fa-solid fa-chevron-left left-arrow"></i>
-                </button>
-                <button class="hero__right">
-                    <i class="fa-solid fa-chevron-right right-arrow"></i>
-                </button>
+            <div class="action__footer">
+              <div class="action__countdown">
+                <h3 class="day">1</h3>
+                <span>d</span>
+                <h3 class="hour">04</h3>
+                <span>h</span>
+                <h3 class="minute">54</h3>
+                <span>m</span>
+                <h3 class="second">14</h3>
+                <span>s</span>
+              </div>
+              <button class="buy-btn">
+                Dodaj
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
             </div>
-        </section>
-        <section class="categories">
-            <div class="categories__wrapper">
-                <div class="categories__row">
-                    <a href="#">
-                        <button class="categories__btn home-category-btn" data-id="desktop">
-                            <img src="/src/styles/icons/desktop.svg" alt="desktop">
-                        </button>
-                        <h3 class="categories__name-category">
-                            Desktop
-                        </h3>
-                    </a>
-                    <a href="#">
-                        <button class="categories__btn home-category-btn" data-id="accessorie">
-                            <img src="/src/styles/icons/keyboard.svg" alt="keyboard">
-                        </button>
-                        <h3 class="categories__name-category">
-                            Accessories
-                        </h3>
-                    </a>
-                    <a href="#">
-                        <button class="categories__btn home-category-btn" data-id="network">
-                            <img src="/src/styles/icons/network.svg" alt="network">
-                        </button>
-                        <h3 class="categories__name-category">
-                            Mreže
-                        </h3>
-                    </a>
-                </div>
-                <div class="categories__row">
-                    <a href="#">
-                        <button class="categories__btn home-category-btn" data-id="laptop">
-                            <img src="/src/styles/icons/laptop.svg" alt="laptop">
-                        </button>
-                        <h3 class="categories__name-category">
-                            Laptopi
-                        </h3>
-                    </a>
-                    <a href="#">
-                        <button class="categories__btn home-category-btn" data-id="monitor">
-                            <img src="/src/styles/icons/monitor.svg" alt="monitor">
-                        </button>
-                        <h3 class="categories__name-category">
-                            Monitori
-                        </h3>
-                    </a>
-                    <a href="#">
-                        <button class="categories__btn home-category-btn" data-id="software">
-                            <img src="/src/styles/icons/software.svg" alt="software">
-                        </button>
-                        <h3 class="categories__name-category">
-                            Software
-                        </h3>
-                    </a>
-                </div>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="best-offer">
+        <div class="best-offer__header">
+          <h2 class="best-offer__heading">Izdvojena ponuda</h2>
+        </div>
+        <ul class="best-offer__wrapper item-list"></ul>
+        <footer class="best-offer__footer">
+          <button class="best-offer__load-more">Učitaj još</button>
+        </footer>
+      </section>
+      <section class="advertisement">
+        <picture class="advertisement__ad">
+          <source
+            media="(min-width:465px)"
+            srcset="/src/styles/img/Advertisement(gaming-tablet).png"
+          />
+          <img
+            src="/src/styles/img/Gaming-era(iPhoneX).png"
+            alt="advertisement"
+          />
+        </picture>
+      </section>
+      <section class="accordion">
+        <div class="accordion__wrapper">
+          <h2 class="accordion__heading">Često postavljena pitanja</h2>
+          <div class="accordion__tab">
+            <div class="accordion__header">
+              <h3 class="accordion__tab-heading">Gdje se sve nalazimo?</h3>
+              <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
-        </section>
-        <section class="action">
-            <figure class="action__ad-nintendo">
-                <picture>
-                    <source media="(min-width:530px)" srcset="/src/styles/img/nintendo-ad.jpg"
-                        class="action__img-nintendo-tablet">
-                    <img src="/src/styles/img/nintendo-ad(tablet).jpg" alt="nintendo-ad" class="action__img-nintendo">
-                </picture>
-                <figcaption class="action__info-nintendo">
-                    <div class="action__header">
-                        <h2 class="action__heading">Najnoviji krik tehnologije</h2>
-                        <h3 class="action__subheading">Nintendo joystick</h3>
-                        <p class="action__price">99 €</p>
-                    </div>
-                    <div class="action__footer">
-                        <div class="action__countdown">
-                            <h3 class="day">1</h3><span>d</span>
-                            <h3 class="hour">04</h3><span>h</span>
-                            <h3 class="minute">54</h3><span>m</span>
-                            <h3 class="second">14</h3><span>s</span>
-                        </div>
-                        <button class="buy-btn">Dodaj
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                </figcaption>
-            </figure>
-        </section>
-        <section class="best-offer">
-            <div class="best-offer__header">
-                <h2 class="best-offer__heading">Izdvojena ponuda</h2>
+            <div class="accordion__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea,
+                quibusdam reiciendis nam in illo soluta dolore quis.
+              </p>
             </div>
-            <ul class="best-offer__wrapper item-list">
-
-            </ul>
-            <footer class="best-offer__footer">
-                <button class="best-offer__load-more">Učitaj još</button>
-            </footer>
-        </section>
-        <section class="advertisement">
-            <picture class="advertisement__ad">
-                <source media="(min-width:465px)" srcset="/src/styles/img/Advertisement(gaming-tablet).png">
-                <img src="/src/styles/img/Gaming-era(iPhoneX).png" alt="advertisement">
-            </picture>
-        </section>
-        <section class="accordion">
-            <div class="accordion__wrapper">
-                <h2 class="accordion__heading">
-                    Često postavljena pitanja
-                </h2>
-                <div class="accordion__tab">
-                    <div class="accordion__header">
-                        <h3 class="accordion__tab-heading">Gdje se sve nalazimo?</h3>
-                        <i class="fa-solid fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="accordion__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea, quibusdam reiciendis nam in
-                            illo soluta dolore quis.</p>
-                    </div>
-                </div>
-                <div class="accordion__tab">
-                    <div class="accordion__header">
-                        <h3 class="accordion__tab-heading">Sezonski popusti?</h3>
-                        <i class="fa-solid fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="accordion__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis ipsum nemo
-                            dignissimos debitis vitae, neque eius eligendi!</p>
-                    </div>
-                </div>
-                <div class="accordion__tab">
-                    <div class="accordion__header">
-                        <h3 class="accordion__tab-heading">Karijera kod nas?</h3>
-                        <i class="fa-solid fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="accordion__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perspiciatis ipsum nemo
-                            dignissimos debitis vitae, neque eius eligendi!</p>
-                    </div>
-                </div>
+          </div>
+          <div class="accordion__tab">
+            <div class="accordion__header">
+              <h3 class="accordion__tab-heading">Sezonski popusti?</h3>
+              <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
-        </section>
+            <div class="accordion__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae perspiciatis ipsum nemo dignissimos debitis vitae,
+                neque eius eligendi!
+              </p>
+            </div>
+          </div>
+          <div class="accordion__tab">
+            <div class="accordion__header">
+              <h3 class="accordion__tab-heading">Karijera kod nas?</h3>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae perspiciatis ipsum nemo dignissimos debitis vitae,
+                neque eius eligendi!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <div class="footer__logo">
-                <a href="index.html">
-                    <img src="/src/styles/img/logo.png" alt="HQ infomatika">
-                    <h3>HQ Informatika</h3>
-                </a>
-            </div>
-            <div class="footer__wrapper">
-                <form class="footer__form">
-                    <fieldset class="footer__fieldset">
-                        <legend class="footer__legend">Pretplati se na naš newsletter</legend>
-                        <input type="text" name="text" id="footer-text" class="footer__text"
-                            placeholder="Upišite svoj mail">
-                        <input type="submit" name="submit" id="footer-submit" class="footer__submit">
-                    </fieldset>
-                </form>
-                <nav class="footer__row">
-                    <h2 class="footer__heading">Služba za korisnike</h2>
-                    <a class="footer__link" href="#">Izjava o privatnosti</a>
-                    <a class="footer__link" href="#">Uvjeti korištenja</a>
-                    <a class="footer__link" href="#">Servis</a>
-                    <a class="footer__link" href="#">Kontaktirajte nas</a>
-                    <a class="footer__link" href="#">Rješavanje sporova</a>
-                </nav>
-                <nav class="footer__row">
-                    <h2 class="footer__heading">Moj račun</h2>
-                    <a class="footer__link" href="#">Adrese</a>
-                    <a class="footer__link" href="#">Nalozi</a>
-                    <a class="footer__link" href="#">Lista želja</a>
-                    <a class="footer__link" href="#">Košarica</a>
-                </nav>
-                <nav class="footer__row">
-                    <h2 class="footer__heading">Naš web</h2>
-                    <a class="footer__link" href="#">Novo</a>
-                    <a class="footer__link" href="#">Nedavno pogledani proizvodi</a>
-                    <a class="footer__link" href="#">Usporedite proizvode</a>
-                    <a class="footer__link" href="#">Pretraživanje</a>
-                </nav>
-            </div>
+      <div class="container">
+        <div class="footer__logo">
+          <a href="index.html">
+            <img src="/src/styles/img/logo.png" alt="HQ infomatika" />
+            <h3>HQ Informatika</h3>
+          </a>
         </div>
-        <div class="footer__copyright">
-            <div class="footer__copyright-wrapper">
-                <span>Web shop kreirao:</span>
-                <h3 class="author">Boris Galac</h3>
-            </div>
+        <div class="footer__wrapper">
+          <form class="footer__form">
+            <fieldset class="footer__fieldset">
+              <legend class="footer__legend">
+                Pretplati se na naš newsletter
+              </legend>
+              <input
+                type="text"
+                name="text"
+                id="footer-text"
+                class="footer__text"
+                placeholder="Upišite svoj mail"
+              />
+              <input
+                type="submit"
+                name="submit"
+                id="footer-submit"
+                class="footer__submit"
+              />
+            </fieldset>
+          </form>
+          <nav class="footer__row">
+            <h2 class="footer__heading">Služba za korisnike</h2>
+            <a class="footer__link" href="#">Izjava o privatnosti</a>
+            <a class="footer__link" href="#">Uvjeti korištenja</a>
+            <a class="footer__link" href="#">Servis</a>
+            <a class="footer__link" href="#">Kontaktirajte nas</a>
+            <a class="footer__link" href="#">Rješavanje sporova</a>
+          </nav>
+          <nav class="footer__row">
+            <h2 class="footer__heading">Moj račun</h2>
+            <a class="footer__link" href="#">Adrese</a>
+            <a class="footer__link" href="#">Nalozi</a>
+            <a class="footer__link" href="#">Lista želja</a>
+            <a class="footer__link" href="#">Košarica</a>
+          </nav>
+          <nav class="footer__row">
+            <h2 class="footer__heading">Naš web</h2>
+            <a class="footer__link" href="#">Novo</a>
+            <a class="footer__link" href="#">Nedavno pogledani proizvodi</a>
+            <a class="footer__link" href="#">Usporedite proizvode</a>
+            <a class="footer__link" href="#">Pretraživanje</a>
+          </nav>
         </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright-wrapper">
+          <span>Web shop kreirao:</span>
+          <h3 class="author">Boris Galac</h3>
+        </div>
+      </div>
     </footer>
     <!-- socials bar -->
     <aside class="socials">
-        <button class="socials__btn">
-            <i class="fa-brands fa-instagram"></i>
-        </button>
-        <button class="socials__btn">
-            <i class="fa-brands fa-facebook"></i>
-        </button>
-        <button class="socials__btn">
-            <i class="fa-brands fa-youtube"></i>
-        </button>
-        <button class="socials__btn">
-            <i class="fa-brands fa-shopify"></i>
-        </button>
+      <button class="socials__btn">
+        <i class="fa-brands fa-instagram"></i>
+      </button>
+      <button class="socials__btn">
+        <i class="fa-brands fa-facebook"></i>
+      </button>
+      <button class="socials__btn">
+        <i class="fa-brands fa-youtube"></i>
+      </button>
+      <button class="socials__btn">
+        <i class="fa-brands fa-shopify"></i>
+      </button>
     </aside>
     <!-- back to top -->
     <button class="back-to-top"><i class="fa-solid fa-angle-up"></i></button>
     <!-- login form -->
     <div class="form-container">
-        <div class="forms">
-            <div class="form__login">
-                <span class="form__login-title">Login</span>
-                <form>
-                    <div class="form__login-input-field">
-                        <input type="text" name="input-text" id="inputText" placeholder="myname@gmail.com" required>
-                        <label for="inputText"><i class="fa-solid fa-envelope"></i></label>
-                    </div>
-                    <div class="form__login-input-field">
-                        <input type="password" class="password" name="input-password" id="inputPassword"
-                            placeholder="Enter your password" required>
-                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label>
-                        <i class="fa-solid fa-eye-slash" id="showHide"></i>
-                    </div>
-                    <div class="form__login-checkbox">
-                        <div>
-                            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
-                            <label for="checkbox" class="checkbox-label">Remember me</label>
-                        </div>
-                        <a href="#" class="password-link">Forgot password?</a>
-                    </div>
-                    <div class="form__login-submit">
-                        <input type="submit" value="Login Now">
-                    </div>
-                    <div class="form__login-signup">
-                        <span>
-                            Not a member?
-                            <a href="#" class="form__login-link">Signup now</a>
-                        </span>
-                    </div>
-                </form>
+      <div class="forms">
+        <div class="form__login">
+          <span class="form__login-title">Login</span>
+          <form>
+            <div class="form__login-input-field">
+              <input
+                type="text"
+                name="input-text"
+                id="inputText"
+                placeholder="myname@gmail.com"
+                required
+              />
+              <label for="inputText"
+                ><i class="fa-solid fa-envelope"></i
+              ></label>
             </div>
-            <!-- Registration form -->
-            <div class="form__login registration-form">
-                <span class="form__login-title">Registration</span>
-                <form>
-                    <div class="form__login-input-field">
-                        <input type="text" name="input-text" id="inputText" placeholder="John Smith" required>
-                        <label for="inputText"><i class="fa-solid fa-user"></i></label>
-                    </div>
-                    <div class="form__login-input-field">
-                        <input type="text" name="input-text" id="inputText" placeholder="myname@gmail.com" required>
-                        <label for="inputText"><i class="fa-solid fa-envelope"></i></label>
-                    </div>
-                    <div class="form__login-input-field">
-                        <input type="password" class="password" name="input-password" id="inputPassword"
-                            placeholder="Enter your password" required>
-                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label>
-                        <i class="fa-solid fa-eye-slash" id="showHide"></i>
-                    </div>
-                    <div class="form__login-input-field">
-                        <input type="password" class="password" name="input-password" id="inputPassword"
-                            placeholder="Repeat your password" required>
-                        <label for="inputPassword"><i class="fa-solid fa-lock"></i></label>
-                        <i class="fa-solid fa-eye-slash" id="showHide"></i>
-                    </div>
-                    <div class="form__login-terms">
-                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                    </div>
-                    <div class="form__login-submit">
-                        <input type="submit" value="Login Now">
-                    </div>
-                    <div class="form__login-signup">
-                        <span>
-                            Not a member?
-                            <a href="#" class="form__login-link">Signup now</a>
-                        </span>
-                    </div>
-                </form>
+            <div class="form__login-input-field">
+              <input
+                type="password"
+                class="password"
+                name="input-password"
+                id="inputPassword"
+                placeholder="Enter your password"
+                required
+              />
+              <label for="inputPassword"
+                ><i class="fa-solid fa-lock"></i
+              ></label>
+              <i class="fa-solid fa-eye-slash" id="showHide"></i>
             </div>
+            <div class="form__login-checkbox">
+              <div>
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="checkbox"
+                />
+                <label for="checkbox" class="checkbox-label">Remember me</label>
+              </div>
+              <a href="#" class="password-link">Forgot password?</a>
+            </div>
+            <div class="form__login-submit">
+              <input type="submit" value="Login Now" />
+            </div>
+            <div class="form__login-signup">
+              <span>
+                Not a member?
+                <a href="#" class="form__login-link">Signup now</a>
+              </span>
+            </div>
+          </form>
         </div>
+        <!-- Registration form -->
+        <div class="form__login registration-form">
+          <span class="form__login-title">Registration</span>
+          <form>
+            <div class="form__login-input-field">
+              <input
+                type="text"
+                name="input-text"
+                id="inputText"
+                placeholder="John Smith"
+                required
+              />
+              <label for="inputText"><i class="fa-solid fa-user"></i></label>
+            </div>
+            <div class="form__login-input-field">
+              <input
+                type="text"
+                name="input-text"
+                id="inputText"
+                placeholder="myname@gmail.com"
+                required
+              />
+              <label for="inputText"
+                ><i class="fa-solid fa-envelope"></i
+              ></label>
+            </div>
+            <div class="form__login-input-field">
+              <input
+                type="password"
+                class="password"
+                name="input-password"
+                id="inputPassword"
+                placeholder="Enter your password"
+                required
+              />
+              <label for="inputPassword"
+                ><i class="fa-solid fa-lock"></i
+              ></label>
+              <i class="fa-solid fa-eye-slash" id="showHide"></i>
+            </div>
+            <div class="form__login-input-field">
+              <input
+                type="password"
+                class="password"
+                name="input-password"
+                id="inputPassword"
+                placeholder="Repeat your password"
+                required
+              />
+              <label for="inputPassword"
+                ><i class="fa-solid fa-lock"></i
+              ></label>
+              <i class="fa-solid fa-eye-slash" id="showHide"></i>
+            </div>
+            <div class="form__login-terms">
+              <p>
+                By creating an account you agree to our
+                <a href="#">Terms & Privacy</a>.
+              </p>
+            </div>
+            <div class="form__login-submit">
+              <input type="submit" value="Login Now" />
+            </div>
+            <div class="form__login-signup">
+              <span>
+                Not a member?
+                <a href="#" class="form__login-link">Signup now</a>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
