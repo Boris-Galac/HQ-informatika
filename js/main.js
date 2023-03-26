@@ -994,7 +994,7 @@ if (location.href.includes("index.html")) {
   ////////// COUNTDOWN
 
   const countdown = () => {
-    const countDate = new Date("February 14, 2023 00:00:00").getTime();
+    const countDate = new Date("June 23, 2023 00:00:00").getTime();
     const currentTime = new Date().getTime();
     const gap = countDate - currentTime;
 
